@@ -39,6 +39,7 @@ To learn more about modeling and simulation with Simscape, please visit:
 * [Simscape Getting Started Resources](https://www.mathworks.com/solutions/physical-modeling/resources.html)
 * Product Capabilities:
    * [Simscape&trade;](https://www.mathworks.com/products/simscape.html)
+   * [Simscape Battery&trade;](https://www.mathworks.com/products/simscape-battery.html)
    * [Simscape Driveline&trade;](https://www.mathworks.com/products/simscape-driveline.html)
    * [Simscape Electrical&trade;](https://www.mathworks.com/products/simscape-electrical.html)
    * [Simscape Fluids&trade;](https://www.mathworks.com/products/simscape-fluids.html)
