@@ -11,3 +11,5 @@ ExcvGlobal = Excavator_Pin_Locations_global('Design A');
 ExcvLocal  = Excavator_Pin_Locations_global2local(ExcvGlobal);
 
 Excavator_Design_app_run
+
+web('Excavator_Design_Overview.html')

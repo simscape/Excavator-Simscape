@@ -1,5 +1,9 @@
-%% Excavator Design Solution in Simscape: BOF, TOF Calculation
+%% Excavator Design with Simscape: BOF, TOF Calculation
 % 
+% <<Excavator_BOF_TOF_Overview_Image.png>>
+%
+% (<matlab:web('Excavator_Design_Overview.html') return to Excavator Design Overview>)
+%
 % This app enables you to calculate the Break Out Force (BOF) and Tear Out
 % Force (TOF) per standard ISO 6015:2006 "Earth-moving machinery --
 % Hydraulic excavators and backhoe loaders -- Methods of determing tool

@@ -1,4 +1,4 @@
-# **Excavator Design Solution in Simscape&trade;**
+# **Excavator Design with Simscape&trade;**
 Copyright 2022 The MathWorks, Inc.
 
 This example models an excavator with hydraulic actuation of the swing motor and cylinders for the boom, stick and bucket.  A MATLAB App enables you to explore the mechanical and hydraulic design space to calculate digging and lifting forces according to international standards.

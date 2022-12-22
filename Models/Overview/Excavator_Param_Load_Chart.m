@@ -1,5 +1,9 @@
-%% Excavator Design Solution in Simscape: Load Chart Calculation
+%% Excavator Design with Simscape: Load Chart Calculation
 % 
+% <<Excavator_Load_Chart_Overview_Image.png>>
+%
+% (<matlab:web('Excavator_Design_Overview.html') return to Excavator Design Overview>)
+%
 % This app enables you to create a load chart for a given excavator design.
 % The load chart calculation is performed using a minimal set of parameters
 % to enable design space exploration.
@@ -66,7 +70,7 @@
 % <<Excavator_LoadChart_UI_Calc.png>>
 %
 
-%% Load Chart Test, Pressure Settings A
+%% Load Chart Test, Design A
 %
 % Generating the load chart can be automated using MATLAB commands.  The
 % MATLAB code below creates a load chart for Design A.
@@ -95,6 +99,16 @@ qBucketSet = linspace(90,60,3);   % deg
 
 Excavator_LoadChart_Create(qBoomSet,qStickSet,qBucketSet,...
     mdl_LoadChart_setup,mdl_LoadChart_calc,true);
+
+%% Load Capacity Test, Design A, Pin Loads
+%
+% In this test we calculate and plot the pin loads and cylinder pressures
+% for one of the positions of the load capacity test.
+
+Excavator_Test_Scenario_Select('Lift',mdl_LoadChart_setup,mdl_LoadChart_calc);
+simOut = sim(mdl_LoadChart_calc);
+[fLoad,test_type,pBoom,pStick,pBucket,pinForces]= Excavator_simlogToBOFTOF(simOut.logsout);
+Excavator_BOFTOFLoad_plot(ExcvGlobal,fLoad,test_type,pBoom,pStick,pBucket,pinForces);
 
 %% Load Chart Test, Design B
 %
