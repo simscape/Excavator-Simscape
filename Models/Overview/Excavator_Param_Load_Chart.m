@@ -1,4 +1,4 @@
-%% Excavator Design with Simscape: Load Chart Calculation
+%% Excavator Design with Simscape(TM): Load Chart Calculation
 % 
 % <<Excavator_Load_Chart_Overview_Image.png>>
 %
@@ -21,7 +21,9 @@
 % to determine the lift capacity at each of those points, including the
 % effects of gravity. The resulting plot will be shown in the app.
 %
-% Copyright 2022 The MathWorks, Inc.
+% <matlab:Excavator_Design_app_run Open App for Calculating BOF, TOF, and Load Capacity>
+%
+% Copyright 2022-2023 The MathWorks, Inc.
 
 %% Excavator Design App: Define Pin Locations
 %

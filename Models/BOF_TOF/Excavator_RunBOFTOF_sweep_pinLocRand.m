@@ -1,5 +1,5 @@
 % Script to sweep pin locations
-% Copyright 2022 The MathWorks, Inc
+% Copyright 2022-2023 The MathWorks, Inc
 
 [~, PinLocTable] = Excavator_Pin_Locations_global('Design A');
 PinLocTableFINISH = PinLocTable;

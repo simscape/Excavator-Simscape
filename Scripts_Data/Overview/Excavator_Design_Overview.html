@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Excavator Design with Simscape</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2022-12-22"><meta name="DC.source" content="Excavator_Design_Overview.m"><style type="text/css">
+      --><title>Excavator Design with Simscape&#8482;</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2023-01-13"><meta name="DC.source" content="Excavator_Design_Overview.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -67,9 +67,9 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Excavator Design with Simscape</h1><p><img vspace="5" hspace="5" src="Excavator_Design_Overview_AnimApp_604x240.png" alt=""> </p><p>This repository contains models and code to help engineers design excavators.</p><div><ul><li><b>Early-stage physical physical design</b> is supported by a static analysis tool parameterized by pin locations.</li><li><b>Integrated testing of physical system and controller</b> is supported by a hydromechanical model of the swing motor, boom, stick and bucket.</li></ul></div><p><b>Design Workflows</b></p><div><ol><li><b><a href="matlab:web('Excavator_Param_BOF_TOF.html')">Calculate digging forces (BOF/TOF) and pin loads</a></b> according to ISO 6015:2016.</li><li><b><a href="matlab:web('Excavator_Param_Load_Chart.html')">Create load chart and calculate pin loads</a></b> at custom arm positions.</li><li><b><a href="matlab:web('Excavator_Complete.html')">Measure dig cycle time and efficiency</a></b> with a hydraulic simulation.</li></ol></div><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2022b</a><br></p></div><!--
+  </style></head><body><div class="content"><h1>Excavator Design with Simscape&#8482;</h1><p><img vspace="5" hspace="5" src="Excavator_Design_Overview_AnimApp_604x240.png" alt=""> </p><p>This repository contains models and code to help engineers design excavators.</p><div><ul><li><b>Early-stage physical physical design</b> is supported by a static analysis tool parameterized by pin locations.</li><li><b>Integrated testing of physical system and controller</b> is supported by a hydromechanical model of the swing motor, boom, stick and bucket.</li></ul></div><p><b>Design Workflows</b></p><div><ol><li><b><a href="matlab:web('Excavator_Param_BOF_TOF.html')">Calculate digging forces (BOF/TOF) and pin loads</a></b> according to ISO 6015:2016.</li><li><b><a href="matlab:web('Excavator_Param_Load_Chart.html')">Create load chart and calculate pin loads</a></b> at custom arm positions.</li><li><b><a href="matlab:web('Excavator_Motion.html')">Estimate required actuator forces</a></b> with a motion simulation.</li><li><b><a href="matlab:web('Excavator_Complete.html')">Measure dig cycle time and efficiency</a></b> with a hydraulic simulation.</li></ol></div><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2022b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
-%% Excavator Design with Simscape
+%% Excavator Design with Simscape(TM)
 %
 % <<Excavator_Design_Overview_AnimApp_604x240.png>>
 % 
@@ -85,6 +85,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 % 
 % # *<matlab:web('Excavator_Param_BOF_TOF.html') Calculate digging forces (BOF/TOF) and pin loads>* according to ISO 6015:2016.
 % # *<matlab:web('Excavator_Param_Load_Chart.html') Create load chart and calculate pin loads>* at custom arm positions.
+% # *<matlab:web('Excavator_Motion.html') Estimate required actuator forces>* with a motion simulation.
 % # *<matlab:web('Excavator_Complete.html') Measure dig cycle time and efficiency>* with a hydraulic simulation.
 % 
 

@@ -1,7 +1,7 @@
 function Excavator_Complete_plot1operatorcmds(varargin) 
 % Code to plot operator commands for Excavator_Complete.slx
 
-% Copyright 2022 The MathWorks, Inc.
+% Copyright 2022-2023 The MathWorks, Inc.
 
 if (nargin==0)
 

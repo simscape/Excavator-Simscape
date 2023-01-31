@@ -10,7 +10,7 @@
 % pressures, and the energy expended are reported in plots for each
 % scenario.
 %
-% Copyright 2022 The MathWorks, Inc.
+% Copyright 2022-2023 The MathWorks, Inc.
 
 %% Model
 clear
@@ -25,71 +25,108 @@ Scenario = Excavator_Test_Scenario_Define;
 open_system(mdl)
 
 %% Swing Left
-Excavator_Test_Scenario_Select('swingLeft')
+activeScenario = 'swingLeft';
+Excavator_Test_Scenario_Select(activeScenario)
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
 Excavator_Complete_plot3pressure
+
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;
 
 %% Swing Right
-Excavator_Test_Scenario_Select('swingRight')
+activeScenario = 'swingRight';
+Excavator_Test_Scenario_Select(activeScenario)
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
 Excavator_Complete_plot3pressure
+
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;
 
 %% Boom Up
-Excavator_Test_Scenario_Select('boomUp')
+activeScenario = 'boomUp';
+Excavator_Test_Scenario_Select(activeScenario)
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
 Excavator_Complete_plot3pressure
+
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;
 
 %% Boom Down
-Excavator_Test_Scenario_Select('boomDown')
+activeScenario = 'boomDown';
+Excavator_Test_Scenario_Select(activeScenario)
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
 Excavator_Complete_plot3pressure
+
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;
 
 %% Stick In
-Excavator_Test_Scenario_Select('stickIn')
+activeScenario = 'stickIn';
+Excavator_Test_Scenario_Select(activeScenario)
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
 Excavator_Complete_plot3pressure
+
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;
 
 %% Stick Out
-Excavator_Test_Scenario_Select('stickOut')
+activeScenario = 'stickOut';
+Excavator_Test_Scenario_Select(activeScenario)
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
 Excavator_Complete_plot3pressure
+
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;
 
 %% Bucket Close
-Excavator_Test_Scenario_Select('bucketClose')
+activeScenario = 'bucketClose';
+Excavator_Test_Scenario_Select(activeScenario)
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
 Excavator_Complete_plot3pressure
+
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;
 
 %% Bucket Open
-Excavator_Test_Scenario_Select('bucketOpen')
+activeScenario = 'bucketOpen';
+Excavator_Test_Scenario_Select(activeScenario)
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
 Excavator_Complete_plot3pressure
 
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;
+
 %% Empty Bucket Dig Cycle
-Excavator_Test_Scenario_Select('emptyBucketDigCycle')
+activeScenario = 'emptyBucketDigCycle';
+Excavator_Test_Scenario_Select(activeScenario);
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
 Excavator_Complete_plot3pressure
 Excavator_Energy_Calc
 
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;
+
 %% Loaded Bucket Dig Cycle
-Excavator_Test_Scenario_Select('loadedBucketDigCycle')
+activeScenario = 'loadedBucketDigCycle';
+Excavator_Test_Scenario_Select(activeScenario);
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
@@ -97,3 +134,5 @@ Excavator_Complete_plot3pressure
 Excavator_Complete_plot4loadsoil
 Excavator_Energy_Calc
 
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;

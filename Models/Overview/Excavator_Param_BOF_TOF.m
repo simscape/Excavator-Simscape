@@ -1,4 +1,4 @@
-%% Excavator Design with Simscape: BOF, TOF Calculation
+%% Excavator Design with Simscape(TM): BOF, TOF Calculation
 % 
 % <<Excavator_BOF_TOF_Overview_Image.png>>
 %
@@ -20,7 +20,9 @@
 % the BOF (or bucket cylinder tool force) and the TOF (or arm cylinder tool
 % force).
 %
-% Copyright 2022 The MathWorks, Inc.
+% <matlab:Excavator_Design_app_run Open App for Calculating BOF, TOF, and Load Capacity>
+%
+% Copyright 2022-2023 The MathWorks, Inc.
 
 
 %% Excavator Design App: Define Pin Locations

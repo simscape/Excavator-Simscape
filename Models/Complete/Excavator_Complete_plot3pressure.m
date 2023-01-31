@@ -1,12 +1,9 @@
 % Code to plot simulation results from Excavator_Complete
 %% Plot Description:
 %
-% The plot below shows the extension of the actuator as the control system
-% attempts to track a reference input.  The Piezo Stack can react much
-% faster than the DC motor but has a limited range.  The control system
-% uses them together to track the reference signal.
+% The plot below shows the pressures in the actuators.
 
-% Copyright 2016-2022 The MathWorks, Inc.
+% Copyright 2016-2023 The MathWorks, Inc.
 
 % Generate new simulation results if they don't exist or if they need to be updated
 %if ~exist('simlog', 'var')) 

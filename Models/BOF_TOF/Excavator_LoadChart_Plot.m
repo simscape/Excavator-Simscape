@@ -1,7 +1,7 @@
 function Excavator_LoadChart_Plot(ExcvGlobal,bucketEdgeXY_set,load_set,varargin)
 % Code to plot load chart
 
-% Copyright 2022 The MathWorks, Inc
+% Copyright 2022-2023 The MathWorks, Inc
 
 % Assume no new figure needed
 createFigure = false;

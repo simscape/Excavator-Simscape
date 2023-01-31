@@ -2,7 +2,7 @@ function BOFTOFPos = Excavator_simlogToBOFTOFPos(simlogData)
 % Function to extract initial configuration from simulation results of
 % setup model.
 
-% Copyright 2022 The MathWorks, Inc
+% Copyright 2022-2023 The MathWorks, Inc
 
 BOFTOFPos.initBoomPistonPos       = simlogData.LeftBoomPistonPos.Data(end); % [mm]
 BOFTOFPos.initStickPistonPos      = simlogData.StickPistonPos.Data(end); % [mm]

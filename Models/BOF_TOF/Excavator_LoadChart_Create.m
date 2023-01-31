@@ -1,7 +1,7 @@
 function Excavator_LoadChart_Create(qBoomSet,qStickSet,qBucketSet,setupMdl,calcMdl,useFastRestart,varargin)
 % Code to create load chart based on simulations
 
-% Copyright 2022 The MathWorks, Inc
+% Copyright 2022-2023 The MathWorks, Inc
 
 % If an axis handle has been passed, plot on that axis
 % Else, the standard figure will be used

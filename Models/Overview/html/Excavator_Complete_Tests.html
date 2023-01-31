@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Excavator with Hydraulic System, Test Scenarios</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2022-10-06"><meta name="DC.source" content="Excavator_Complete_Tests.m"><style type="text/css">
+      --><title>Excavator with Hydraulic System, Test Scenarios</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2023-01-13"><meta name="DC.source" content="Excavator_Complete_Tests.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -67,70 +67,24 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Excavator with Hydraulic System, Test Scenarios</h1><!--introduction--><p>This example models an excavator with complete hydraulic system to power cylinders for the boom, stick, and bucket, as well as the swing motor to orient the excavator. It can be used to measure the duration and efficiency of a dig cycle.</p><p>The results below are from tests that exercise each actuator is exercised individually, and then a full dig cycle is completed. Positions, pressures, and the energy expended are reported in plots for each scenario.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Model</a></li><li><a href="#2">Swing Left</a></li><li><a href="#3">Swing Right</a></li><li><a href="#4">Boom Up</a></li><li><a href="#5">Boom Down</a></li><li><a href="#6">Stick In</a></li><li><a href="#7">Stick Out</a></li><li><a href="#8">Bucket Close</a></li><li><a href="#9">Bucket Open</a></li><li><a href="#10">Empty Bucket Dig Cycle</a></li><li><a href="#11">Loaded Bucket Dig Cycle</a></li></ul></div><h2 id="1">Model</h2><pre class="codeinput">clear
-mdl = <span class="string">'Excavator_Complete'</span>;
-mdl_BOFTOF_setup = <span class="string">'Excavator_Param_BOFTOF_Setup'</span>;
-mdl_BOFTOF_calc  = <span class="string">'Excavator_Param_BOFTOF_Calc'</span>;
-
-Excavator_Init_Params
-Excavator_System_params
-
-Scenario = Excavator_Test_Scenario_Define;
-open_system(mdl)
-</pre><img vspace="5" hspace="5" src="Excavator_Complete_Tests_01.png" alt=""> <h2 id="2">Swing Left</h2><pre class="codeinput">Excavator_Test_Scenario_Select(<span class="string">'swingLeft'</span>)
-simOut = sim(mdl);
-Excavator_Complete_plot1operatorcmds
-Excavator_Complete_plot2position
-Excavator_Complete_plot3pressure
-</pre><img vspace="5" hspace="5" src="Excavator_Complete_Tests_02.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_03.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_04.png" alt=""> <h2 id="3">Swing Right</h2><pre class="codeinput">Excavator_Test_Scenario_Select(<span class="string">'swingRight'</span>)
-simOut = sim(mdl);
-Excavator_Complete_plot1operatorcmds
-Excavator_Complete_plot2position
-Excavator_Complete_plot3pressure
-</pre><img vspace="5" hspace="5" src="Excavator_Complete_Tests_05.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_06.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_07.png" alt=""> <h2 id="4">Boom Up</h2><pre class="codeinput">Excavator_Test_Scenario_Select(<span class="string">'boomUp'</span>)
-simOut = sim(mdl);
-Excavator_Complete_plot1operatorcmds
-Excavator_Complete_plot2position
-Excavator_Complete_plot3pressure
-</pre><img vspace="5" hspace="5" src="Excavator_Complete_Tests_08.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_09.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_10.png" alt=""> <h2 id="5">Boom Down</h2><pre class="codeinput">Excavator_Test_Scenario_Select(<span class="string">'boomDown'</span>)
-simOut = sim(mdl);
-Excavator_Complete_plot1operatorcmds
-Excavator_Complete_plot2position
-Excavator_Complete_plot3pressure
-</pre><img vspace="5" hspace="5" src="Excavator_Complete_Tests_11.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_12.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_13.png" alt=""> <h2 id="6">Stick In</h2><pre class="codeinput">Excavator_Test_Scenario_Select(<span class="string">'stickIn'</span>)
-simOut = sim(mdl);
-Excavator_Complete_plot1operatorcmds
-Excavator_Complete_plot2position
-Excavator_Complete_plot3pressure
-</pre><img vspace="5" hspace="5" src="Excavator_Complete_Tests_14.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_15.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_16.png" alt=""> <h2 id="7">Stick Out</h2><pre class="codeinput">Excavator_Test_Scenario_Select(<span class="string">'stickOut'</span>)
-simOut = sim(mdl);
-Excavator_Complete_plot1operatorcmds
-Excavator_Complete_plot2position
-Excavator_Complete_plot3pressure
-</pre><img vspace="5" hspace="5" src="Excavator_Complete_Tests_17.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_18.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_19.png" alt=""> <h2 id="8">Bucket Close</h2><pre class="codeinput">Excavator_Test_Scenario_Select(<span class="string">'bucketClose'</span>)
-simOut = sim(mdl);
-Excavator_Complete_plot1operatorcmds
-Excavator_Complete_plot2position
-Excavator_Complete_plot3pressure
-</pre><img vspace="5" hspace="5" src="Excavator_Complete_Tests_20.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_21.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_22.png" alt=""> <h2 id="9">Bucket Open</h2><pre class="codeinput">Excavator_Test_Scenario_Select(<span class="string">'bucketOpen'</span>)
-simOut = sim(mdl);
-Excavator_Complete_plot1operatorcmds
-Excavator_Complete_plot2position
-Excavator_Complete_plot3pressure
-</pre><img vspace="5" hspace="5" src="Excavator_Complete_Tests_23.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_24.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_25.png" alt=""> <h2 id="10">Empty Bucket Dig Cycle</h2><pre class="codeinput">Excavator_Test_Scenario_Select(<span class="string">'emptyBucketDigCycle'</span>)
-simOut = sim(mdl);
-Excavator_Complete_plot1operatorcmds
-Excavator_Complete_plot2position
-Excavator_Complete_plot3pressure
-Excavator_Energy_Calc
-</pre><img vspace="5" hspace="5" src="Excavator_Complete_Tests_26.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_27.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_28.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_29.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_30.png" alt=""> <h2 id="11">Loaded Bucket Dig Cycle</h2><pre class="codeinput">Excavator_Test_Scenario_Select(<span class="string">'loadedBucketDigCycle'</span>)
-simOut = sim(mdl);
-Excavator_Complete_plot1operatorcmds
-Excavator_Complete_plot2position
-Excavator_Complete_plot3pressure
-Excavator_Complete_plot4loadsoil
-Excavator_Energy_Calc
-</pre><img vspace="5" hspace="5" src="Excavator_Complete_Tests_31.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_32.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_33.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_34.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_35.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_36.png" alt=""> <p class="footer">Copyright 2022 The MathWorks, Inc.<br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2022b</a><br></p></div><!--
+  </style></head><body><div class="content"><h1>Excavator with Hydraulic System, Test Scenarios</h1><!--introduction--><p>This example models an excavator with complete hydraulic system to power cylinders for the boom, stick, and bucket, as well as the swing motor to orient the excavator. It can be used to measure the duration and efficiency of a dig cycle.</p><p>The results below are from tests that exercise each actuator is exercised individually, and then a full dig cycle is completed. Positions, pressures, and the energy expended are reported in plots for each scenario.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Model</a></li><li><a href="#2">Swing Left</a></li><li><a href="#3">Swing Right</a></li><li><a href="#4">Boom Up</a></li><li><a href="#5">Boom Down</a></li><li><a href="#6">Stick In</a></li><li><a href="#7">Stick Out</a></li><li><a href="#8">Bucket Close</a></li><li><a href="#9">Bucket Open</a></li><li><a href="#10">Empty Bucket Dig Cycle</a></li><li><a href="#11">Loaded Bucket Dig Cycle</a></li></ul></div><h2 id="1">Model</h2><img vspace="5" hspace="5" src="Excavator_Complete_Tests_01.png" alt=""> <h2 id="2">Swing Left</h2><img vspace="5" hspace="5" src="Excavator_Complete_Tests_02.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_03.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_04.png" alt=""> <h2 id="3">Swing Right</h2><img vspace="5" hspace="5" src="Excavator_Complete_Tests_05.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_06.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_07.png" alt=""> <h2 id="4">Boom Up</h2><img vspace="5" hspace="5" src="Excavator_Complete_Tests_08.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_09.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_10.png" alt=""> <h2 id="5">Boom Down</h2><img vspace="5" hspace="5" src="Excavator_Complete_Tests_11.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_12.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_13.png" alt=""> <h2 id="6">Stick In</h2><img vspace="5" hspace="5" src="Excavator_Complete_Tests_14.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_15.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_16.png" alt=""> <h2 id="7">Stick Out</h2><img vspace="5" hspace="5" src="Excavator_Complete_Tests_17.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_18.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_19.png" alt=""> <h2 id="8">Bucket Close</h2><img vspace="5" hspace="5" src="Excavator_Complete_Tests_20.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_21.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_22.png" alt=""> <h2 id="9">Bucket Open</h2><pre class="codeoutput">Warning: Solver is encountering difficulty in simulating model '&lt;a
+href="matlab:open_system ('Excavator_Complete')"&gt;Excavator_Complete&lt;/a&gt;' at
+time 0.0010402814436370506. Simulink will continue to simulate with warnings.
+Please check the model for errors. 
+Warning: Solver was unable to reduce the step size without violating the
+minimum step size value of 3.69582E-18 for 10 consecutive times at time
+0.00104028. This usually may be caused by violating algebraic constraints in
+the differential-algebraic system or by the high stiffness of the system. Try
+tightening the error tolerances, and/or the tolerances for computing consistent
+conditions. If the problem persists, please check the system or increase the
+solver &lt;a
+href="matlab:configset.internal.open('Excavator_Complete','MaxConsecutiveMinStep');"&gt;Number
+of consecutive min steps&lt;/a&gt; violation parameter.
+Suggested Actions:
+    &#8226; Open Solver Profiler to explore such issues - &lt;a
+    href="matlab:solverprofiler.launchSolverProfiler"&gt;Open&lt;/a&gt;
+ 
+</pre><img vspace="5" hspace="5" src="Excavator_Complete_Tests_23.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_24.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_25.png" alt=""> <h2 id="10">Empty Bucket Dig Cycle</h2><img vspace="5" hspace="5" src="Excavator_Complete_Tests_26.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_27.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_28.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_29.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_30.png" alt=""> <h2 id="11">Loaded Bucket Dig Cycle</h2><img vspace="5" hspace="5" src="Excavator_Complete_Tests_31.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_32.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_33.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_34.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_35.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Complete_Tests_36.png" alt=""> <p class="footer">Copyright 2022-2023 The MathWorks, Inc.<br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2022b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Excavator with Hydraulic System, Test Scenarios
 % 
@@ -144,7 +98,7 @@ Excavator_Energy_Calc
 % pressures, and the energy expended are reported in plots for each
 % scenario.
 %
-% Copyright 2022 The MathWorks, Inc.
+% Copyright 2022-2023 The MathWorks, Inc.
 
 %% Model
 clear
@@ -159,71 +113,108 @@ Scenario = Excavator_Test_Scenario_Define;
 open_system(mdl)
 
 %% Swing Left
-Excavator_Test_Scenario_Select('swingLeft')
+activeScenario = 'swingLeft';
+Excavator_Test_Scenario_Select(activeScenario)
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
 Excavator_Complete_plot3pressure
+
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;
 
 %% Swing Right
-Excavator_Test_Scenario_Select('swingRight')
+activeScenario = 'swingRight';
+Excavator_Test_Scenario_Select(activeScenario)
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
 Excavator_Complete_plot3pressure
+
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;
 
 %% Boom Up
-Excavator_Test_Scenario_Select('boomUp')
+activeScenario = 'boomUp';
+Excavator_Test_Scenario_Select(activeScenario)
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
 Excavator_Complete_plot3pressure
+
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;
 
 %% Boom Down
-Excavator_Test_Scenario_Select('boomDown')
+activeScenario = 'boomDown';
+Excavator_Test_Scenario_Select(activeScenario)
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
 Excavator_Complete_plot3pressure
+
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;
 
 %% Stick In
-Excavator_Test_Scenario_Select('stickIn')
+activeScenario = 'stickIn';
+Excavator_Test_Scenario_Select(activeScenario)
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
 Excavator_Complete_plot3pressure
+
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;
 
 %% Stick Out
-Excavator_Test_Scenario_Select('stickOut')
+activeScenario = 'stickOut';
+Excavator_Test_Scenario_Select(activeScenario)
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
 Excavator_Complete_plot3pressure
+
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;
 
 %% Bucket Close
-Excavator_Test_Scenario_Select('bucketClose')
+activeScenario = 'bucketClose';
+Excavator_Test_Scenario_Select(activeScenario)
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
 Excavator_Complete_plot3pressure
+
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;
 
 %% Bucket Open
-Excavator_Test_Scenario_Select('bucketOpen')
+activeScenario = 'bucketOpen';
+Excavator_Test_Scenario_Select(activeScenario)
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
 Excavator_Complete_plot3pressure
 
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;
+
 %% Empty Bucket Dig Cycle
-Excavator_Test_Scenario_Select('emptyBucketDigCycle')
+activeScenario = 'emptyBucketDigCycle';
+Excavator_Test_Scenario_Select(activeScenario);
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
 Excavator_Complete_plot3pressure
 Excavator_Energy_Calc
 
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;
+
 %% Loaded Bucket Dig Cycle
-Excavator_Test_Scenario_Select('loadedBucketDigCycle')
+activeScenario = 'loadedBucketDigCycle';
+Excavator_Test_Scenario_Select(activeScenario);
 simOut = sim(mdl);
 Excavator_Complete_plot1operatorcmds
 Excavator_Complete_plot2position
@@ -231,6 +222,8 @@ Excavator_Complete_plot3pressure
 Excavator_Complete_plot4loadsoil
 Excavator_Energy_Calc
 
+Excavator_Motion_Test_Assemble
+ScenarioMotion.(activeScenario) = activeTestPos;
 
 ##### SOURCE END #####
 --></body></html>

@@ -1,4 +1,4 @@
-%% Excavator Design with Simscape: Hydromechanical Model with Controls
+%% Excavator Design with Simscape(TM): Hydromechanical Model with Controls
 % 
 % <<Excavator_Complete_Overview_Image.png>>
 %
@@ -9,7 +9,9 @@
 % orient the excavator. It can be used to measure the duration and
 % efficiency of a dig cycle.
 %
-% Copyright 2022 The MathWorks, Inc.
+% <matlab:open_system('Excavator_Complete') Open Hydromechanical Model with Controls>
+%
+% Copyright 2022-2023 The MathWorks, Inc.
 
 %% Model
 open_system('Excavator_Complete')

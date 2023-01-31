@@ -1,7 +1,7 @@
 function [xy_boomArm, xy_boomSticklink] = Extr_Data_Excv_Boom(Boom)
 % Function to create extrusion for boom from pin locations
 
-% Copyright 2022 The MathWorks, Inc
+% Copyright 2022-2023 The MathWorks, Inc
 
 A = [0 0];
 B = Boom.ToBoomCyl;

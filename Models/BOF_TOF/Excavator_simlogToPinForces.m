@@ -1,7 +1,7 @@
 function PinForces = Excavator_simlogToPinForces(logsoutData)
 % Function to extract pin forces from simulation results.
 
-% Copyright 2022 The MathWorks, Inc
+% Copyright 2022-2023 The MathWorks, Inc
 
 pinForcesLog = logsoutData.get('Pin_Forces');
 pinNames = sort(fieldnames(pinForcesLog.Values));

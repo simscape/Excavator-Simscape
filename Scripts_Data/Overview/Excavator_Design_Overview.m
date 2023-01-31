@@ -1,4 +1,4 @@
-%% Excavator Design with Simscape
+%% Excavator Design with Simscape(TM)
 %
 % <<Excavator_Design_Overview_AnimApp_604x240.png>>
 % 
@@ -14,6 +14,7 @@
 % 
 % # *<matlab:web('Excavator_Param_BOF_TOF.html') Calculate digging forces (BOF/TOF) and pin loads>* according to ISO 6015:2016.
 % # *<matlab:web('Excavator_Param_Load_Chart.html') Create load chart and calculate pin loads>* at custom arm positions.
+% # *<matlab:web('Excavator_Motion.html') Estimate required actuator forces>* with a motion simulation.
 % # *<matlab:web('Excavator_Complete.html') Measure dig cycle time and efficiency>* with a hydraulic simulation.
 % 
 

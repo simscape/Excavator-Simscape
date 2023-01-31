@@ -1,7 +1,7 @@
 function [xy_stickArm, xy_stickBucketlink] = Extr_Data_Excv_Stick(Stick)
 % Function to create extrusion for stick from pin locations
 
-% Copyright 2022 The MathWorks, Inc
+% Copyright 2022-2023 The MathWorks, Inc
 
 A = Stick.ToBucket;
 B = [0 0];

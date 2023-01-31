@@ -1,7 +1,7 @@
 function [fLoad,test_type,pBoom,pStick,pBucket,PinForces] = Excavator_RunBOFTOF(setup_mdl,calc_mdl,testType)
 % Code to run BOF, TOF, or Load Capacity test
 
-% Copyright 2022 The MathWorks, Inc
+% Copyright 2022-2023 The MathWorks, Inc
 
 if(endsWith(setup_mdl,'.slx'))
     setup_mdl = setup_mdl(1:end-4);

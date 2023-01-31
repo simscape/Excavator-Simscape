@@ -2,7 +2,7 @@ function Excavator_global = Excavator_Pin_Locations_simlogToGlobal(simlogData)
 % Function to extract pin locations relative to global frame from
 % simulation results
 
-% Copyright 2022 The MathWorks, Inc
+% Copyright 2022-2023 The MathWorks, Inc
 
 Boom.ToBoomCyl    = simlogData.Boom.B1.Data;
 Boom.ToStickCyl   = simlogData.Boom.B2.Data;
