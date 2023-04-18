@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Excavator Design with Simscape&#8482;: Load Chart Calculation</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2023-01-31"><meta name="DC.source" content="Excavator_Param_Load_Chart.m"><style type="text/css">
+      --><title>Excavator Design with Simscape&#8482;: Load Chart Calculation</title><meta name="generator" content="MATLAB 9.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2023-03-18"><meta name="DC.source" content="Excavator_Param_Load_Chart.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -91,40 +91,362 @@ qBucketSet = linspace(90,60,3);   <span class="comment">% deg</span>
 
 Excavator_LoadChart_Create(qBoomSet,qStickSet,qBucketSet,<span class="keyword">...</span>
     mdl_LoadChart_setup,mdl_LoadChart_calc,true);
-</pre><pre class="codeoutput">[31-Jan-2023 19:49:05] Running simulations...
-[31-Jan-2023 19:49:12] Completed 1 of 16 simulation runs
-[31-Jan-2023 19:49:13] Completed 2 of 16 simulation runs
-[31-Jan-2023 19:49:15] Completed 3 of 16 simulation runs
-[31-Jan-2023 19:49:16] Completed 4 of 16 simulation runs
-[31-Jan-2023 19:49:18] Completed 5 of 16 simulation runs
-[31-Jan-2023 19:49:19] Completed 6 of 16 simulation runs
-[31-Jan-2023 19:49:21] Completed 7 of 16 simulation runs
-[31-Jan-2023 19:49:23] Completed 8 of 16 simulation runs
-[31-Jan-2023 19:49:24] Completed 9 of 16 simulation runs
-[31-Jan-2023 19:49:26] Completed 10 of 16 simulation runs
-[31-Jan-2023 19:49:28] Completed 11 of 16 simulation runs
-[31-Jan-2023 19:49:29] Completed 12 of 16 simulation runs
-[31-Jan-2023 19:49:31] Completed 13 of 16 simulation runs
-[31-Jan-2023 19:49:32] Completed 14 of 16 simulation runs
-[31-Jan-2023 19:49:34] Completed 15 of 16 simulation runs
-[31-Jan-2023 19:49:35] Completed 16 of 16 simulation runs
-[31-Jan-2023 19:49:40] Running simulations...
-[31-Jan-2023 19:49:46] Completed 1 of 16 simulation runs
-[31-Jan-2023 19:49:48] Completed 2 of 16 simulation runs
-[31-Jan-2023 19:49:50] Completed 3 of 16 simulation runs
-[31-Jan-2023 19:49:51] Completed 4 of 16 simulation runs
-[31-Jan-2023 19:49:53] Completed 5 of 16 simulation runs
-[31-Jan-2023 19:49:54] Completed 6 of 16 simulation runs
-[31-Jan-2023 19:49:56] Completed 7 of 16 simulation runs
-[31-Jan-2023 19:49:58] Completed 8 of 16 simulation runs
-[31-Jan-2023 19:49:59] Completed 9 of 16 simulation runs
-[31-Jan-2023 19:50:01] Completed 10 of 16 simulation runs
-[31-Jan-2023 19:50:02] Completed 11 of 16 simulation runs
-[31-Jan-2023 19:50:04] Completed 12 of 16 simulation runs
-[31-Jan-2023 19:50:05] Completed 13 of 16 simulation runs
-[31-Jan-2023 19:50:07] Completed 14 of 16 simulation runs
-[31-Jan-2023 19:50:09] Completed 15 of 16 simulation runs
-[31-Jan-2023 19:50:11] Completed 16 of 16 simulation runs
+</pre><pre class="codeoutput">[18-Mar-2023 09:43:00] Running simulations...
+[18-Mar-2023 09:43:04] Completed 1 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:43:05] Completed 2 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:43:07] Completed 3 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:43:08] Completed 4 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:43:10] Completed 5 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:43:11] Completed 6 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:43:12] Completed 7 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:43:14] Completed 8 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:43:15] Completed 9 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:43:17] Completed 10 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:43:18] Completed 11 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:43:19] Completed 12 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:43:21] Completed 13 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:43:22] Completed 14 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Bucket
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Bucket Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Bucket
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Bucket Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might
+be because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:43:24] Completed 15 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Bucket
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Bucket Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Bucket
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Bucket Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might
+be because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:43:25] Completed 16 of 16 simulation runs
+[18-Mar-2023 09:43:28] Running simulations...
+[18-Mar-2023 09:43:32] Completed 1 of 16 simulation runs
+[18-Mar-2023 09:43:34] Completed 2 of 16 simulation runs
+[18-Mar-2023 09:43:35] Completed 3 of 16 simulation runs
+[18-Mar-2023 09:43:36] Completed 4 of 16 simulation runs
+[18-Mar-2023 09:43:38] Completed 5 of 16 simulation runs
+[18-Mar-2023 09:43:39] Completed 6 of 16 simulation runs
+[18-Mar-2023 09:43:40] Completed 7 of 16 simulation runs
+[18-Mar-2023 09:43:42] Completed 8 of 16 simulation runs
+[18-Mar-2023 09:43:43] Completed 9 of 16 simulation runs
+[18-Mar-2023 09:43:44] Completed 10 of 16 simulation runs
+[18-Mar-2023 09:43:45] Completed 11 of 16 simulation runs
+[18-Mar-2023 09:43:47] Completed 12 of 16 simulation runs
+[18-Mar-2023 09:43:48] Completed 13 of 16 simulation runs
+[18-Mar-2023 09:43:50] Completed 14 of 16 simulation runs
+[18-Mar-2023 09:43:51] Completed 15 of 16 simulation runs
+[18-Mar-2023 09:43:52] Completed 16 of 16 simulation runs
 </pre><img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_01.png" alt=""> <h2 id="4">Load Capacity Test, Design A, Pin Loads</h2><p>In this test we calculate and plot the pin loads and cylinder pressures for one of the positions of the load capacity test.</p><pre class="codeinput">Excavator_Test_Scenario_Select(<span class="string">'Lift'</span>,mdl_LoadChart_setup,mdl_LoadChart_calc);
 simOut = sim(mdl_LoadChart_calc);
 [fLoad,test_type,pBoom,pStick,pBucket,pinForces]= Excavator_simlogToBOFTOF(simOut.logsout);
@@ -135,80 +457,724 @@ ExcvLocal  = Excavator_Pin_Locations_global2local(ExcvGlobal);
 
 Excavator_LoadChart_Create(qBoomSet,qStickSet,qBucketSet,<span class="keyword">...</span>
     mdl_LoadChart_setup,mdl_LoadChart_calc,true);
-</pre><pre class="codeoutput">[31-Jan-2023 19:50:44] Running simulations...
-[31-Jan-2023 19:50:49] Completed 1 of 16 simulation runs
-[31-Jan-2023 19:50:51] Completed 2 of 16 simulation runs
-[31-Jan-2023 19:50:52] Completed 3 of 16 simulation runs
-[31-Jan-2023 19:50:54] Completed 4 of 16 simulation runs
-[31-Jan-2023 19:50:56] Completed 5 of 16 simulation runs
-[31-Jan-2023 19:50:57] Completed 6 of 16 simulation runs
-[31-Jan-2023 19:50:59] Completed 7 of 16 simulation runs
-[31-Jan-2023 19:51:01] Completed 8 of 16 simulation runs
-[31-Jan-2023 19:51:02] Completed 9 of 16 simulation runs
-[31-Jan-2023 19:51:04] Completed 10 of 16 simulation runs
-[31-Jan-2023 19:51:05] Completed 11 of 16 simulation runs
-[31-Jan-2023 19:51:07] Completed 12 of 16 simulation runs
-[31-Jan-2023 19:51:08] Completed 13 of 16 simulation runs
-[31-Jan-2023 19:51:10] Completed 14 of 16 simulation runs
-[31-Jan-2023 19:51:12] Completed 15 of 16 simulation runs
-[31-Jan-2023 19:51:13] Completed 16 of 16 simulation runs
-[31-Jan-2023 19:51:19] Running simulations...
-[31-Jan-2023 19:51:25] Completed 1 of 16 simulation runs
-[31-Jan-2023 19:51:27] Completed 2 of 16 simulation runs
-[31-Jan-2023 19:51:28] Completed 3 of 16 simulation runs
-[31-Jan-2023 19:51:30] Completed 4 of 16 simulation runs
-[31-Jan-2023 19:51:31] Completed 5 of 16 simulation runs
-[31-Jan-2023 19:51:33] Completed 6 of 16 simulation runs
-[31-Jan-2023 19:51:34] Completed 7 of 16 simulation runs
-[31-Jan-2023 19:51:35] Completed 8 of 16 simulation runs
-[31-Jan-2023 19:51:37] Completed 9 of 16 simulation runs
-[31-Jan-2023 19:51:38] Completed 10 of 16 simulation runs
-[31-Jan-2023 19:51:40] Completed 11 of 16 simulation runs
-[31-Jan-2023 19:51:42] Completed 12 of 16 simulation runs
-[31-Jan-2023 19:51:43] Completed 13 of 16 simulation runs
-[31-Jan-2023 19:51:45] Completed 14 of 16 simulation runs
-[31-Jan-2023 19:51:47] Completed 15 of 16 simulation runs
-[31-Jan-2023 19:51:48] Completed 16 of 16 simulation runs
+</pre><pre class="codeoutput">[18-Mar-2023 09:44:15] Running simulations...
+[18-Mar-2023 09:44:19] Completed 1 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:44:20] Completed 2 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:44:22] Completed 3 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:44:23] Completed 4 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:44:24] Completed 5 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:44:26] Completed 6 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:44:27] Completed 7 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:44:28] Completed 8 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:44:30] Completed 9 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:44:31] Completed 10 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:44:32] Completed 11 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:44:34] Completed 12 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:44:35] Completed 13 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:44:37] Completed 14 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Bucket
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Bucket Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Bucket
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Bucket Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might
+be because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:44:38] Completed 15 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Bucket
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Bucket Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Bucket
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Bucket Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might
+be because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:44:39] Completed 16 of 16 simulation runs
+[18-Mar-2023 09:44:43] Running simulations...
+[18-Mar-2023 09:44:46] Completed 1 of 16 simulation runs
+[18-Mar-2023 09:44:48] Completed 2 of 16 simulation runs
+[18-Mar-2023 09:44:49] Completed 3 of 16 simulation runs
+[18-Mar-2023 09:44:50] Completed 4 of 16 simulation runs
+[18-Mar-2023 09:44:51] Completed 5 of 16 simulation runs
+[18-Mar-2023 09:44:53] Completed 6 of 16 simulation runs
+[18-Mar-2023 09:44:54] Completed 7 of 16 simulation runs
+[18-Mar-2023 09:44:55] Completed 8 of 16 simulation runs
+[18-Mar-2023 09:44:57] Completed 9 of 16 simulation runs
+[18-Mar-2023 09:44:58] Completed 10 of 16 simulation runs
+[18-Mar-2023 09:44:59] Completed 11 of 16 simulation runs
+[18-Mar-2023 09:45:01] Completed 12 of 16 simulation runs
+[18-Mar-2023 09:45:02] Completed 13 of 16 simulation runs
+[18-Mar-2023 09:45:03] Completed 14 of 16 simulation runs
+[18-Mar-2023 09:45:05] Completed 15 of 16 simulation runs
+[18-Mar-2023 09:45:06] Completed 16 of 16 simulation runs
 </pre><img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_03.png" alt=""> <h2 id="6">Load Chart Test, Design B, Higher Pressure Settings</h2><p>In this test we increase the pressure settings to see the effect on the load chart.</p><pre class="codeinput">forceTestMaxActiveCylPr   = 400; <span class="comment">% bar, Max pressure boom cylinder</span>
 forceTestMaxReactiveCylPr = 450; <span class="comment">% bar, Max pressure stick and bucket cylinders</span>
 
 Excavator_LoadChart_Create(qBoomSet,qStickSet,qBucketSet,<span class="keyword">...</span>
     mdl_LoadChart_setup,mdl_LoadChart_calc,true);
-</pre><pre class="codeoutput">[31-Jan-2023 19:52:02] Running simulations...
-[31-Jan-2023 19:52:07] Completed 1 of 16 simulation runs
-[31-Jan-2023 19:52:08] Completed 2 of 16 simulation runs
-[31-Jan-2023 19:52:10] Completed 3 of 16 simulation runs
-[31-Jan-2023 19:52:11] Completed 4 of 16 simulation runs
-[31-Jan-2023 19:52:13] Completed 5 of 16 simulation runs
-[31-Jan-2023 19:52:14] Completed 6 of 16 simulation runs
-[31-Jan-2023 19:52:16] Completed 7 of 16 simulation runs
-[31-Jan-2023 19:52:17] Completed 8 of 16 simulation runs
-[31-Jan-2023 19:52:19] Completed 9 of 16 simulation runs
-[31-Jan-2023 19:52:21] Completed 10 of 16 simulation runs
-[31-Jan-2023 19:52:22] Completed 11 of 16 simulation runs
-[31-Jan-2023 19:52:24] Completed 12 of 16 simulation runs
-[31-Jan-2023 19:52:26] Completed 13 of 16 simulation runs
-[31-Jan-2023 19:52:28] Completed 14 of 16 simulation runs
-[31-Jan-2023 19:52:29] Completed 15 of 16 simulation runs
-[31-Jan-2023 19:52:31] Completed 16 of 16 simulation runs
-[31-Jan-2023 19:52:36] Running simulations...
-[31-Jan-2023 19:52:45] Completed 1 of 16 simulation runs
-[31-Jan-2023 19:52:48] Completed 2 of 16 simulation runs
-[31-Jan-2023 19:52:50] Completed 3 of 16 simulation runs
-[31-Jan-2023 19:52:52] Completed 4 of 16 simulation runs
-[31-Jan-2023 19:52:54] Completed 5 of 16 simulation runs
-[31-Jan-2023 19:52:56] Completed 6 of 16 simulation runs
-[31-Jan-2023 19:52:59] Completed 7 of 16 simulation runs
-[31-Jan-2023 19:53:01] Completed 8 of 16 simulation runs
-[31-Jan-2023 19:53:03] Completed 9 of 16 simulation runs
-[31-Jan-2023 19:53:05] Completed 10 of 16 simulation runs
-[31-Jan-2023 19:53:07] Completed 11 of 16 simulation runs
-[31-Jan-2023 19:53:08] Completed 12 of 16 simulation runs
-[31-Jan-2023 19:53:10] Completed 13 of 16 simulation runs
-[31-Jan-2023 19:53:11] Completed 14 of 16 simulation runs
-[31-Jan-2023 19:53:13] Completed 15 of 16 simulation runs
-[31-Jan-2023 19:53:15] Completed 16 of 16 simulation runs
-</pre><img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_04.png" alt=""> <p class="footer">Copyright 2022-2023 The MathWorks, Inc.<br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2022b</a><br></p></div><!--
+</pre><pre class="codeoutput">[18-Mar-2023 09:45:16] Running simulations...
+[18-Mar-2023 09:45:20] Completed 1 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:45:21] Completed 2 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:45:22] Completed 3 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:45:24] Completed 4 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:45:25] Completed 5 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:45:26] Completed 6 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:45:28] Completed 7 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:45:29] Completed 8 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:45:30] Completed 9 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:45:32] Completed 10 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:45:33] Completed 11 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:45:34] Completed 12 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:45:36] Completed 13 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:45:37] Completed 14 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Bucket
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Bucket Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Bucket
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Bucket Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might
+be because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:45:38] Completed 15 of 16 simulation runs
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might be
+because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Boom
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Boom Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Bucket
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Bucket Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Bucket
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Bucket Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might
+be because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter
+'RevolutionAngle' of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Revolved Solid','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Revolved Solid&lt;/a&gt;' during simulation. This might
+be because the value of 'RevolutionAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+Warning: Failed to change the value of the nontunable parameter 'RotationAngle'
+of block '&lt;a href="matlab:open_and_hilite_hyperlink
+('Excavator_Param_BOFTOF_Setup_pct_temp/Angle Constraints/Stick
+Angle/Arc/Transform Arc','error')"&gt;Excavator_Param_BOFTOF_Setup_pct_temp/Angle
+Constraints/Stick Angle/Arc/Transform Arc&lt;/a&gt;' during simulation. This might be
+because the value of 'RotationAngle' is a tunable variable whose value has
+changed. Restart the simulation to use the new value. 
+[18-Mar-2023 09:45:40] Completed 16 of 16 simulation runs
+[18-Mar-2023 09:45:44] Running simulations...
+[18-Mar-2023 09:45:47] Completed 1 of 16 simulation runs
+[18-Mar-2023 09:45:49] Completed 2 of 16 simulation runs
+[18-Mar-2023 09:45:50] Completed 3 of 16 simulation runs
+[18-Mar-2023 09:45:51] Completed 4 of 16 simulation runs
+[18-Mar-2023 09:45:53] Completed 5 of 16 simulation runs
+[18-Mar-2023 09:45:54] Completed 6 of 16 simulation runs
+[18-Mar-2023 09:45:55] Completed 7 of 16 simulation runs
+[18-Mar-2023 09:45:57] Completed 8 of 16 simulation runs
+[18-Mar-2023 09:45:58] Completed 9 of 16 simulation runs
+[18-Mar-2023 09:45:59] Completed 10 of 16 simulation runs
+[18-Mar-2023 09:46:01] Completed 11 of 16 simulation runs
+[18-Mar-2023 09:46:02] Completed 12 of 16 simulation runs
+[18-Mar-2023 09:46:03] Completed 13 of 16 simulation runs
+[18-Mar-2023 09:46:05] Completed 14 of 16 simulation runs
+[18-Mar-2023 09:46:06] Completed 15 of 16 simulation runs
+[18-Mar-2023 09:46:07] Completed 16 of 16 simulation runs
+</pre><img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_04.png" alt=""> <p class="footer">Copyright 2022-2023 The MathWorks, Inc.<br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2023a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Excavator Design with Simscape(TM): Load Chart Calculation
 % 
