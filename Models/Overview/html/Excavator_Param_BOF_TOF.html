@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Excavator Design with Simscape&#8482;: BOF, TOF Calculation</title><meta name="generator" content="MATLAB 9.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2023-03-18"><meta name="DC.source" content="Excavator_Param_BOF_TOF.m"><style type="text/css">
+      --><title>Excavator Design with Simscape&#8482;: BOF, TOF Calculation</title><meta name="generator" content="MATLAB 9.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2023-05-02"><meta name="DC.source" content="Excavator_Param_BOF_TOF.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -67,74 +67,19 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Excavator Design with Simscape&#8482;: BOF, TOF Calculation</h1><!--introduction--><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_Overview_Image.png" alt=""> </p><p>(<a href="matlab:web('Excavator_Design_Overview.html')">return to Excavator Design Overview</a>)</p><p>This app enables you to calculate the Break Out Force (BOF) and Tear Out Force (TOF) per standard ISO 6015:2006 "Earth-moving machinery -- Hydraulic excavators and backhoe loaders -- Methods of determing tool forces."</p><p>You use the app to specify:</p><div><ul><li>Pin locations</li><li>Maximum hydraulic relief pressures</li><li>Cylinder areas</li></ul></div><p>The app will translate these values into the appropriate parameters for a Simscape Multibody model of the excavator and use that model to calculate the BOF (or bucket cylinder tool force) and the TOF (or arm cylinder tool force).</p><p><a href="matlab:Excavator_Design_app_run">Open App for Calculating BOF, TOF, and Load Capacity</a></p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Excavator Design App: Define Pin Locations</a></li><li><a href="#2">Excavator Design App: Calculate Break Out Force (BOF), Tear Out Force (TOF)</a></li><li><a href="#3">BOF Test, Design A</a></li><li><a href="#4">BOF Test, Design B</a></li><li><a href="#5">TOF Test, Design A</a></li><li><a href="#6">TOF Test Design B</a></li></ul></div><h2 id="1">Excavator Design App: Define Pin Locations</h2><p>On the "Design" tab you specify the pin locations in the design position.</p><div><ul><li>Edit the pin locations in the table.</li><li>Press the "Plot Design Position" button to draw the excavator.</li><li>Press the "Model Design Position" button to display the model. This loads the pin locations into the MATLAB workspace.</li></ul></div><p>Pre-saved sets of pin locations can be loaded from Excel.</p><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_UI_Design_Tab.png" alt=""> </p><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_UI_Model_Design_Position.png" alt=""> </p><h2 id="2">Excavator Design App: Calculate Break Out Force (BOF), Tear Out Force (TOF)</h2><p>On the "BOF, TOF" tab you configure the BOF/TOF calculation.</p><div><ul><li>Set the key angles (all 90 degrees per the ISO standard)</li><li>Press "View Position" button to confirm position</li><li>Define maximum pressures for the actuators</li><li>--- For BOF, the active cylinder is the bucket cylinder.</li><li>--- For TOF, the active cylinder is the stick cylinder.</li><li>--- For Load Chart, the active cylinder is the boom cylinder.</li><li>Define cylinder cross-sectional areas.</li><li>Set "Test Type" dropdown to the type of test you wish to run</li><li>Press "Run Test" button</li></ul></div><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_UI_BOFTOF_Tab.png" alt=""> </p><p>The model visualizes the angles specified for the test configuration. The arrows indicate the axes along which the load will be applied.</p><div><ul><li>BOF: Green arrow</li><li>TOF: Orange arrow</li><li>Load Chart: Blue arrow (direction of gravity)</li></ul></div><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_UI_BOF_Setup_allArrows.png" alt=""> </p><p>The arrows in the calculation show the force applied and the forces in each cylinder.  This image shows the BOF test.  During the test,</p><div><ul><li>Gravity is turned off, as defined by the ISO standard</li><li>The cylinders are locked in the specified test position</li><li>The load is increased until one of the cylinders reaches the limit specified in the app.</li></ul></div><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_UI_BOF_Calc.png" alt=""> </p><p>The force on the bucket, cylinder pressures, and pin loads are updated in the respective fields of the UI, and a plot shows their values overlaid on a sketch of the excavator.</p><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_UI_BOFTOF_Tab_Results.png" alt=""> </p><p><img vspace="5" hspace="5" src="Excavator_Param_BOF_TOF_01.png" alt=""> </p><h2 id="3">BOF Test, Design A</h2><p>Calculation of the Break Out Force (BOF) and Tear Out Force (TOF) can be automated using MATLAB commands.  The MATLAB code below determines the BOF and TOF for two different designs.</p><pre class="codeinput">mdl_BOFTOF_setup = <span class="string">'Excavator_Param_BOFTOF_Setup'</span>;
-mdl_BOFTOF_calc  = <span class="string">'Excavator_Param_BOFTOF_Calc'</span>;
-
-Excavator_Init_Params
-Excavator_System_params
-Scenario = Excavator_Test_Scenario_Define;
-
-MPdata = readtable(<span class="string">'Excavator_Pin_Locations_global.xlsx'</span>,<span class="string">'Sheet'</span>,<span class="string">'Design A'</span>,<span class="string">'Range'</span>,<span class="string">'B2:F15'</span>,<span class="string">'VariableNamingRule'</span>,<span class="string">'preserve'</span>);
-ExcvGlobal = Excavator_Pin_Locations_table2struct(MPdata);
-ExcvLocal  = Excavator_Pin_Locations_global2local(ExcvGlobal);
-
-Excavator_Test_Scenario_Select(<span class="string">'BOF'</span>,mdl_BOFTOF_setup,mdl_BOFTOF_calc)
-simOut = sim(mdl_BOFTOF_calc);
-[fLoad,test_type,pBoom,pStick,pBucket,pinForces]= Excavator_simlogToBOFTOF(simOut.logsout);
-disp([test_type <span class="string">' (kN): '</span> num2str(fLoad)]);
-disp([<span class="string">'Boom Cylinder Pressure (bar):   '</span> num2str(pBoom)]);
-disp([<span class="string">'Stick Cylinder Pressure (bar):  '</span> num2str(pStick)]);
-disp([<span class="string">'Bucket Cylinder Pressure (bar): '</span> num2str(pBucket)]);
-Excavator_BOFTOFLoad_plot(ExcvGlobal,fLoad,test_type,pBoom,pStick,pBucket,pinForces);
-</pre><pre class="codeoutput">BOF (kN): 323.8827
+  </style></head><body><div class="content"><h1>Excavator Design with Simscape&#8482;: BOF, TOF Calculation</h1><!--introduction--><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_Overview_Image.png" alt=""> </p><p>(<a href="matlab:web('Excavator_Design_Overview.html')">return to Excavator Design Overview</a>)</p><p>This app enables you to calculate the Break Out Force (BOF) and Tear Out Force (TOF) per standard ISO 6015:2006 "Earth-moving machinery -- Hydraulic excavators and backhoe loaders -- Methods of determing tool forces."</p><p>You use the app to specify:</p><div><ul><li>Pin locations</li><li>Maximum hydraulic relief pressures</li><li>Cylinder areas</li></ul></div><p>The app will translate these values into the appropriate parameters for a Simscape Multibody model of the excavator and use that model to calculate the BOF (or bucket cylinder tool force) and the TOF (or arm cylinder tool force).</p><p><a href="matlab:Excavator_Design_app_run">Open App for Calculating BOF, TOF, and Load Capacity</a></p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Excavator Design App: Define Pin Locations</a></li><li><a href="#2">Excavator Design App: Calculate Break Out Force (BOF), Tear Out Force (TOF)</a></li><li><a href="#3">BOF Test, Design A</a></li><li><a href="#4">BOF Test, Design B</a></li><li><a href="#5">TOF Test, Design A</a></li><li><a href="#6">TOF Test Design B</a></li></ul></div><h2 id="1">Excavator Design App: Define Pin Locations</h2><p>On the "Design" tab you specify the pin locations in the design position.</p><div><ul><li>Edit the pin locations in the table.</li><li>Press the "Plot Design Position" button to draw the excavator.</li><li>Press the "Model Design Position" button to display the model. This loads the pin locations into the MATLAB workspace.</li></ul></div><p>Pre-saved sets of pin locations can be loaded from Excel.</p><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_UI_Design_Tab.png" alt=""> </p><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_UI_Model_Design_Position.png" alt=""> </p><h2 id="2">Excavator Design App: Calculate Break Out Force (BOF), Tear Out Force (TOF)</h2><p>On the "BOF, TOF" tab you configure the BOF/TOF calculation.</p><div><ul><li>Set the key angles (all 90 degrees per the ISO standard)</li><li>Press "View Position" button to confirm position</li><li>Define maximum pressures for the actuators</li><li>--- For BOF, the active cylinder is the bucket cylinder.</li><li>--- For TOF, the active cylinder is the stick cylinder.</li><li>--- For Load Chart, the active cylinder is the boom cylinder.</li><li>Define cylinder cross-sectional areas.</li><li>Set "Test Type" dropdown to the type of test you wish to run</li><li>Press "Run Test" button</li></ul></div><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_UI_BOFTOF_Tab.png" alt=""> </p><p>The model visualizes the angles specified for the test configuration. The arrows indicate the axes along which the load will be applied.</p><div><ul><li>BOF: Green arrow</li><li>TOF: Orange arrow</li><li>Load Chart: Blue arrow (direction of gravity)</li></ul></div><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_UI_BOF_Setup_allArrows.png" alt=""> </p><p>The arrows in the calculation show the force applied and the forces in each cylinder.  This image shows the BOF test.  During the test,</p><div><ul><li>Gravity is turned off, as defined by the ISO standard</li><li>The cylinders are locked in the specified test position</li><li>The load is increased until one of the cylinders reaches the limit specified in the app.</li></ul></div><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_UI_BOF_Calc.png" alt=""> </p><p>The force on the bucket, cylinder pressures, and pin loads are updated in the respective fields of the UI, and a plot shows their values overlaid on a sketch of the excavator.</p><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_UI_BOFTOF_Tab_Results.png" alt=""> </p><p><img vspace="5" hspace="5" src="Excavator_Param_BOF_TOF_01.png" alt=""> </p><h2 id="3">BOF Test, Design A</h2><p>Calculation of the Break Out Force (BOF) and Tear Out Force (TOF) can be automated using MATLAB commands.  The MATLAB code below determines the BOF and TOF for two different designs.</p><pre class="codeoutput">BOF (kN): 323.8827
 Boom Cylinder Pressure (bar):   400
 Stick Cylinder Pressure (bar):  305.5686
 Bucket Cylinder Pressure (bar): 267.2291
-</pre><img vspace="5" hspace="5" src="Excavator_Param_BOF_TOF_01.png" alt=""> <h2 id="4">BOF Test, Design B</h2><pre class="codeinput">MPdata = readtable(<span class="string">'Excavator_Pin_Locations_global.xlsx'</span>,<span class="string">'Sheet'</span>,<span class="string">'Design B'</span>,<span class="string">'Range'</span>,<span class="string">'B2:F15'</span>,<span class="string">'VariableNamingRule'</span>,<span class="string">'preserve'</span>);
-ExcvGlobal = Excavator_Pin_Locations_table2struct(MPdata);
-ExcvLocal  = Excavator_Pin_Locations_global2local(ExcvGlobal);
-
-Excavator_Test_Scenario_Select(<span class="string">'BOF'</span>,mdl_BOFTOF_setup,mdl_BOFTOF_calc)
-simOut = sim(mdl_BOFTOF_calc);
-[fLoad,test_type,pBoom,pStick,pBucket,pinForces]= Excavator_simlogToBOFTOF(simOut.logsout);
-disp([test_type <span class="string">' (kN): '</span> num2str(fLoad)]);
-disp([<span class="string">'Boom Cylinder Pressure (bar):   '</span> num2str(pBoom)]);
-disp([<span class="string">'Stick Cylinder Pressure (bar):  '</span> num2str(pStick)]);
-disp([<span class="string">'Bucket Cylinder Pressure (bar): '</span> num2str(pBucket)]);
-Excavator_BOFTOFLoad_plot(ExcvGlobal,fLoad,test_type,pBoom,pStick,pBucket,pinForces);
-</pre><pre class="codeoutput">BOF (kN): 308.9146
+</pre><img vspace="5" hspace="5" src="Excavator_Param_BOF_TOF_01.png" alt=""> <h2 id="4">BOF Test, Design B</h2><pre class="codeoutput">BOF (kN): 308.9146
 Boom Cylinder Pressure (bar):   400
 Stick Cylinder Pressure (bar):  296.2922
 Bucket Cylinder Pressure (bar): 254.8792
-</pre><img vspace="5" hspace="5" src="Excavator_Param_BOF_TOF_02.png" alt=""> <h2 id="5">TOF Test, Design A</h2><pre class="codeinput">MPdata = readtable(<span class="string">'Excavator_Pin_Locations_global.xlsx'</span>,<span class="string">'Sheet'</span>,<span class="string">'Design A'</span>,<span class="string">'Range'</span>,<span class="string">'B2:F15'</span>,<span class="string">'VariableNamingRule'</span>,<span class="string">'preserve'</span>);
-ExcvGlobal = Excavator_Pin_Locations_table2struct(MPdata);
-ExcvLocal  = Excavator_Pin_Locations_global2local(ExcvGlobal);
-
-Excavator_Test_Scenario_Select(<span class="string">'TOF'</span>,mdl_BOFTOF_setup,mdl_BOFTOF_calc)
-simOut = sim(mdl_BOFTOF_calc);
-[fLoad,test_type,pBoom,pStick,pBucket,pinForces]= Excavator_simlogToBOFTOF(simOut.logsout);
-disp([test_type <span class="string">' (kN): '</span> num2str(fLoad)]);
-disp([<span class="string">'Boom Cylinder Pressure (bar):   '</span> num2str(pBoom)]);
-disp([<span class="string">'Stick Cylinder Pressure (bar):  '</span> num2str(pStick)]);
-disp([<span class="string">'Bucket Cylinder Pressure (bar): '</span> num2str(pBucket)]);
-Excavator_BOFTOFLoad_plot(ExcvGlobal,fLoad,test_type,pBoom,pStick,pBucket,pinForces);
-</pre><pre class="codeoutput">TOF (kN): 257.7931
+</pre><img vspace="5" hspace="5" src="Excavator_Param_BOF_TOF_02.png" alt=""> <h2 id="5">TOF Test, Design A</h2><pre class="codeoutput">TOF (kN): 257.7931
 Boom Cylinder Pressure (bar):   400
 Stick Cylinder Pressure (bar):  247.1939
 Bucket Cylinder Pressure (bar): 209.2771
-</pre><img vspace="5" hspace="5" src="Excavator_Param_BOF_TOF_03.png" alt=""> <h2 id="6">TOF Test Design B</h2><pre class="codeinput">MPdata = readtable(<span class="string">'Excavator_Pin_Locations_global.xlsx'</span>,<span class="string">'Sheet'</span>,<span class="string">'Design B'</span>,<span class="string">'Range'</span>,<span class="string">'B2:F15'</span>,<span class="string">'VariableNamingRule'</span>,<span class="string">'preserve'</span>);
-ExcvGlobal = Excavator_Pin_Locations_table2struct(MPdata);
-ExcvLocal  = Excavator_Pin_Locations_global2local(ExcvGlobal);
-
-Excavator_Test_Scenario_Select(<span class="string">'TOF'</span>,mdl_BOFTOF_setup,mdl_BOFTOF_calc)
-simOut = sim(mdl_BOFTOF_calc);
-[fLoad,test_type,pBoom,pStick,pBucket,pinForces]= Excavator_simlogToBOFTOF(simOut.logsout);
-disp([test_type <span class="string">' (kN): '</span> num2str(fLoad)]);
-disp([<span class="string">'Boom Cylinder Pressure (bar):   '</span> num2str(pBoom)]);
-disp([<span class="string">'Stick Cylinder Pressure (bar):  '</span> num2str(pStick)]);
-disp([<span class="string">'Bucket Cylinder Pressure (bar): '</span> num2str(pBucket)]);
-Excavator_BOFTOFLoad_plot(ExcvGlobal,fLoad,test_type,pBoom,pStick,pBucket,pinForces);
-</pre><pre class="codeoutput">TOF (kN): 240.2918
+</pre><img vspace="5" hspace="5" src="Excavator_Param_BOF_TOF_03.png" alt=""> <h2 id="6">TOF Test Design B</h2><pre class="codeoutput">TOF (kN): 240.2918
 Boom Cylinder Pressure (bar):   400
 Stick Cylinder Pressure (bar):  235.8249
 Bucket Cylinder Pressure (bar): 193.7608
