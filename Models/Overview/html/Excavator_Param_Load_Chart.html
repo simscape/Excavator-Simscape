@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Excavator Design with Simscape&#8482;: Load Chart Calculation</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2023-01-31"><meta name="DC.source" content="Excavator_Param_Load_Chart.m"><style type="text/css">
+      --><title>Excavator Design with Simscape&#8482;: Load Chart Calculation</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2023-04-30"><meta name="DC.source" content="Excavator_Param_Load_Chart.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -67,147 +67,108 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Excavator Design with Simscape&#8482;: Load Chart Calculation</h1><!--introduction--><p><img vspace="5" hspace="5" src="Excavator_Load_Chart_Overview_Image.png" alt=""> </p><p>(<a href="matlab:web('Excavator_Design_Overview.html')">return to Excavator Design Overview</a>)</p><p>This app enables you to create a load chart for a given excavator design. The load chart calculation is performed using a minimal set of parameters to enable design space exploration.</p><p>You use the app to specify:</p><div><ul><li>Pin locations</li><li>Maximum hydraulic relief pressures</li><li>Cylinder areas</li><li>Boom, stick, and bucket masses</li><li>Excavator arm angles for test points</li></ul></div><p>The app will assign these values to a parameterized excavator model created using Simscape Multibody. It will then run a set of simulations to determine the lift capacity at each of those points, including the effects of gravity. The resulting plot will be shown in the app.</p><p><a href="matlab:Excavator_Design_app_run">Open App for Calculating BOF, TOF, and Load Capacity</a></p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Excavator Design App: Define Pin Locations</a></li><li><a href="#2">Excavator Design App: Create Load Chart</a></li><li><a href="#3">Load Chart Test, Design A</a></li><li><a href="#4">Load Capacity Test, Design A, Pin Loads</a></li><li><a href="#5">Load Chart Test, Design B</a></li><li><a href="#6">Load Chart Test, Design B, Higher Pressure Settings</a></li></ul></div><h2 id="1">Excavator Design App: Define Pin Locations</h2><p>On the "Design" tab you specify the pin locations in the design position.</p><div><ul><li>Edit the pin locations in the table.</li><li>Press the "Plot Design Position" button to draw the excavator.</li><li>Press the "Model Design Position" button to display the model. This loads the pin locations into the MATLAB workspace.</li></ul></div><p>Pre-saved sets of pin locations can be loaded from Excel.</p><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_UI_Design_Tab.png" alt=""> </p><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_UI_Model_Design_Position.png" alt=""> </p><h2 id="2">Excavator Design App: Create Load Chart</h2><p>On the "Load Chart" tab you configure the load chart sweep.</p><div><ul><li>Define maximum pressures for the actuators</li><li>Define cylinder cross-sectional areas.</li><li>Define the mass for the boom, stick, and bucket</li><li>Define the excavator arm angles for test points.</li><li>--- See the BOF, TOF tab for a diagram explaining the angles</li><li>--- The stick and bucket angles will be held at their initial position while the boom angle is swept from start to stop</li><li>--- Next, the stick angle will be swept as the boom angle is held at the stop angle and the bucket angle is held at the start angle.</li><li>--- Finally, the bucket angle will be swept as the boom angle and stick angle are held at their respective stop angles</li><li>Set the "Use Fast Restart" checkbox for a faster sweep (excavator visualization will not be shown) or leave it blank to see each excavator position.</li><li>Press "Generate Load Chart" button</li></ul></div><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_UI_LoadChart_Tab.png" alt=""> </p><p>The final configuration of the excavator will be visualized. The arrows in the windo show the load force applied and the forces in each cylinder.  This image shows an example of the Load Chart test.  During the test,</p><div><ul><li>Gravity is turned on</li><li>The cylinders are locked in the specified test position</li><li>The load is increased until one of the cylinders reaches the limit specified in the app.</li></ul></div><p><img vspace="5" hspace="5" src="Excavator_LoadChart_UI_Calc.png" alt=""> </p><h2 id="3">Load Chart Test, Design A</h2><p>Generating the load chart can be automated using MATLAB commands.  The MATLAB code below creates a load chart for Design A.</p><pre class="codeinput">mdl_LoadChart_setup = <span class="string">'Excavator_Param_BOFTOF_Setup'</span>;
-mdl_LoadChart_calc  = <span class="string">'Excavator_Param_BOFTOF_Calc'</span>;
-
-MPdata = readtable(<span class="string">'Excavator_Pin_Locations_global.xlsx'</span>,<span class="string">'Sheet'</span>,<span class="string">'Design A'</span>,<span class="string">'Range'</span>,<span class="string">'B2:F15'</span>,<span class="string">'VariableNamingRule'</span>,<span class="string">'preserve'</span>);
-ExcvGlobal = Excavator_Pin_Locations_table2struct(MPdata);
-ExcvLocal  = Excavator_Pin_Locations_global2local(ExcvGlobal);
-
-forceTestMaxActiveCylPr   = 350; <span class="comment">% bar, Max pressure boom cylinder</span>
-forceTestMaxReactiveCylPr = 400; <span class="comment">% bar, Max pressure stick and bucket cylinders</span>
-
-BOFTOF_BoomCylArea   = 38013; <span class="comment">% mm^2, Area boom cylinder, head end</span>
-BOFTOF_StickCylArea  = 26389; <span class="comment">% mm^2, Area stick cylinder, rod end</span>
-BOFTOF_BucketCylArea = 17907; <span class="comment">% mm^3, Area bucket cylinder, rod end</span>
-
-LoadChart_BoomMass   = 7226.51; <span class="comment">% kg, Mass boom arm</span>
-LoadChart_StickMass  = 3327.88; <span class="comment">% kg, Mass stick arm</span>
-LoadChart_BucketMass = 5119.51; <span class="comment">% kg, Mass bucket</span>
-
-qBoomSet   = linspace(60,120,10); <span class="comment">% deg</span>
-qStickSet  = linspace(120,45,5);  <span class="comment">% deg</span>
-qBucketSet = linspace(90,60,3);   <span class="comment">% deg</span>
-
-Excavator_LoadChart_Create(qBoomSet,qStickSet,qBucketSet,<span class="keyword">...</span>
-    mdl_LoadChart_setup,mdl_LoadChart_calc,true);
-</pre><pre class="codeoutput">[31-Jan-2023 19:49:05] Running simulations...
-[31-Jan-2023 19:49:12] Completed 1 of 16 simulation runs
-[31-Jan-2023 19:49:13] Completed 2 of 16 simulation runs
-[31-Jan-2023 19:49:15] Completed 3 of 16 simulation runs
-[31-Jan-2023 19:49:16] Completed 4 of 16 simulation runs
-[31-Jan-2023 19:49:18] Completed 5 of 16 simulation runs
-[31-Jan-2023 19:49:19] Completed 6 of 16 simulation runs
-[31-Jan-2023 19:49:21] Completed 7 of 16 simulation runs
-[31-Jan-2023 19:49:23] Completed 8 of 16 simulation runs
-[31-Jan-2023 19:49:24] Completed 9 of 16 simulation runs
-[31-Jan-2023 19:49:26] Completed 10 of 16 simulation runs
-[31-Jan-2023 19:49:28] Completed 11 of 16 simulation runs
-[31-Jan-2023 19:49:29] Completed 12 of 16 simulation runs
-[31-Jan-2023 19:49:31] Completed 13 of 16 simulation runs
-[31-Jan-2023 19:49:32] Completed 14 of 16 simulation runs
-[31-Jan-2023 19:49:34] Completed 15 of 16 simulation runs
-[31-Jan-2023 19:49:35] Completed 16 of 16 simulation runs
-[31-Jan-2023 19:49:40] Running simulations...
-[31-Jan-2023 19:49:46] Completed 1 of 16 simulation runs
-[31-Jan-2023 19:49:48] Completed 2 of 16 simulation runs
-[31-Jan-2023 19:49:50] Completed 3 of 16 simulation runs
-[31-Jan-2023 19:49:51] Completed 4 of 16 simulation runs
-[31-Jan-2023 19:49:53] Completed 5 of 16 simulation runs
-[31-Jan-2023 19:49:54] Completed 6 of 16 simulation runs
-[31-Jan-2023 19:49:56] Completed 7 of 16 simulation runs
-[31-Jan-2023 19:49:58] Completed 8 of 16 simulation runs
-[31-Jan-2023 19:49:59] Completed 9 of 16 simulation runs
-[31-Jan-2023 19:50:01] Completed 10 of 16 simulation runs
-[31-Jan-2023 19:50:02] Completed 11 of 16 simulation runs
-[31-Jan-2023 19:50:04] Completed 12 of 16 simulation runs
-[31-Jan-2023 19:50:05] Completed 13 of 16 simulation runs
-[31-Jan-2023 19:50:07] Completed 14 of 16 simulation runs
-[31-Jan-2023 19:50:09] Completed 15 of 16 simulation runs
-[31-Jan-2023 19:50:11] Completed 16 of 16 simulation runs
-</pre><img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_01.png" alt=""> <h2 id="4">Load Capacity Test, Design A, Pin Loads</h2><p>In this test we calculate and plot the pin loads and cylinder pressures for one of the positions of the load capacity test.</p><pre class="codeinput">Excavator_Test_Scenario_Select(<span class="string">'Lift'</span>,mdl_LoadChart_setup,mdl_LoadChart_calc);
-simOut = sim(mdl_LoadChart_calc);
-[fLoad,test_type,pBoom,pStick,pBucket,pinForces]= Excavator_simlogToBOFTOF(simOut.logsout);
-Excavator_BOFTOFLoad_plot(ExcvGlobal,fLoad,test_type,pBoom,pStick,pBucket,pinForces);
-</pre><img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_02.png" alt=""> <h2 id="5">Load Chart Test, Design B</h2><p>In this test we generate the load chart using Design B</p><pre class="codeinput">MPdata = readtable(<span class="string">'Excavator_Pin_Locations_global.xlsx'</span>,<span class="string">'Sheet'</span>,<span class="string">'Design B'</span>,<span class="string">'Range'</span>,<span class="string">'B2:F15'</span>,<span class="string">'VariableNamingRule'</span>,<span class="string">'preserve'</span>);
-ExcvGlobal = Excavator_Pin_Locations_table2struct(MPdata);
-ExcvLocal  = Excavator_Pin_Locations_global2local(ExcvGlobal);
-
-Excavator_LoadChart_Create(qBoomSet,qStickSet,qBucketSet,<span class="keyword">...</span>
-    mdl_LoadChart_setup,mdl_LoadChart_calc,true);
-</pre><pre class="codeoutput">[31-Jan-2023 19:50:44] Running simulations...
-[31-Jan-2023 19:50:49] Completed 1 of 16 simulation runs
-[31-Jan-2023 19:50:51] Completed 2 of 16 simulation runs
-[31-Jan-2023 19:50:52] Completed 3 of 16 simulation runs
-[31-Jan-2023 19:50:54] Completed 4 of 16 simulation runs
-[31-Jan-2023 19:50:56] Completed 5 of 16 simulation runs
-[31-Jan-2023 19:50:57] Completed 6 of 16 simulation runs
-[31-Jan-2023 19:50:59] Completed 7 of 16 simulation runs
-[31-Jan-2023 19:51:01] Completed 8 of 16 simulation runs
-[31-Jan-2023 19:51:02] Completed 9 of 16 simulation runs
-[31-Jan-2023 19:51:04] Completed 10 of 16 simulation runs
-[31-Jan-2023 19:51:05] Completed 11 of 16 simulation runs
-[31-Jan-2023 19:51:07] Completed 12 of 16 simulation runs
-[31-Jan-2023 19:51:08] Completed 13 of 16 simulation runs
-[31-Jan-2023 19:51:10] Completed 14 of 16 simulation runs
-[31-Jan-2023 19:51:12] Completed 15 of 16 simulation runs
-[31-Jan-2023 19:51:13] Completed 16 of 16 simulation runs
-[31-Jan-2023 19:51:19] Running simulations...
-[31-Jan-2023 19:51:25] Completed 1 of 16 simulation runs
-[31-Jan-2023 19:51:27] Completed 2 of 16 simulation runs
-[31-Jan-2023 19:51:28] Completed 3 of 16 simulation runs
-[31-Jan-2023 19:51:30] Completed 4 of 16 simulation runs
-[31-Jan-2023 19:51:31] Completed 5 of 16 simulation runs
-[31-Jan-2023 19:51:33] Completed 6 of 16 simulation runs
-[31-Jan-2023 19:51:34] Completed 7 of 16 simulation runs
-[31-Jan-2023 19:51:35] Completed 8 of 16 simulation runs
-[31-Jan-2023 19:51:37] Completed 9 of 16 simulation runs
-[31-Jan-2023 19:51:38] Completed 10 of 16 simulation runs
-[31-Jan-2023 19:51:40] Completed 11 of 16 simulation runs
-[31-Jan-2023 19:51:42] Completed 12 of 16 simulation runs
-[31-Jan-2023 19:51:43] Completed 13 of 16 simulation runs
-[31-Jan-2023 19:51:45] Completed 14 of 16 simulation runs
-[31-Jan-2023 19:51:47] Completed 15 of 16 simulation runs
-[31-Jan-2023 19:51:48] Completed 16 of 16 simulation runs
-</pre><img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_03.png" alt=""> <h2 id="6">Load Chart Test, Design B, Higher Pressure Settings</h2><p>In this test we increase the pressure settings to see the effect on the load chart.</p><pre class="codeinput">forceTestMaxActiveCylPr   = 400; <span class="comment">% bar, Max pressure boom cylinder</span>
-forceTestMaxReactiveCylPr = 450; <span class="comment">% bar, Max pressure stick and bucket cylinders</span>
-
-Excavator_LoadChart_Create(qBoomSet,qStickSet,qBucketSet,<span class="keyword">...</span>
-    mdl_LoadChart_setup,mdl_LoadChart_calc,true);
-</pre><pre class="codeoutput">[31-Jan-2023 19:52:02] Running simulations...
-[31-Jan-2023 19:52:07] Completed 1 of 16 simulation runs
-[31-Jan-2023 19:52:08] Completed 2 of 16 simulation runs
-[31-Jan-2023 19:52:10] Completed 3 of 16 simulation runs
-[31-Jan-2023 19:52:11] Completed 4 of 16 simulation runs
-[31-Jan-2023 19:52:13] Completed 5 of 16 simulation runs
-[31-Jan-2023 19:52:14] Completed 6 of 16 simulation runs
-[31-Jan-2023 19:52:16] Completed 7 of 16 simulation runs
-[31-Jan-2023 19:52:17] Completed 8 of 16 simulation runs
-[31-Jan-2023 19:52:19] Completed 9 of 16 simulation runs
-[31-Jan-2023 19:52:21] Completed 10 of 16 simulation runs
-[31-Jan-2023 19:52:22] Completed 11 of 16 simulation runs
-[31-Jan-2023 19:52:24] Completed 12 of 16 simulation runs
-[31-Jan-2023 19:52:26] Completed 13 of 16 simulation runs
-[31-Jan-2023 19:52:28] Completed 14 of 16 simulation runs
-[31-Jan-2023 19:52:29] Completed 15 of 16 simulation runs
-[31-Jan-2023 19:52:31] Completed 16 of 16 simulation runs
-[31-Jan-2023 19:52:36] Running simulations...
-[31-Jan-2023 19:52:45] Completed 1 of 16 simulation runs
-[31-Jan-2023 19:52:48] Completed 2 of 16 simulation runs
-[31-Jan-2023 19:52:50] Completed 3 of 16 simulation runs
-[31-Jan-2023 19:52:52] Completed 4 of 16 simulation runs
-[31-Jan-2023 19:52:54] Completed 5 of 16 simulation runs
-[31-Jan-2023 19:52:56] Completed 6 of 16 simulation runs
-[31-Jan-2023 19:52:59] Completed 7 of 16 simulation runs
-[31-Jan-2023 19:53:01] Completed 8 of 16 simulation runs
-[31-Jan-2023 19:53:03] Completed 9 of 16 simulation runs
-[31-Jan-2023 19:53:05] Completed 10 of 16 simulation runs
-[31-Jan-2023 19:53:07] Completed 11 of 16 simulation runs
-[31-Jan-2023 19:53:08] Completed 12 of 16 simulation runs
-[31-Jan-2023 19:53:10] Completed 13 of 16 simulation runs
-[31-Jan-2023 19:53:11] Completed 14 of 16 simulation runs
-[31-Jan-2023 19:53:13] Completed 15 of 16 simulation runs
-[31-Jan-2023 19:53:15] Completed 16 of 16 simulation runs
+  </style></head><body><div class="content"><h1>Excavator Design with Simscape&#8482;: Load Chart Calculation</h1><!--introduction--><p><img vspace="5" hspace="5" src="Excavator_Load_Chart_Overview_Image.png" alt=""> </p><p>(<a href="matlab:web('Excavator_Design_Overview.html')">return to Excavator Design Overview</a>)</p><p>This app enables you to create a load chart for a given excavator design. The load chart calculation is performed using a minimal set of parameters to enable design space exploration.</p><p>You use the app to specify:</p><div><ul><li>Pin locations</li><li>Maximum hydraulic relief pressures</li><li>Cylinder areas</li><li>Boom, stick, and bucket masses</li><li>Excavator arm angles for test points</li></ul></div><p>The app will assign these values to a parameterized excavator model created using Simscape Multibody. It will then run a set of simulations to determine the lift capacity at each of those points, including the effects of gravity. The resulting plot will be shown in the app.</p><p><a href="matlab:Excavator_Design_app_run">Open App for Calculating BOF, TOF, and Load Capacity</a></p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Excavator Design App: Define Pin Locations</a></li><li><a href="#2">Excavator Design App: Create Load Chart</a></li><li><a href="#3">Load Chart Test, Design A</a></li><li><a href="#4">Load Capacity Test, Design A, Pin Loads</a></li><li><a href="#5">Load Chart Test, Design B</a></li><li><a href="#6">Load Chart Test, Design B, Higher Pressure Settings</a></li></ul></div><h2 id="1">Excavator Design App: Define Pin Locations</h2><p>On the "Design" tab you specify the pin locations in the design position.</p><div><ul><li>Edit the pin locations in the table.</li><li>Press the "Plot Design Position" button to draw the excavator.</li><li>Press the "Model Design Position" button to display the model. This loads the pin locations into the MATLAB workspace.</li></ul></div><p>Pre-saved sets of pin locations can be loaded from Excel.</p><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_UI_Design_Tab.png" alt=""> </p><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_UI_Model_Design_Position.png" alt=""> </p><h2 id="2">Excavator Design App: Create Load Chart</h2><p>On the "Load Chart" tab you configure the load chart sweep.</p><div><ul><li>Define maximum pressures for the actuators</li><li>Define cylinder cross-sectional areas.</li><li>Define the mass for the boom, stick, and bucket</li><li>Define the excavator arm angles for test points.</li><li>--- See the BOF, TOF tab for a diagram explaining the angles</li><li>--- The stick and bucket angles will be held at their initial position while the boom angle is swept from start to stop</li><li>--- Next, the stick angle will be swept as the boom angle is held at the stop angle and the bucket angle is held at the start angle.</li><li>--- Finally, the bucket angle will be swept as the boom angle and stick angle are held at their respective stop angles</li><li>Set the "Use Fast Restart" checkbox for a faster sweep (excavator visualization will not be shown) or leave it blank to see each excavator position.</li><li>Press "Generate Load Chart" button</li></ul></div><p><img vspace="5" hspace="5" src="Excavator_BOF_TOF_UI_LoadChart_Tab.png" alt=""> </p><p>The final configuration of the excavator will be visualized. The arrows in the windo show the load force applied and the forces in each cylinder.  This image shows an example of the Load Chart test.  During the test,</p><div><ul><li>Gravity is turned on</li><li>The cylinders are locked in the specified test position</li><li>The load is increased until one of the cylinders reaches the limit specified in the app.</li></ul></div><p><img vspace="5" hspace="5" src="Excavator_LoadChart_UI_Calc.png" alt=""> </p><h2 id="3">Load Chart Test, Design A</h2><p>Generating the load chart can be automated using MATLAB commands.  The MATLAB code below creates a load chart for Design A.</p><pre class="codeoutput">[30-Apr-2023 12:03:35] Running simulations...
+[30-Apr-2023 12:03:40] Completed 1 of 16 simulation runs
+[30-Apr-2023 12:03:40] Completed 2 of 16 simulation runs
+[30-Apr-2023 12:03:42] Completed 3 of 16 simulation runs
+[30-Apr-2023 12:03:43] Completed 4 of 16 simulation runs
+[30-Apr-2023 12:03:44] Completed 5 of 16 simulation runs
+[30-Apr-2023 12:03:45] Completed 6 of 16 simulation runs
+[30-Apr-2023 12:03:46] Completed 7 of 16 simulation runs
+[30-Apr-2023 12:03:48] Completed 8 of 16 simulation runs
+[30-Apr-2023 12:03:49] Completed 9 of 16 simulation runs
+[30-Apr-2023 12:03:50] Completed 10 of 16 simulation runs
+[30-Apr-2023 12:03:51] Completed 11 of 16 simulation runs
+[30-Apr-2023 12:03:52] Completed 12 of 16 simulation runs
+[30-Apr-2023 12:03:53] Completed 13 of 16 simulation runs
+[30-Apr-2023 12:03:54] Completed 14 of 16 simulation runs
+[30-Apr-2023 12:03:55] Completed 15 of 16 simulation runs
+[30-Apr-2023 12:03:57] Completed 16 of 16 simulation runs
+[30-Apr-2023 12:04:00] Running simulations...
+[30-Apr-2023 12:04:04] Completed 1 of 16 simulation runs
+[30-Apr-2023 12:04:05] Completed 2 of 16 simulation runs
+[30-Apr-2023 12:04:06] Completed 3 of 16 simulation runs
+[30-Apr-2023 12:04:08] Completed 4 of 16 simulation runs
+[30-Apr-2023 12:04:09] Completed 5 of 16 simulation runs
+[30-Apr-2023 12:04:10] Completed 6 of 16 simulation runs
+[30-Apr-2023 12:04:11] Completed 7 of 16 simulation runs
+[30-Apr-2023 12:04:12] Completed 8 of 16 simulation runs
+[30-Apr-2023 12:04:13] Completed 9 of 16 simulation runs
+[30-Apr-2023 12:04:14] Completed 10 of 16 simulation runs
+[30-Apr-2023 12:04:15] Completed 11 of 16 simulation runs
+[30-Apr-2023 12:04:16] Completed 12 of 16 simulation runs
+[30-Apr-2023 12:04:18] Completed 13 of 16 simulation runs
+[30-Apr-2023 12:04:19] Completed 14 of 16 simulation runs
+[30-Apr-2023 12:04:20] Completed 15 of 16 simulation runs
+[30-Apr-2023 12:04:21] Completed 16 of 16 simulation runs
+</pre><img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_01.png" alt=""> <h2 id="4">Load Capacity Test, Design A, Pin Loads</h2><p>In this test we calculate and plot the pin loads and cylinder pressures for one of the positions of the load capacity test.</p><img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_02.png" alt=""> <h2 id="5">Load Chart Test, Design B</h2><p>In this test we generate the load chart using Design B</p><pre class="codeoutput">[30-Apr-2023 12:04:43] Running simulations...
+[30-Apr-2023 12:04:47] Completed 1 of 16 simulation runs
+[30-Apr-2023 12:04:48] Completed 2 of 16 simulation runs
+[30-Apr-2023 12:04:49] Completed 3 of 16 simulation runs
+[30-Apr-2023 12:04:50] Completed 4 of 16 simulation runs
+[30-Apr-2023 12:04:51] Completed 5 of 16 simulation runs
+[30-Apr-2023 12:04:53] Completed 6 of 16 simulation runs
+[30-Apr-2023 12:04:54] Completed 7 of 16 simulation runs
+[30-Apr-2023 12:04:55] Completed 8 of 16 simulation runs
+[30-Apr-2023 12:04:56] Completed 9 of 16 simulation runs
+[30-Apr-2023 12:04:57] Completed 10 of 16 simulation runs
+[30-Apr-2023 12:04:58] Completed 11 of 16 simulation runs
+[30-Apr-2023 12:05:00] Completed 12 of 16 simulation runs
+[30-Apr-2023 12:05:01] Completed 13 of 16 simulation runs
+[30-Apr-2023 12:05:02] Completed 14 of 16 simulation runs
+[30-Apr-2023 12:05:03] Completed 15 of 16 simulation runs
+[30-Apr-2023 12:05:04] Completed 16 of 16 simulation runs
+[30-Apr-2023 12:05:07] Running simulations...
+[30-Apr-2023 12:05:11] Completed 1 of 16 simulation runs
+[30-Apr-2023 12:05:12] Completed 2 of 16 simulation runs
+[30-Apr-2023 12:05:13] Completed 3 of 16 simulation runs
+[30-Apr-2023 12:05:14] Completed 4 of 16 simulation runs
+[30-Apr-2023 12:05:15] Completed 5 of 16 simulation runs
+[30-Apr-2023 12:05:16] Completed 6 of 16 simulation runs
+[30-Apr-2023 12:05:18] Completed 7 of 16 simulation runs
+[30-Apr-2023 12:05:19] Completed 8 of 16 simulation runs
+[30-Apr-2023 12:05:20] Completed 9 of 16 simulation runs
+[30-Apr-2023 12:05:21] Completed 10 of 16 simulation runs
+[30-Apr-2023 12:05:22] Completed 11 of 16 simulation runs
+[30-Apr-2023 12:05:23] Completed 12 of 16 simulation runs
+[30-Apr-2023 12:05:24] Completed 13 of 16 simulation runs
+[30-Apr-2023 12:05:25] Completed 14 of 16 simulation runs
+[30-Apr-2023 12:05:26] Completed 15 of 16 simulation runs
+[30-Apr-2023 12:05:27] Completed 16 of 16 simulation runs
+</pre><img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_03.png" alt=""> <h2 id="6">Load Chart Test, Design B, Higher Pressure Settings</h2><p>In this test we increase the pressure settings to see the effect on the load chart.</p><pre class="codeoutput">[30-Apr-2023 12:05:37] Running simulations...
+[30-Apr-2023 12:05:40] Completed 1 of 16 simulation runs
+[30-Apr-2023 12:05:42] Completed 2 of 16 simulation runs
+[30-Apr-2023 12:05:43] Completed 3 of 16 simulation runs
+[30-Apr-2023 12:05:44] Completed 4 of 16 simulation runs
+[30-Apr-2023 12:05:45] Completed 5 of 16 simulation runs
+[30-Apr-2023 12:05:46] Completed 6 of 16 simulation runs
+[30-Apr-2023 12:05:47] Completed 7 of 16 simulation runs
+[30-Apr-2023 12:05:48] Completed 8 of 16 simulation runs
+[30-Apr-2023 12:05:50] Completed 9 of 16 simulation runs
+[30-Apr-2023 12:05:51] Completed 10 of 16 simulation runs
+[30-Apr-2023 12:05:52] Completed 11 of 16 simulation runs
+[30-Apr-2023 12:05:53] Completed 12 of 16 simulation runs
+[30-Apr-2023 12:05:54] Completed 13 of 16 simulation runs
+[30-Apr-2023 12:05:55] Completed 14 of 16 simulation runs
+[30-Apr-2023 12:05:56] Completed 15 of 16 simulation runs
+[30-Apr-2023 12:05:58] Completed 16 of 16 simulation runs
+[30-Apr-2023 12:06:01] Running simulations...
+[30-Apr-2023 12:06:05] Completed 1 of 16 simulation runs
+[30-Apr-2023 12:06:06] Completed 2 of 16 simulation runs
+[30-Apr-2023 12:06:07] Completed 3 of 16 simulation runs
+[30-Apr-2023 12:06:08] Completed 4 of 16 simulation runs
+[30-Apr-2023 12:06:09] Completed 5 of 16 simulation runs
+[30-Apr-2023 12:06:11] Completed 6 of 16 simulation runs
+[30-Apr-2023 12:06:12] Completed 7 of 16 simulation runs
+[30-Apr-2023 12:06:13] Completed 8 of 16 simulation runs
+[30-Apr-2023 12:06:14] Completed 9 of 16 simulation runs
+[30-Apr-2023 12:06:15] Completed 10 of 16 simulation runs
+[30-Apr-2023 12:06:16] Completed 11 of 16 simulation runs
+[30-Apr-2023 12:06:17] Completed 12 of 16 simulation runs
+[30-Apr-2023 12:06:18] Completed 13 of 16 simulation runs
+[30-Apr-2023 12:06:19] Completed 14 of 16 simulation runs
+[30-Apr-2023 12:06:21] Completed 15 of 16 simulation runs
+[30-Apr-2023 12:06:22] Completed 16 of 16 simulation runs
 </pre><img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_04.png" alt=""> <p class="footer">Copyright 2022-2023 The MathWorks, Inc.<br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2022b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Excavator Design with Simscape(TM): Load Chart Calculation

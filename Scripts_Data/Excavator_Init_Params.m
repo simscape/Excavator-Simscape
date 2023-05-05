@@ -8,6 +8,7 @@
 % Sample time
 %Ts = 0.005;
 Ts = 0.1;
+p0 = 5.66532;
 
 %% Test Definition
 
@@ -74,7 +75,7 @@ boomValve.checkValveMaxOpeningPrDiff = 0.01; % [bar]
 boomValve.checkValveMaxOpeningArea = 1100; % [mm^2]
 boomValve.checkValveLeakageArea = 0.001; % [mm^2]
 boomCylFriction.brkawyToCoulRatio = 1.2;
-boomCylFriction.brkawyVel = 1e-4; % [m/s]
+boomCylFriction.brkawyVel = 1e-2; % [m/s]
 boomCylFriction.preloadForce = 20; % [N]
 boomCylFriction.coulForceCoef = 1e-4; % [N/Pa]
 boomCylFriction.viscCoeff = 5e3; % [N/(m/s)] 
@@ -97,7 +98,7 @@ stickValve.checkValveMaxOpeningPrDiff = 0.01; % [bar]
 stickValve.checkValveMaxOpeningArea = 1100; % [mm^2]
 stickValve.checkValveLeakageArea = 0.01; % [mm^2]
 stickCylFriction.brkawyToCoulRatio = 1.2;
-stickCylFriction.brkawyVel = 1e-4; % [m/s]
+stickCylFriction.brkawyVel = 1e-2; % [m/s]
 stickCylFriction.preloadForce = 20; % [N]
 stickCylFriction.coulForceCoef = 1e-4; % [N/Pa]
 stickCylFriction.viscCoeff = 5e3; % [N/(m/s)] 
@@ -115,7 +116,7 @@ bucketValve.AtoTOrificeAreaVector = [1e-3; 3.5.^spoolPos(2:end)]; % [mm^2]
 bucketValve.BtoTOrificeAreaVector = [1e-3; 2.4.^spoolPos(2:end)]; % [mm^2] 
 bucketValve.PtoBOrificeAreaVector = [1e-3; 3.5.^spoolPos(2:end)]; % [mm^2] 
 bucketCylFriction.brkawyToCoulRatio = 1.2;
-bucketCylFriction.brkawyVel = 1e-4; % [m/s]
+bucketCylFriction.brkawyVel = 1e-2; % [m/s]
 bucketCylFriction.preloadForce = 20; % [N]
 bucketCylFriction.coulForceCoef = 1e-4; % [N/Pa]
 bucketCylFriction.viscCoeff = 5e3; % [N/(m/s)]
