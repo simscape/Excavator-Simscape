@@ -1,2 +1,2 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Info ReadOnly="WRITABLE" Name="ForDEM3P"/>
+<Info Name="ForDEM3P" ReadOnly="WRITABLE"/>

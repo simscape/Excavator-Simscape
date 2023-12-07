@@ -1,2 +1,2 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Info Type="Basic" GroupUUID="401cc15f-b768-49bd-972a-3b64bb94c13f" Visible="1" Icon="" File="Models/Complete/Excavator_Complete.slx" Name="3. Excavator Model"/>
+<Info File="Models/Complete/Excavator_Complete.slx" GroupUUID="401cc15f-b768-49bd-972a-3b64bb94c13f" Icon="" Name="3. Excavator Model" Type="Basic" Visible="1"/>

@@ -1,5 +1,5 @@
 # **Excavator Design with Simscape&trade;**
-Copyright 2022 The MathWorks, Inc.
+Copyright 2023 The MathWorks, Inc.
 
 This example models an excavator with hydraulic actuation of the swing motor and 
 cylinders for the boom, stick and bucket.  A MATLAB App enables you to explore 
@@ -16,6 +16,9 @@ according to international standards.
 * **Realistic soil loads** are applied to the bucket using Discrete Element Modeling (DEM) software.
 
 Open the project file Excavator.prj to get started.
+
+View on File Exchange: [![View Excavator Design with Simscape on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/119268-excavator-design-with-simscape)  
+You can also open in MATLAB Online: [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=simscape/Excavator-Simscape&project=Excavator_Simscape.prj)
 
 ## **Excavator Dig Cycle Animation Clip**
 ![](Models/Images/Excavator_Complete_digCycle_clip.gif)
