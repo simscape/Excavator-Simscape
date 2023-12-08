@@ -73,6 +73,7 @@ end
 %% Adjust settings and save
 set_param(mdl_setup,'SimscapeLogType','none');
 set_param(mdl_setup,'SimscapeLogToSDI','off');
+set_param([mdl_setup '/Angle Constraints'],'checkbox_show_arc','off');
 save_system(mdl_setup)
 
 %% Run parameter sweep
