@@ -15,7 +15,7 @@ according to international standards.
 * **Dig cycle time and efficiency** are determined in dynamic simulation.
 * **Realistic soil loads** are applied to the bucket using Discrete Element Modeling (DEM) software.
 
-Open the project file Excavator.prj to get started.
+Open the project file Excavator_Simscape.prj to get started.
 
 View on File Exchange: [![View Excavator Design with Simscape on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/119268-excavator-design-with-simscape)  
 You can also open in MATLAB Online: [![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=simscape/Excavator-Simscape&project=Excavator_Simscape.prj)
