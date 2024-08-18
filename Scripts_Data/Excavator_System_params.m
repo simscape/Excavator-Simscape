@@ -1,7 +1,7 @@
 % Additional parameters for Excavator project
 % Mostly appearance, some default values
 
-% Copyright 2022-2023 The MathWorks, Inc
+% Copyright 2022-2024 The MathWorks, Inc
 
 
 excv_data.arm.clr = [1 1 0]';

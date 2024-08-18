@@ -1,7 +1,7 @@
 function Excavator_Test_Scenario_Select(scenario_name,varargin)
 % Function to select test scenario for excavator model 
 
-% Copyright 2022-2023 The MathWorks, Inc
+% Copyright 2022-2024 The MathWorks, Inc
 
 
 Scenario_set = evalin('base','Scenario');

@@ -1,7 +1,7 @@
 % Script to run (instead of edit) Excavator Design app
 % and ensure only one copy of the UI is opened.
 
-% Copyright 2022-2023 The MathWorks, Inc.
+% Copyright 2022-2024 The MathWorks, Inc.
 
 if(exist('Excavator_Design_app_uifigure','var'))
     if(~isempty(Excavator_Design_app_uifigure))

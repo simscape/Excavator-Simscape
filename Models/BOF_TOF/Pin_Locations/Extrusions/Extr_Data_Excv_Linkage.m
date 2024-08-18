@@ -1,7 +1,7 @@
 function [xy_linkage_stickLink, xy_linkage_bucketLink] = Extr_Data_Excv_Linkage(Linkage)
 % Function to create extrusion for linkage from pin locations
 
-% Copyright 2022-2023 The MathWorks, Inc
+% Copyright 2022-2024 The MathWorks, Inc
 
 L = Linkage.LengthToStick;
 W = 0.2;

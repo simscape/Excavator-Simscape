@@ -3,7 +3,7 @@
 %
 % The plot below shows the pressures in the actuators.
 
-% Copyright 2016-2023 The MathWorks, Inc.
+% Copyright 2016-2024 The MathWorks, Inc.
 
 % Generate new simulation results if they don't exist or if they need to be updated
 %if ~exist('simlog', 'var')) 

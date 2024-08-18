@@ -2,7 +2,7 @@ function Scenario = Excavator_Test_Scenario_Define
 %% P28 Test Scenario Definitions
 % This script contains all model test scenario definitions.
 
-% Copyright 2022-2023 The MathWorks, Inc
+% Copyright 2022-2024 The MathWorks, Inc
 
 %% Defaults
 % -- Test Definitions

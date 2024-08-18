@@ -11,7 +11,7 @@
 %
 % <matlab:open_system('Excavator_Complete') Open Hydromechanical Model with Controls>
 %
-% Copyright 2022-2023 The MathWorks, Inc.
+% Copyright 2022-2024 The MathWorks, Inc.
 
 %% Model
 open_system('Excavator_Complete')

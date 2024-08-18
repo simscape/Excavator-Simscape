@@ -12,7 +12,7 @@ function ExcvLocal = Excavator_Pin_Locations_global2local(ExcvGlobal)
 %   in Simscape Multibody.  The Rigid Transform blocks must have the same
 %   reference frame as defined below.
 %
-% Copyright 2022-2023 The MathWorks, Inc.
+% Copyright 2022-2024 The MathWorks, Inc.
 
 % Offset to local reference within part
 boom_offset = ExcvGlobal.Chassis.ToBoom;

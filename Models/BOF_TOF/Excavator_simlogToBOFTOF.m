@@ -1,7 +1,7 @@
 function [fLoad,test_type,pBoom,pStick,pBucket,pinForces]= Excavator_simlogToBOFTOF(logsoutData)
 % Function to extract load and pressures from simulation results.
 
-% Copyright 2022-2023 The MathWorks, Inc
+% Copyright 2022-2024 The MathWorks, Inc
 
 fLoad   = logsoutData.get('Load_kN').Values.Data;
 pBoom   = logsoutData.get('CylPr_bar').Values.Data(1);

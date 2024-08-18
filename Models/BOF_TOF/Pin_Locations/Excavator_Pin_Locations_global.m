@@ -3,7 +3,7 @@ function [ExcvGlobalStruct,ExcvGlobalTable] = Excavator_Pin_Locations_global(des
 % Input argument is the name of the sheet where the pin locations are
 % stored.
 
-% Copyright 2022-2023 The MathWorks, Inc
+% Copyright 2022-2024 The MathWorks, Inc
 
 ExcvGlobalTable  = readtable('Excavator_Pin_Locations_global.xlsx','Sheet',designName,'Range','B2:F15','VariableNamingRule','preserve');
 ExcvGlobalStruct = Excavator_Pin_Locations_table2struct(ExcvGlobalTable);

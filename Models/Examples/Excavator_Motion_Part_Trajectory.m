@@ -1,7 +1,7 @@
 % Code to take simulation results and add motion profiles to variable
 % activeTestPos, for use in Excavator_Motion.slx
 
-% Copyright 2022-2023 The MathWorks, Inc
+% Copyright 2022-2024 The MathWorks, Inc
 
 % Extract bucket trajectory from motion test model
 bucket_posOri = simOut.logsout_Excavator_Motion.get('FramePosOri').Values.Bucket;
