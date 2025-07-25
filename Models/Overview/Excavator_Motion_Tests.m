@@ -10,7 +10,7 @@
 % individually, and then a full dig cycle is completed. Positions and
 % forces/torques for each actuator are reported in plots for each scenario.
 %
-% Copyright 2022-2024 The MathWorks, Inc.
+% Copyright 2022-2025 The MathWorks, Inc.
 
 %% Model
 clear

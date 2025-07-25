@@ -1,7 +1,7 @@
 function Excavator_BOFTOFLoad_plot(ExcvGlobal,fLoad,test_type,pBoom,pStick,pBucket,pinForces,varargin)
 % Code to plot load chart
 
-% Copyright 2022-2024 The MathWorks, Inc
+% Copyright 2022-2025 The MathWorks, Inc
 
 % Assume no new figure needed
 createFigure = false;

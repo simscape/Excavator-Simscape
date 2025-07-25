@@ -4,7 +4,7 @@ function Excavator_Pin_Locations_plotGlobal(ExcvGlobal,varargin)
 %    Excavator_Pin_Locations_plotGlobal(ExcvGlobal,<axis handle>)
 %
 
-% Copyright 2022-2024 The MathWorks, Inc
+% Copyright 2022-2025 The MathWorks, Inc
 
 partfill_clr = [1 1 0.2];
 partedge_clr = [0.6 0.6 0.6];

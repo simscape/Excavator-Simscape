@@ -7,7 +7,7 @@
 % reported in the cab swing motor reference frame (swing motor angle is
 % ignored).
 
-% Copyright 2022-2024 The MathWorks, Inc.
+% Copyright 2022-2025 The MathWorks, Inc.
 
 % Generate new simulation results if they don't exist or if they need to be updated
 %if ~exist('simlog', 'var')) 

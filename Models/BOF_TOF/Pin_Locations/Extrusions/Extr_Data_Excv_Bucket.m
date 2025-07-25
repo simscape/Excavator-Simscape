@@ -1,7 +1,7 @@
 function [xy_bucketBracket, xy_bucketScoop] = Extr_Data_Excv_Bucket(Bucket)
 % Function to create extrusion for bucket from pin locations
 
-% Copyright 2022-2024 The MathWorks, Inc
+% Copyright 2022-2025 The MathWorks, Inc
 
 A = [0 0];
 B = Bucket.ToBucketLinkage;

@@ -7,7 +7,7 @@
 % gravity.  This calculation will give misleading results if the system
 % does not return to its original height.
 
-% Copyright 2022-2024 The MathWorks, Inc
+% Copyright 2022-2025 The MathWorks, Inc
 
 % Time
 if(~exist('simOut'))

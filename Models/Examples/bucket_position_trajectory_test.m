@@ -1,7 +1,7 @@
 % Code to extract bucket part trajectory from motion test and apply it in
 % test harness model that only contains bucket part.
 
-% Copyright 2022-2024 The MathWorks, Inc
+% Copyright 2022-2025 The MathWorks, Inc
 
 %% Open model to generate part trajectory
 open_system('Excavator_Motion')

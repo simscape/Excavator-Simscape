@@ -12,7 +12,7 @@
 %
 % <matlab:open_system('Excavator_Motion') Open Actuator Force Calculation Model>
 %
-% Copyright 2022-2024 The MathWorks, Inc.
+% Copyright 2022-2025 The MathWorks, Inc.
 
 %% Model
 open_system('Excavator_Motion')

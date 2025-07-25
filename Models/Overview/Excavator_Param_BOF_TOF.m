@@ -22,7 +22,7 @@
 %
 % <matlab:Excavator_Design_app_run Open App for Calculating BOF, TOF, and Load Capacity>
 %
-% Copyright 2022-2024 The MathWorks, Inc.
+% Copyright 2022-2025 The MathWorks, Inc.
 
 
 %% Excavator Design App: Define Pin Locations

@@ -3,7 +3,7 @@ function ExcvGlobal = Excavator_Pin_Locations_table2struct(ExcvTable)
 % MATLAB structure is used by model as a mask parameter to apply
 % pin locations to Simscape model.
 
-% Copyright 2022-2024 The MathWorks, Inc
+% Copyright 2022-2025 The MathWorks, Inc
 
 Chassis.ToBoom      = ExcvTable{1,4:5};
 Chassis.ToBoomCyl   = ExcvTable{2,4:5};

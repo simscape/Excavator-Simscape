@@ -6,7 +6,7 @@
 % faster than the DC motor but has a limited range.  The control system
 % uses them together to track the reference signal.
 
-% Copyright 2016-2024 The MathWorks, Inc.
+% Copyright 2016-2025 The MathWorks, Inc.
 
 % Generate new simulation results if they don't exist or if they need to be updated
 %if ~exist('simlog', 'var')) 
