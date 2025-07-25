@@ -12,7 +12,7 @@ end
 %% Add the ZMQ DLL to the system path:
 p = simulinkproject;
 if strcmp(mexext,'mexw64')
-    zmqdll_list = dir([p.RootFolder '/**/util_zmq/zmqdll/libzmq*.dll']);
+    zmqdll_list = dir([p.RootFolder '/**/Models/Cosim/util_zmq/zmqdll/libzmq*.dll']);
     if(length(zmqdll_list)==1)
         %if exist(fullfile(p.RootFolder,'Models','Cosim','zmq','libzmq','bin','x64','bin','Release','libzmq-v143-mt-4_3_5.dll'),'file')
         pathEnvVar = getenv('PATH');
@@ -25,11 +25,9 @@ if strcmp(mexext,'mexw64')
             success = 1;
             msg = sprintf('%s\n%s','libzmq DLL already on system PATH:',[zmqdll_list.folder]);
         end
-    elseif(length(zmqdll_list)>1)
+    else
         success = 0;
-        msg = ['ZMQ library not added to path. There were ' length(zmqdll_list') ' libzmq DLLs found in subfolders.'];
-    elseif(isempty(zmqdll_list))
-        msg = 'ZMQ library not found.';
+        msg = 'libzmq DLL not found. Build libzmq DLL before adding to the system path.';
     end
 else
     success = 0;
@@ -37,6 +35,7 @@ else
 end
 
 if(showResult)
+    msg = sprintf('%s\n%s','libzmq DLL added to system PATH:',[zmqdll_list.folder filesep zmqdll_list.name]);
     disp(msg)
 end
 

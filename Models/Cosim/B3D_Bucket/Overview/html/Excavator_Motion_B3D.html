@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Excavator Design with Simscape&#8482;: Model Soil Loads</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2023-05-02"><meta name="DC.source" content="Excavator_Motion_B3D.m"><style type="text/css">
+      --><title>Excavator Design with Simscape&#8482;: Model Soil Loads</title><meta name="generator" content="MATLAB 9.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2025-07-24"><meta name="DC.source" content="Excavator_Motion_B3D.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -67,7 +67,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Excavator Design with Simscape&#8482;: Model Soil Loads</h1><!--introduction--><p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_Overview.png" alt=""> </p><p>(<a href="matlab:web('Excavator_Design_Overview.html')">return to Excavator Design Overview</a>)</p><p>This example models an excavator acting against soil loads modeled using discrete element modeling in ThreeParticle/CAE&#8482; software. The motion of the actuators is prescribed, and the simulation calculates the amount of force or torque required to execute the motion.  Cosimulation is used to connect the Simscape Multibody model to ThreeParticle/CAE&#8482;.</p><p><b>If you have downloaded the correct release from GitHub</b>, you can follow the steps below to set up cosimulation on your machine.  All of the files you need to set up the cosimulation are provided in a specific release you must obtain from the <a href="https://github.com/simscape/Excavator-Simscape">GitHub repository</a>.  You will also need <a href="https://www.becker3d.com/">ThreeParticle/CAE&#8482; software</a> R6.1 and API version 3.1.1 which you can obtain in a trial license from BECKER 3D.</p><p>Note that the compiled files provided will only work with MATLAB R2022b on a Windows 64-bit operating system. To set up this example for other versions or operating systems, please contact the authors of this submission on the MATLAB Central File Exchange.  We worked with <a href="https://simutopia.com/">Simutopia&reg;</a> to create this example.</p><p><a href="matlab:try,open_system('Excavator_Motion_B3D'),catch,warning('Model%20Excavator_Motion_B3D.slx%20not%20found.%20Please%20obtain%20the%20correct%20release%20from%20GitHub.'),end">Open Excavator with ThreeParticle DEM Soil Loads Model</a></p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Cosimulation Setup</a></li><li><a href="#2">Model</a></li><li><a href="#3">Excavator Machine Subsystem</a></li><li><a href="#4">DEM Loads Subsystem</a></li><li><a href="#5">Dig Test</a></li></ul></div><h2 id="1">Cosimulation Setup</h2><p>(Note: the compiled files will only work with MATLAB R2022b on a Windows 64 bit operating system.)</p><p><b>1. Copy <tt>\Models\Cosim\util_zmq\zmqdll\libzmq-v143-mt-4_3_5.dll</tt> to the "Bin" subfolder within your ThreeParticle installation directory.</b></p><p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_CopyZMQDLL.png" alt=""> </p><p><b>2. Copy <tt>\Models\Cosim\B3D_Bucket\CosimDLL\API_CoSimulation.dll</tt> to the <tt>"Bin\API"</tt> subfolder within your ThreeParticle installation directory.</b></p><p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_CopyAPICosimDLL.png" alt=""> </p><p><b>3. Open ThreeParticle/CAE&#8482; Software</b></p><p><b>4. Import keyword file <tt>\Models\Cosim\B3D_Bucket\Models_B3D\Bucket_Dig_Cycle.inp</tt></b></p><p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_LoadBucketDigCycle.png" alt=""> </p><p><b>5. In MATLAB, open Simulink model Excavator_Motion_B3D.slx</b></p><p><b>6. Start the simulation in ThreeParticle/CAE&#8482; software</b></p><p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_StartThreeParticleSim.png" alt=""> </p><p><b>7. Start the simulation in Simulink</b></p><p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_StartSimulinkSim.png" alt=""> </p><p><b>8. Monitor the progress in animation</b></p><p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_ProgressAnimation.png" alt=""> </p><h2 id="2">Model</h2><img vspace="5" hspace="5" src="Excavator_Motion_B3D_01.png" alt=""> <h2 id="3">Excavator Machine Subsystem</h2><p><a href="matlab:open_system('Excavator_Motion_B3D');open_system('Excavator_Motion_B3D/Excavator/Machine','force');">Open Subsystem</a></p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_02.png" alt=""> <h2 id="4">DEM Loads Subsystem</h2><p><a href="matlab:open_system('Excavator_Motion_B3D');open_system('Excavator_Motion_B3D/DEM%20Loads','force');">Open Subsystem</a></p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_03.png" alt=""> <h2 id="5">Dig Test</h2><p>The simulation actuates the excavator arm to dig the bucket into the bed of particles which models the soil.  The soil loads are plotted below.</p><p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_results_soil_loads.png" alt=""> </p><p class="footer">Copyright 2022-2023 The MathWorks, Inc.<br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2022b</a><br></p></div><!--
+  </style></head><body><div class="content"><h1>Excavator Design with Simscape&#8482;: Model Soil Loads</h1><!--introduction--><p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_Overview.png" alt=""> </p><p>(<a href="matlab:web('Excavator_Design_Overview.html')">return to Excavator Design Overview</a>)</p><p>This example models an excavator acting against soil loads modeled using discrete element modeling in ThreeParticle/CAE software. The motion of the actuators is prescribed and the simulation calculates the amount of force or torque required to execute the motion.  Cosimulation is used to connect the Simscape Multibody model to ThreeParticle/CAE.</p><p>Follow the steps below to set up cosimulation on your machine.  All of the files you need to set up the cosimulation are provided here.  You will also need ThreeParticle software. Note that the compiled files provided will only work with MATLAB R2023a on a Windows 64 bit operating system. To set up this example for other versions or operating systems, please contact the authors of this submission on the MATLAB Central File Exchange.</p><p><a href="matlab:open_system('Excavator_Motion_B3D')">Open Excavator with ThreeParticle DEM Soil Loads Model</a></p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Cosimulation Setup</a></li><li><a href="#2">Model</a></li><li><a href="#3">Excavator Machine Subsystem</a></li><li><a href="#4">DEM Loads Subsystem</a></li><li><a href="#5">Dig Test</a></li></ul></div><h2 id="1">Cosimulation Setup</h2><p>(Note: the compiled files will only work with MATLAB R2023a on a Windows 64 bit operating system.)</p><p><b>1. Copy <tt>\Models\Cosim\util_zmq\zmqdll\libzmq-v143-mt-4_3_6.dll</tt> to the "Bin" subfolder within your ThreeParticle installation directory.</b></p><p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_CopyZMQDLL.png" alt=""> </p><p><b>2. Copy <tt>\Models\Cosim\B3D_Bucket\CosimDLL\API_CoSimulation.dll</tt> to the <tt>"Bin\API"</tt> subfolder within your ThreeParticle installation directory.</b></p><p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_CopyAPICosimDLL.png" alt=""> </p><p><b>3. Open ThreeParticle Software</b></p><p><b>4. Import keyword file <tt>\Models\Cosim\B3D_Bucket\Models_B3D\Bucket_Dig_Cycle.inp</tt></b></p><p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_LoadBucketDigCycle.png" alt=""> </p><p><b>5. In MATLAB, open Simulink model Excavator_Motion_B3D.slx</b></p><p><b>6. Start the simulation in ThreeParticle software</b></p><p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_StartThreeParticleSim.png" alt=""> </p><p><b>7. Start the simulation in Simulink</b></p><p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_StartSimulinkSim.png" alt=""> </p><p><b>8. Monitor the progress in animation</b></p><p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_ProgressAnimation.png" alt=""> </p><h2 id="2">Model</h2><img vspace="5" hspace="5" src="Excavator_Motion_B3D_01.png" alt=""> <h2 id="3">Excavator Machine Subsystem</h2><p><a href="matlab:open_system('Excavator_Motion_B3D');open_system('Excavator_Motion_B3D/Excavator/Machine','force');">Open Subsystem</a></p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_02.png" alt=""> <h2 id="4">DEM Loads Subsystem</h2><p><a href="matlab:open_system('Excavator_Motion_B3D');open_system('Excavator_Motion_B3D/DEM%20Loads','force');">Open Subsystem</a></p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_03.png" alt=""> <h2 id="5">Dig Test</h2><p>The simulation actuates the excavator arm to dig the bucket into the bed of particles which models the soil.  The soil loads are plotted below.</p><p><img vspace="5" hspace="5" src="Excavator_Motion_B3D_results_soil_loads.png" alt=""> </p><p class="footer">Copyright 2022-2023 The MathWorks, Inc.<br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2023a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Excavator Design with Simscape(TM): Model Soil Loads 
 % 
@@ -76,36 +76,29 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 % (<matlab:web('Excavator_Design_Overview.html') return to Excavator Design Overview>)
 %
 % This example models an excavator acting against soil loads modeled using
-% discrete element modeling in ThreeParticle/CAE(TM) software. The motion of the
-% actuators is prescribed, and the simulation calculates the amount of force
+% discrete element modeling in ThreeParticle/CAE software. The motion of the
+% actuators is prescribed and the simulation calculates the amount of force
 % or torque required to execute the motion.  Cosimulation is used to
-% connect the Simscape Multibody model to ThreeParticle/CAE(TM).
+% connect the Simscape Multibody model to ThreeParticle/CAE.
 %
-% *If you have downloaded the correct release from GitHub*, you can follow
-% the steps below to set up cosimulation on your machine.  All of the files
-% you need to set up the cosimulation are provided in a specific release
-% you must obtain from the <https://github.com/simscape/Excavator-Simscape
-% GitHub repository>.  You will also need <https://www.becker3d.com/
-% ThreeParticle/CAE(TM) software> R6.1 and API version 3.1.1 which you can
-% obtain in a trial license from BECKER 3D.
-% 
-% Note that the compiled files provided will only work with MATLAB R2022b
-% on a Windows 64-bit operating system. To set up this example for other
-% versions or operating systems, please contact the authors of this
-% submission on the MATLAB Central File Exchange.  We worked with
-% <https://simutopia.com/ Simutopia(R)> to create this example.
+% Follow the steps below to set up cosimulation on your machine.  All of
+% the files you need to set up the cosimulation are provided here.  You
+% will also need ThreeParticle software. Note that the compiled files
+% provided will only work with MATLAB R2023a on a Windows 64 bit operating
+% system. To set up this example for other versions or operating systems,
+% please contact the authors of this submission on the MATLAB Central File
+% Exchange.
 %
-% <matlab:try,open_system('Excavator_Motion_B3D'),catch,warning('Model%20Excavator_Motion_B3D.slx%20not%20found.%20Please%20obtain%20the%20correct%20release%20from%20GitHub.'),end Open Excavator with
-% ThreeParticle DEM Soil Loads Model>
+% <matlab:open_system('Excavator_Motion_B3D') Open Excavator with ThreeParticle DEM Soil Loads Model>
 %
 % Copyright 2022-2023 The MathWorks, Inc.
 
 %% Cosimulation Setup
 %
-% (Note: the compiled files will only work with MATLAB R2022b on a Windows
+% (Note: the compiled files will only work with MATLAB R2023a on a Windows
 % 64 bit operating system.)
 %
-% *1. Copy |\Models\Cosim\util_zmq\zmqdll\libzmq-v143-mt-4_3_5.dll| to the
+% *1. Copy |\Models\Cosim\util_zmq\zmqdll\libzmq-v143-mt-4_3_6.dll| to the
 % "Bin" subfolder within your ThreeParticle installation directory.*
 %
 % <<Excavator_Motion_B3D_CopyZMQDLL.png>>
@@ -115,7 +108,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 %
 % <<Excavator_Motion_B3D_CopyAPICosimDLL.png>>
 %
-% *3. Open ThreeParticle/CAE(TM) Software*
+% *3. Open ThreeParticle Software*
 %
 % *4. Import keyword file
 % |\Models\Cosim\B3D_Bucket\Models_B3D\Bucket_Dig_Cycle.inp|*
@@ -124,7 +117,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 %
 % *5. In MATLAB, open Simulink model Excavator_Motion_B3D.slx*
 %
-% *6. Start the simulation in ThreeParticle/CAE(TM) software*
+% *6. Start the simulation in ThreeParticle software*
 %
 % <<Excavator_Motion_B3D_StartThreeParticleSim.png>>
 %
