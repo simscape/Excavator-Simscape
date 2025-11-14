@@ -48,6 +48,11 @@ To learn more about modeling and cosimulation with ThreeParticle/CAE&trade; plea
 * [BECKER 3D](https://www.becker3d.com/)
 * [Simutopia&reg;](https://simutopia.com/)
 
+## **Excavator Model, Soil Loads and Terrain Interaction with Mevea**
+![](Models/Cosim/Mevea/Overview/html/Excavator_Mevea_Overview_Image.png)
+
+To learn more about modeling and cosimulation with Mevea please visit [Mevea](https://mevea.com/)
+
 To learn more about modeling and simulation with Simscape, please visit:
 * [Simscape Getting Started Resources](https://www.mathworks.com/solutions/physical-modeling/resources.html)
 * Product Capabilities:
