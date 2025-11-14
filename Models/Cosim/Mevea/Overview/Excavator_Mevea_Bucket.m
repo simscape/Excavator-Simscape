@@ -15,7 +15,7 @@
 % Start button.  Both tools will be open simultaneously and the results can
 % be seen in both animation windows.
 %
-% Copyright 2022-2024 The MathWorks, Inc.
+% Copyright 2022-2025 The MathWorks, Inc.
 
 %% Model
 %
