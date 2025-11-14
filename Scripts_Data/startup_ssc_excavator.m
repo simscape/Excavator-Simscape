@@ -1,6 +1,6 @@
 % Startup script for Excavator.prj
 
-% Copyright 2022-2025 The MathWorks, Inc
+% Copyright 2022-2024 The MathWorks, Inc
 
 Excavator_Init_Params
 Scenario = Excavator_Test_Scenario_Define;
@@ -24,3 +24,4 @@ end
 Excavator_Design_app_run
 
 web('Excavator_Design_Overview.html')
+
