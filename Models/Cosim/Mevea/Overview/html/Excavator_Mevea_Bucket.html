@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      -->
+<title>Excavator Design with Simscape&trade;: Model Soil Loads on Bucket with Mevea</title>
+<meta name="generator" content="MATLAB 24.2">
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+<meta name="DC.date" content="2025-11-12">
+<meta name="DC.source" content="Excavator_Mevea_Bucket.m">
+<style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style>
+</head>
+<body>
+<div class="content">
+<h1>Excavator Design with Simscape&trade;: Model Soil Loads on Bucket with Mevea</h1>
+<!--introduction-->
+<p>
+<img vspace="5" hspace="5" src="Excavator_Mevea_Overview_Image.png" alt=""> </p>
+<p>(<a href="matlab:web('Excavator_Design_Overview.html')">return to Excavator Design Overview</a>)</p>
+<p>This example models an excavator acting against soil loads modeled using discrete element modeling in Mevea software. The motion of the actuators is prescribed and the simulation calculates the amount of force or torque required to execute the motion. Cosimulation is used to connect the Simscape Multibody model to Mevea.</p>
+<p>Running this model requires Mevea software. Open the Simulink model, start the simulation in Simulink, and when Mevea software opens press the Start button. Both tools will be open simultaneously and the results can be seen in both animation windows.</p>
+<!--/introduction-->
+<h2>Contents</h2>
+<div>
+<ul>
+<li>
+<a href="#1">Model</a>
+</li>
+<li>
+<a href="#2">Excavator Subsystem</a>
+</li>
+<li>
+<a href="#3">Excavator Machine Subsystem</a>
+</li>
+<li>
+<a href="#4">Excavator Mevea Loads</a>
+</li>
+<li>
+<a href="#5">Excavator Hydraulics Subsystem</a>
+</li>
+<li>
+<a href="#6">Excavator Hydraulic Valve Block (Left) Subsystem</a>
+</li>
+<li>
+<a href="#7">Excavator Hydraulic Boom Cylinder Subsystem</a>
+</li>
+<li>
+<a href="#8">Excavator Controller</a>
+</li>
+<li>
+<a href="#9">Dig Cycle Test</a>
+</li>
+</ul>
+</div>
+<h2 id="1">Model</h2>
+<p>
+<a href="matlab:open_system('Excavator_Mevea_Bucket');">Open Model</a>
+</p>
+<img vspace="5" hspace="5" src="Excavator_Mevea_Bucket_01.png" alt=""> <h2 id="2">Excavator Subsystem</h2>
+<p>
+<a href="matlab:open_system('Excavator_Mevea_Bucket');open_system('Excavator_Mevea_Bucket/Excavator','force');">Open Subsystem</a>
+</p>
+<img vspace="5" hspace="5" src="Excavator_Mevea_Bucket_02.png" alt=""> <h2 id="3">Excavator Machine Subsystem</h2>
+<p>
+<a href="matlab:open_system('Excavator_Mevea_Bucket');open_system('Excavator_Mevea_Bucket/Excavator/Machine','force');">Open Subsystem</a>
+</p>
+<img vspace="5" hspace="5" src="Excavator_Mevea_Bucket_03.png" alt=""> <h2 id="4">Excavator Mevea Loads</h2>
+<p>
+<a href="matlab:open_system('Excavator_Mevea_Bucket');open_system('Excavator_Mevea_Bucket/Excavator/Machine/Mevea','force');">Open Subsystem</a>
+</p>
+<img vspace="5" hspace="5" src="Excavator_Mevea_Bucket_04.png" alt=""> <h2 id="5">Excavator Hydraulics Subsystem</h2>
+<p>
+<a href="matlab:open_system('Excavator_Mevea_Bucket');open_system('Excavator_Mevea_Bucket/Excavator/Hydraulics','force');">Open Subsystem</a>
+</p>
+<img vspace="5" hspace="5" src="Excavator_Mevea_Bucket_05.png" alt=""> <h2 id="6">Excavator Hydraulic Valve Block (Left) Subsystem</h2>
+<p>
+<a href="matlab:open_system('Excavator_Mevea_Bucket');open_system('Excavator_Mevea_Bucket/Excavator/Hydraulics/ValveBlocks/LeftValveBlock','force');">Open Subsystem</a>
+</p>
+<img vspace="5" hspace="5" src="Excavator_Mevea_Bucket_06.png" alt=""> <h2 id="7">Excavator Hydraulic Boom Cylinder Subsystem</h2>
+<p>
+<a href="matlab:open_system('Excavator_Mevea_Bucket');open_system('Excavator_Mevea_Bucket/Excavator/Hydraulics/Functions/Boom','force');">Open Subsystem</a>
+</p>
+<img vspace="5" hspace="5" src="Excavator_Mevea_Bucket_07.png" alt=""> <h2 id="8">Excavator Controller</h2>
+<p>
+<a href="matlab:open_system('Excavator_Mevea_Bucket');open_system('Excavator_Mevea_Bucket/Controller/Function%20Commander','force');">Open Subsystem</a>
+</p>
+<img vspace="5" hspace="5" src="Excavator_Mevea_Bucket_08.png" alt=""> <h2 id="9">Dig Cycle Test</h2>
+<p>Simulate a complete dig cycle and plot operator commands, actuator positions, cylinder pressures, and the load on the bucket due to the soil.</p>
+<pre class="codeoutput">Elapsed Sim Time = 644.6853
+</pre>
+<img vspace="5" hspace="5" src="Excavator_Mevea_Bucket_09.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Mevea_Bucket_10.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Mevea_Bucket_11.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Mevea_Bucket_12.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Mevea_Bucket_13.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Mevea_Bucket_14.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Mevea_Bucket_15.png" alt=""> <p class="footer">Copyright 2022-2024 The MathWorks, Inc.<br>
+<a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2024b</a>
+<br>
+</p>
+</div>
+<!--
+##### SOURCE BEGIN #####
+%% Excavator Design with Simscape(TM): Model Soil Loads on Bucket with Mevea
+% 
+% <<Excavator_Mevea_Overview_Image.png>>
+%
+% (<matlab:web('Excavator_Design_Overview.html') return to Excavator Design Overview>)
+%
+% This example models an excavator acting against soil loads modeled using
+% discrete element modeling in Mevea software. The motion of the
+% actuators is prescribed and the simulation calculates the amount of force
+% or torque required to execute the motion.  Cosimulation is used to
+% connect the Simscape Multibody model to Mevea.
+%
+% Running this model requires Mevea software.  Open the Simulink model,
+% start the simulation in Simulink, and when Mevea software opens press the
+% Start button.  Both tools will be open simultaneously and the results can
+% be seen in both animation windows.
+%
+% Copyright 2022-2024 The MathWorks, Inc.
+
+%% Model
+%
+% <matlab:open_system('Excavator_Mevea_Bucket'); Open Model>
+
+open_system('Excavator_Mevea_Bucket')
+ann_h = find_system('Excavator_Mevea_Bucket','MatchFilter',@Simulink.match.allVariants,'FindAll', 'on','type','annotation','Tag','ModelFeatures');
+for i=1:length(ann_h)
+    set_param(ann_h(i),'Interpreter','off');
+end
+
+%% Excavator Subsystem
+%
+% <matlab:open_system('Excavator_Mevea_Bucket');open_system('Excavator_Mevea_Bucket/Excavator','force'); Open Subsystem>
+
+set_param('Excavator_Mevea_Bucket/Excavator','LinkStatus','none')
+open_system('Excavator_Mevea_Bucket/Excavator','force')
+
+%% Excavator Machine Subsystem
+%
+% <matlab:open_system('Excavator_Mevea_Bucket');open_system('Excavator_Mevea_Bucket/Excavator/Machine','force'); Open Subsystem>
+
+set_param('Excavator_Mevea_Bucket/Excavator/Machine','LinkStatus','none')
+open_system('Excavator_Mevea_Bucket/Excavator/Machine','force')
+
+%% Excavator Mevea Loads
+%
+% <matlab:open_system('Excavator_Mevea_Bucket');open_system('Excavator_Mevea_Bucket/Excavator/Machine/Mevea','force'); Open Subsystem>
+
+set_param('Excavator_Mevea_Bucket/Excavator/Machine/Mevea','LinkStatus','none')
+open_system('Excavator_Mevea_Bucket/Excavator/Machine/Mevea','force')
+
+%% Excavator Hydraulics Subsystem
+%
+% <matlab:open_system('Excavator_Mevea_Bucket');open_system('Excavator_Mevea_Bucket/Excavator/Hydraulics','force'); Open Subsystem>
+
+set_param('Excavator_Mevea_Bucket/Excavator/Hydraulics','LinkStatus','none')
+open_system('Excavator_Mevea_Bucket/Excavator/Hydraulics','force')
+
+%% Excavator Hydraulic Valve Block (Left) Subsystem
+%
+% <matlab:open_system('Excavator_Mevea_Bucket');open_system('Excavator_Mevea_Bucket/Excavator/Hydraulics/ValveBlocks/LeftValveBlock','force'); Open Subsystem>
+
+set_param('Excavator_Mevea_Bucket/Excavator/Hydraulics/ValveBlocks/LeftValveBlock','LinkStatus','none')
+open_system('Excavator_Mevea_Bucket/Excavator/Hydraulics/ValveBlocks/LeftValveBlock','force')
+
+%% Excavator Hydraulic Boom Cylinder Subsystem
+%
+% <matlab:open_system('Excavator_Mevea_Bucket');open_system('Excavator_Mevea_Bucket/Excavator/Hydraulics/Functions/Boom','force'); Open Subsystem>
+
+set_param('Excavator_Mevea_Bucket/Excavator/Hydraulics/Functions/Boom','LinkStatus','none')
+open_system('Excavator_Mevea_Bucket/Excavator/Hydraulics/Functions/Boom','force')
+
+%% Excavator Controller
+%
+% <matlab:open_system('Excavator_Mevea_Bucket');open_system('Excavator_Mevea_Bucket/Controller/Function%20Commander','force'); Open Subsystem>
+
+set_param('Excavator_Mevea_Bucket/Controller/Function Commander','LinkStatus','none')
+open_system('Excavator_Mevea_Bucket/Controller/Function Commander','force')
+
+%% Dig Cycle Test
+%
+% Simulate a complete dig cycle and plot operator commands, actuator
+% positions, cylinder pressures, and the load on the bucket due to the
+% soil.
+
+mdl = 'Excavator_Mevea_BucketDriveline';
+
+simOut = sim(mdl);
+
+Excavator_Complete_plot1operatorcmds
+Excavator_Complete_plot2position
+Excavator_Complete_plot3pressure
+Excavator_Mevea_plot4loadsoil
+Excavator_Energy_Calc
+
+
+%%
+
+%clear all
+close all
+bdclose all
+
+
+##### SOURCE END #####
+-->
+</body>
+</html>

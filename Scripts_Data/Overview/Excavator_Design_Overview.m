@@ -16,5 +16,6 @@
 % # *<matlab:web('Excavator_Param_Load_Chart.html') Create load chart and calculate pin loads>* at custom arm positions.
 % # *<matlab:web('Excavator_Motion.html') Estimate required actuator forces>* with a motion simulation.
 % # *<matlab:web('Excavator_Complete.html') Measure dig cycle time and efficiency>* with a hydraulic simulation.
-% # *<matlab:web('Excavator_Motion_B3D.html') Model soil loads>* using discrete element modeling.
+% # *<matlab:web('Excavator_Motion_B3D.html') Model soil loads>* using discrete element modeling with ThreeParticle/CAE.
+% # *<matlab:web('Excavator_Mevea_BucketDriveline.html') Model soil loads and terrain interaction>* using macroscopic terrain modeling in Mevea.
 
