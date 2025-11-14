@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMInputFile>
+  <Model Name="Excavator bucket with external control" Method="Recursive" Integrator="Runge-Kutta 4" SparseSolver="Yes" dt="0.001" tstop="1000" hydrIntMethod="Numeric solver" numHydrIntegr="10" Oil_B0="1.6e9" enableCavitation="Yes" update_frequency="1000" computeJointForces="No" error="1.0e-5" nGSIterations="3" collisionGroupDefinitionsFile="" hydraulicsSchematicFile="" logoImageName="" openDialogs="">
+    <Gravitation x="0" y="-9.81" z="0" />
+  </Model>
+  <MevPacker baseDir="" additionalDirs="" skipDirs="" files="" password="" modelId="0" modelIdString="" />
+  <Assemblies>
+    <LargeCrawlerAssembly13Rollers name="LargeCrawlerAssembly13Rollers" isActive="Yes" fileName="Assemblies/LargeUndercarriage13Roller.xml" models="">
+      <color R="208" G="208" B="208" />
+    </LargeCrawlerAssembly13Rollers>
+    <LargeBucketAssembly name="LargeBucketAssembly" isActive="Yes" fileName="Assemblies/LargeBucket.xml" models="">
+      <color R="224" G="224" B="224" />
+    </LargeBucketAssembly>
+  </Assemblies>
+  <Bodies>
+    <Ground name="Ground" assembly="" BodyType="Rigid" RelTo="Ground" RelToCS="" CmCS="" CmiCS="" VisualizationGraphics="" CollisionGraphics="" bodyDefinitionFile="" ColLayer="" ColIgnores="" VisOptions="" FlexFile="" Modes="" criticalDamping="" AnsysSource="" VisSource="" VisModes="">
+      <Inertia mass="10">
+        <I Ixx="1" Iyy="1" Izz="1" Ixy="0" Izx="0" Iyz="0" />
+      </Inertia>
+      <CS>
+        <CS_Overview_Ref name="CS_Overview_Ref" Node="0" VisOptions="" orientTargetName="">
+          <Position x="-9" y="2" z="7" />
+          <Orientation rx="-0" ry="0" rz="-0" />
+        </CS_Overview_Ref>
+        <CS_Overview_LookAt name="CS_Overview_LookAt" Node="0" VisOptions="" orientTargetName="">
+          <Position x="0" y="1" z="0" />
+          <Orientation rx="-0" ry="0" rz="-0" />
+        </CS_Overview_LookAt>
+        <CS_Right_Ref name="CS_Right_Ref" Node="0" VisOptions="" orientTargetName="">
+          <Position x="-2" y="1" z="10" />
+          <Orientation rx="-0" ry="0" rz="-0" />
+        </CS_Right_Ref>
+        <CS_Left_Ref name="CS_Left_Ref" Node="0" VisOptions="" orientTargetName="">
+          <Position x="-2" y="1" z="-10" />
+          <Orientation rx="-0" ry="0" rz="-0" />
+        </CS_Left_Ref>
+        <CS_Right_LookAt name="CS_Right_LookAt" Node="0" VisOptions="" orientTargetName="">
+          <Position x="-2" y="1" z="0" />
+          <Orientation rx="-0" ry="0" rz="-0" />
+        </CS_Right_LookAt>
+        <CS_Left_LookAt name="CS_Left_LookAt" Node="0" VisOptions="" orientTargetName="">
+          <Position x="2" y="1" z="0" />
+          <Orientation rx="-0" ry="0" rz="-0" />
+        </CS_Left_LookAt>
+        <CS_pileLoc name="CS_pileLoc" Node="-1" VisOptions="" orientTargetName="">
+          <Position x="0" y="0" z="0" />
+          <Orientation rx="0" ry="0" rz="0" />
+        </CS_pileLoc>
+        <CS_CS_Heightfield1 name="CS_CS_Heightfield1" Node="-1" VisOptions="" orientTargetName="">
+          <Position x="-36" y="0" z="-30" />
+          <Orientation rx="0" ry="0" rz="0" />
+        </CS_CS_Heightfield1>
+        <ExcavatorLocation name="ExcavatorLocation" Node="0" VisOptions="" orientTargetName="">
+          <Position x="0" y="1.3" z="0" />
+          <Orientation rx="0" ry="0" rz="0" />
+          <CSControl>
+            <CsControl1 name="CsControl1" assembly="" csControlActive="Yes" type="State" angleAsQuat="Yes" nrounds="1" inputX="AI_UndercarriagePosition_X" inputY="AI_UndercarriagePosition_Y" inputZ="AI_UndercarriagePosition_Z" inpute1="AI_UndercarriageQuat_ux" inpute2="AI_UndercarriageQuat_uy" inpute3="AI_UndercarriageQuat_uz" inpute0="AI_UndercarriageQuat_w" inputXd="AI_UndercarriageVelocity_X" inputYd="AI_UndercarriageVelocity_Y" inputZd="AI_UndercarriageVelocity_Z" inputwX="AI_UndercarriageOmega_X" inputwY="AI_UndercarriageOmega_Y" inputwZ="AI_UndercarriageOmega_Z" />
+          </CSControl>
+        </ExcavatorLocation>
+        <CS_Bucket name="CS_Bucket" Node="-1" VisOptions="" orientTargetName="">
+          <Position x="-3.204" y="4.493" z="5.55" />
+          <Orientation rx="-3.142" ry="-1.047" rz="-1.908" />
+          <CSControl>
+            <CsControl2 name="CsControl2" assembly="" csControlActive="Yes" type="State" angleAsQuat="Yes" nrounds="1" inputX="AI_BucketPosition_X" inputY="AI_BucketPosition_Y" inputZ="AI_BucketPosition_Z" inpute1="AI_BucketQuat_ux" inpute2="AI_BucketQuat_uy" inpute3="AI_BucketQuat_uz" inpute0="AI_BucketQuat_w" inputXd="AI_BucketVelocity_X" inputYd="AI_BucketVelocity_Y" inputZd="AI_BucketVelocity_Z" inputwX="AI_BucketOmega_X" inputwY="AI_BucketOmega_Y" inputwZ="AI_BucketOmega_Z" />
+          </CSControl>
+        </CS_Bucket>
+        <CS_Body1 name="CS_Body1" Node="-1" VisOptions="" orientTargetName="">
+          <Position x="0" y="0" z="0" />
+          <Orientation rx="0" ry="0" rz="0" />
+        </CS_Body1>
+      </CS>
+    </Ground>
+    <Body1 name="Body1" assembly="" BodyType="Rigid" RelTo="Ground" RelToCS="Ground.CS_Body1" CmCS="Body1.CM" CmiCS="Body1.CM" VisualizationGraphics="" CollisionGraphics="" bodyDefinitionFile="" ColLayer="" ColIgnores="" VisOptions="" FlexFile="" Modes="" criticalDamping="" AnsysSource="" VisSource="" VisModes="">
+      <Inertia mass="10">
+        <I Ixx="1" Iyy="1" Izz="1" Ixy="0" Izx="0" Iyz="0" />
+      </Inertia>
+      <CS>
+        <CM name="CM" Node="-1" VisOptions="" orientTargetName="">
+          <Position x="0" y="0" z="0" />
+          <Orientation rx="0" ry="0" rz="0" />
+        </CM>
+        <Ground name="Ground" Node="-1" VisOptions="" orientTargetName="">
+          <Position x="0" y="0" z="0" />
+          <Orientation rx="0" ry="0" rz="0" />
+        </Ground>
+      </CS>
+    </Body1>
+  </Bodies>
+  <Constraints>
+    <Ground_Body1 name="Ground_Body1" assembly="" Type="Revolute" Active="Yes" activateInPlace="Yes" CutJoint="No" FixedInBodyI="No" isDrivingConstraint="No" setPositionLimits="No" setForceLimits="No" Body1="Ground" Body1CS="Ground.CS_Body1" Body2="Body1" Body2CS="Body1.Ground" ControlSignal="" drivingSignal="" PathNodeIndices="" d0="1" FricName="" JointLength="0" JointDiameter="0" correctionFactor="20" minPos="0" maxPos="0" maxNegativeForce="0" maxPositiveForce="0" negativeSlowDown="0" positiveSlowDown="0" />
+  </Constraints>
+  <Graphics>
+    <Graphics_EnvironmentProjection name="Graphics_EnvironmentProjection" assembly="" FileName="OSG/ExampleProjection/DesolateOutbackProjectionTarget.osgt" Scale="1" Transparency="1" CastShadows="No" ReceiveShadows="Yes" BothSides="No" TransparentBin="No" IsActive="Yes" MaterialColl="" modShading="GGX" useModShading="Yes" scriptName="" usePagedLoading="No" use_flexible_shader="No" showFlexCloud="No" use_normal_map="No" ocean_reflect="No" ocean_refract="No" ocean_discard="No" normalmap="" bumpMapScale="10" normal_map_index="1" ShaderName="" linkDefaultShaders="No" useColor="No" isTerrain="No" isPickable="No" disableCulling="No" flipNormals="No">
+      <Position x="60" y="-1.02" z="130" />
+      <Orientation rx="0" ry="0" rz="0" />
+      <Colour r="0.5" g="0.5" b="0.5" />
+    </Graphics_EnvironmentProjection>
+  </Graphics>
+  <DataSources>
+    <DS_x name="DS_x" assembly="" TypeName="Dummy" ComponentName="Dummy_Bucket" ParameterName="Dummy_Bucket x" Function="" ScriptName="" IirName="" Scale="1" Offset="0" Uniform="No" AverageRounds="0" />
+    <DS_Input_x name="DS_Input_x" assembly="" TypeName="Input" ComponentName="AI_BucketPosition_X" ParameterName="AI_BucketPosition_X RealValue" Function="" ScriptName="" IirName="" Scale="1" Offset="0" Uniform="No" AverageRounds="0" />
+    <DS_diff_x name="DS_diff_x" assembly="" TypeName="SimulationProperties" ComponentName="Simulation" ParameterName="Time" Function="DS_x - DS_Input_x" ScriptName="" IirName="" Scale="1" Offset="0" Uniform="No" AverageRounds="0" />
+    <DS_y name="DS_y" assembly="" TypeName="Dummy" ComponentName="Dummy_Bucket" ParameterName="Dummy_Bucket y" Function="" ScriptName="" IirName="" Scale="1" Offset="0" Uniform="No" AverageRounds="0" />
+    <DS_Input_y name="DS_Input_y" assembly="" TypeName="Input" ComponentName="AI_BucketPosition_Y" ParameterName="AI_BucketPosition_Y RealValue" Function="" ScriptName="" IirName="" Scale="1" Offset="0" Uniform="No" AverageRounds="0" />
+    <DS_diff_y name="DS_diff_y" assembly="" TypeName="SimulationProperties" ComponentName="Simulation" ParameterName="Time" Function="DS_y - DS_Input_y" ScriptName="" IirName="" Scale="1" Offset="0" Uniform="No" AverageRounds="0" />
+    <DS_z name="DS_z" assembly="" TypeName="Dummy" ComponentName="Dummy_Bucket" ParameterName="Dummy_Bucket z" Function="" ScriptName="" IirName="" Scale="1" Offset="0" Uniform="No" AverageRounds="0" />
+    <DS_Input_z name="DS_Input_z" assembly="" TypeName="Input" ComponentName="AI_BucketPosition_Z" ParameterName="AI_BucketPosition_Z RealValue" Function="" ScriptName="" IirName="" Scale="1" Offset="0" Uniform="No" AverageRounds="0" />
+    <DS_diff_z name="DS_diff_z" assembly="" TypeName="SimulationProperties" ComponentName="Simulation" ParameterName="Time" Function="DS_z - DS_Input_z" ScriptName="" IirName="" Scale="1" Offset="0" Uniform="No" AverageRounds="0" />
+    <DS_Zero name="DS_Zero" assembly="" TypeName="SimulationProperties" ComponentName="Simulation" ParameterName="Time" Function="0" ScriptName="" IirName="" Scale="1" Offset="0" Uniform="No" AverageRounds="0" />
+  </DataSources>
+  <ExternalInterface>
+    <MeveaExcavatorExternalCSControl name="MeveaExcavatorExternalCSControl" assembly="" IPAddress="127.0.0.1" port="5111" fmuPath="./MeveaLargeExcavatorTCFMUCSControl.fmu" fmuExclude="" invertFunctionality="Yes" useFirstOrderHold="No">
+      <SO_BucketForce_X name="SO_BucketForce_X" signalType="AnalogOut" SourceType="Component" DataSourceName="" ComponentType="Dummy" ComponentName="Dummy_Bucket" ParameterName="Dummy_Bucket CollFz" />
+      <SO_BucketForce_Y name="SO_BucketForce_Y" signalType="AnalogOut" SourceType="Component" DataSourceName="" ComponentType="Dummy" ComponentName="Dummy_Bucket" ParameterName="Dummy_Bucket CollFx" />
+      <SO_BucketForce_Z name="SO_BucketForce_Z" signalType="AnalogOut" SourceType="Component" DataSourceName="" ComponentType="Dummy" ComponentName="Dummy_Bucket" ParameterName="Dummy_Bucket CollFy" />
+      <SO_BucketTorque_X name="SO_BucketTorque_X" signalType="AnalogOut" SourceType="Component" DataSourceName="" ComponentType="Dummy" ComponentName="Dummy_Bucket" ParameterName="Dummy_Bucket CollTz" />
+      <SO_BucketTorque_Y name="SO_BucketTorque_Y" signalType="AnalogOut" SourceType="Component" DataSourceName="" ComponentType="Dummy" ComponentName="Dummy_Bucket" ParameterName="Dummy_Bucket CollTx" />
+      <SO_BucketTorque_Z name="SO_BucketTorque_Z" signalType="AnalogOut" SourceType="Component" DataSourceName="" ComponentType="Dummy" ComponentName="Dummy_Bucket" ParameterName="Dummy_Bucket CollTy" />
+      <SO_UndercarriageForce_X name="SO_UndercarriageForce_X" signalType="AnalogOut" SourceType="Component" DataSourceName="" ComponentType="Dummy" ComponentName="Dummy_Undercarriage" ParameterName="Dummy_Undercarriage Fz" />
+      <SO_UndercarriageForce_Y name="SO_UndercarriageForce_Y" signalType="AnalogOut" SourceType="Component" DataSourceName="" ComponentType="Dummy" ComponentName="Dummy_Undercarriage" ParameterName="Dummy_Undercarriage Fx" />
+      <SO_UndercarriageForce_Z name="SO_UndercarriageForce_Z" signalType="AnalogOut" SourceType="Component" DataSourceName="" ComponentType="Dummy" ComponentName="Dummy_Undercarriage" ParameterName="Dummy_Undercarriage Fy" />
+      <SO_UndercarriageTorque_X name="SO_UndercarriageTorque_X" signalType="AnalogOut" SourceType="Component" DataSourceName="" ComponentType="Dummy" ComponentName="Dummy_Undercarriage" ParameterName="Dummy_Undercarriage Tz" />
+      <SO_UndercarriageTorque_Y name="SO_UndercarriageTorque_Y" signalType="AnalogOut" SourceType="Component" DataSourceName="" ComponentType="Dummy" ComponentName="Dummy_Undercarriage" ParameterName="Dummy_Undercarriage Tx" />
+      <SO_UndercarriageTorque_Z name="SO_UndercarriageTorque_Z" signalType="AnalogOut" SourceType="Component" DataSourceName="" ComponentType="Dummy" ComponentName="Dummy_Undercarriage" ParameterName="Dummy_Undercarriage Ty" />
+      <SO_LeftCrawler_w name="SO_LeftCrawler_w" signalType="AnalogOut" SourceType="Component" DataSourceName="" ComponentType="Brake" ComponentName="BrakeLeft" ParameterName="BrakeLeft wout" />
+      <SO_RightCrawler_w name="SO_RightCrawler_w" signalType="AnalogOut" SourceType="Component" DataSourceName="" ComponentType="Brake" ComponentName="BrakeRight" ParameterName="BrakeRight wout" />
+      <SI_BucketVelocity_X name="SI_BucketVelocity_X" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_BucketVelocity_X" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_BucketVelocity_Y name="SI_BucketVelocity_Y" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_BucketVelocity_Y" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_BucketVelocity_Z name="SI_BucketVelocity_Z" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_BucketVelocity_Z" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_BucketOmega_X name="SI_BucketOmega_X" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_BucketOmega_X" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_BucketOmega_Y name="SI_BucketOmega_Y" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_BucketOmega_Y" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_BucketOmega_Z name="SI_BucketOmega_Z" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_BucketOmega_Z" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_BucketPosition_X name="SI_BucketPosition_X" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_BucketPosition_X" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_BucketPosition_Y name="SI_BucketPosition_Y" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_BucketPosition_Y" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_BucketPosition_Z name="SI_BucketPosition_Z" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_BucketPosition_Z" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_BucketQuat_w name="SI_BucketQuat_w" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_BucketQuat_w" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_BucketQuat_ux name="SI_BucketQuat_ux" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_BucketQuat_ux" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_BucketQuat_uy name="SI_BucketQuat_uy" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_BucketQuat_uy" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_BucketQuat_uz name="SI_BucketQuat_uz" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_BucketQuat_uz" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_UndercarriageVelocity_X name="SI_UndercarriageVelocity_X" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_UndercarriageVelocity_X" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_UndercarriageVelocity_Y name="SI_UndercarriageVelocity_Y" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_UndercarriageVelocity_Y" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_UndercarriageVelocity_Z name="SI_UndercarriageVelocity_Z" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_UndercarriageVelocity_Z" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_UndercarriageOmega_X name="SI_UndercarriageOmega_X" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_UndercarriageOmega_X" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_UndercarriageOmega_Y name="SI_UndercarriageOmega_Y" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_UndercarriageOmega_Y" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_UndercarriageOmega_Z name="SI_UndercarriageOmega_Z" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_UndercarriageOmega_Z" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_UndercarriagePosition_X name="SI_UndercarriagePosition_X" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_UndercarriagePosition_X" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_UndercarriagePosition_Y name="SI_UndercarriagePosition_Y" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_UndercarriagePosition_Y" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_UndercarriagePosition_Z name="SI_UndercarriagePosition_Z" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_UndercarriagePosition_Z" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_UndercarriageQuat_w name="SI_UndercarriageQuat_w" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_UndercarriageQuat_w" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_UndercarriageQuat_ux name="SI_UndercarriageQuat_ux" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_UndercarriageQuat_ux" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_UndercarriageQuat_uy name="SI_UndercarriageQuat_uy" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_UndercarriageQuat_uy" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_UndercarriageQuat_uz name="SI_UndercarriageQuat_uz" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_UndercarriageQuat_uz" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_LeftCrawler_T name="SI_LeftCrawler_T" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_LeftCrawlerTorque" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_RightCrawler_T name="SI_RightCrawler_T" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_RightCrawlerTorque" ComponentType="" ComponentName="" ParameterName="" />
+      <SI_CrawlerBrake name="SI_CrawlerBrake" signalType="AnalogIn" SourceType="DataSource" DataSourceName="AI_Brake" ComponentType="" ComponentName="" ParameterName="" />
+    </MeveaExcavatorExternalCSControl>
+  </ExternalInterface>
+  <DataCollections>
+    <DC_Powertrain name="DC_Powertrain" assembly="" isActive="No" resultFolder="results" closeAfterInputs="No">
+      <DataSet>
+        <DS_PT_AngularVelovity name="DS_PT_AngularVelovity" isActive="Yes" resultFile="" prefixModelName="No" postfixTime="Yes" separator="Tab" updateFrequency="0" inputFile="" showPlot="Yes" plotLength="0" keepData="No" compareFile="" dataFile="" saveAnimation="No" animationFile="">
+          <PlotPos x="980" y="0" />
+          <PlotSize x="640" y="480" />
+          <DataItem>
+            <DI_w_L name="DI_w_L" dataItemType="Component" dataSource="" componentType="Brake" componentName="BrakeLeft" parameterName="BrakeLeft wout" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_w_L>
+            <DI_w_R name="DI_w_R" dataItemType="Component" dataSource="" componentType="Brake" componentName="BrakeRight" parameterName="BrakeRight wout" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_w_R>
+            <DI_w_RSL name="DI_w_RSL" dataItemType="Component" dataSource="" componentType="ParticleRopeConstraint" componentName="Pulley_Left_Rear" parameterName="Pulley_Left_Rear w" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_w_RSL>
+            <DI_w_RSR name="DI_w_RSR" dataItemType="Component" dataSource="" componentType="ParticleRopeConstraint" componentName="Pulley_Right_Rear" parameterName="Pulley_Right_Rear w" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_w_RSR>
+          </DataItem>
+        </DS_PT_AngularVelovity>
+        <DS_PT_Torque name="DS_PT_Torque" isActive="Yes" resultFile="" prefixModelName="No" postfixTime="Yes" separator="Tab" updateFrequency="0" inputFile="" showPlot="Yes" plotLength="0" keepData="No" compareFile="" dataFile="" saveAnimation="No" animationFile="">
+          <PlotPos x="980" y="520" />
+          <PlotSize x="640" y="480" />
+          <DataItem>
+            <DI_T_L name="DI_T_L" dataItemType="Component" dataSource="" componentType="TorqueSource" componentName="TorqueSource_L" parameterName="TorqueSource_L Tin" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_T_L>
+            <DI_T_R name="DI_T_R" dataItemType="Component" dataSource="" componentType="TorqueSource" componentName="TorqueSource_R" parameterName="TorqueSource_R Tin" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_T_R>
+          </DataItem>
+        </DS_PT_Torque>
+      </DataSet>
+    </DC_Powertrain>
+    <DC_Animation name="DC_Animation" assembly="" isActive="Yes" resultFolder="results" closeAfterInputs="No">
+      <DataSet>
+        <DS_Animation name="DS_Animation" isActive="Yes" resultFile="" prefixModelName="No" postfixTime="Yes" separator="Tab" updateFrequency="0" inputFile="" showPlot="No" plotLength="0" keepData="No" compareFile="" dataFile="" saveAnimation="Yes" animationFile="ExcavatorAnimation">
+          <PlotPos x="100" y="100" />
+          <PlotSize x="640" y="480" />
+        </DS_Animation>
+      </DataSet>
+    </DC_Animation>
+  </DataCollections>
+  <Particles>
+    <Pile assembly="" RelToC="Ground" RelToCS="Ground.CS_pileLoc">
+      <Size x="4" z="4" />
+      <PileParameters assembly="" IsMixed="0" IsAligned="0" PileType="0" CellIterationInterval="1" CellFraktile="98" ContactFrictionStiffness="0.5" sleepMotion="0.5" sleepingTimeDelay="0.1" broadPhaseAlgorithm="SAP" bendingModel="BF3Points" applyActivationToAllContacts="No" />
+      <ObjectDimensions x="1" y="0" z="0" />
+      <PGraph>
+        <ParticleSystem_Sand name="ParticleSystem_Sand" assembly="" TypePsys="Granular" DrawType="None" CollisionType="Particles" is6DOF="Yes" npsys="0" GraphVisName="" GraphContName="" TriangleContactMaterial="" k_jousi="0" c_jousi="0" k_coll="6e4" e_coll="0.01" myy="0.6" radius="0.07" useMass="Use Mass" M_Psys="4" Vol="0" roo="0" dampingT="0.6" dampingR="0.1" length="1" nparticles="1" useTwistlocks="No" TwistlockDefinition="" ContainerDefinition="">
+          <I_Psys Ixx="2" Iyy="2" Izz="2" />
+          <I_unitM Ixx="0.06" Iyy="0.06" Izz="0.06" />
+          <cmLoc x="0" y="0" z="0" />
+          <m_stackRefPoint x="0" y="0" z="0" />
+        </ParticleSystem_Sand>
+      </PGraph>
+    </Pile>
+    <Granular>
+      <HeightField>
+        <Heightfield1 name="Heightfield1" assembly="" attachedToBody="Ground" attachedToCS="Ground.CS_CS_Heightfield1" gridSizeX="512" gridSizeZ="512" gridCellSize="0.125" updateInterval="2" soilAlgorithm="shearForce" keepEdgesLocked="Yes" useMassUpdate="No" fillRate="1" isTiltingModelEnabled="No" tiltingModelVelocityCoefficient="0.8">
+          <BottomFunction>
+            <HF_BottomOperator name="HF_BottomOperator" isActive="Yes" type="CONSTANT" value="-6" body="" graphic="" radius="0" intensity="0" fileName="" />
+          </BottomFunction>
+          <HeightFunction>
+            <HF_ElevationOperation name="HF_ElevationOperation" isActive="Yes" type="CONSTANT" value="-10" body="" graphic="" radius="0" intensity="0" fileName="" />
+            <HF_GroundProjection name="HF_GroundProjection" isActive="Yes" type="MESH_PROJECT" value="0" body="Ground" graphic="Graphics_EnvironmentProjection" radius="0" intensity="0" fileName="" />
+          </HeightFunction>
+        </Heightfield1>
+      </HeightField>
+      <HeightFieldMaterials>
+        <HF_Material_Sand name="HF_Material_Sand" assembly="" partGenDeltaH="0.06" partGenVRel="0.3" pilingSlope="0.7" materialMixingValue="4" materialFlowingVelocity="0.00035" density="2000" maxCompaction="0.1" compactiveness="0.3" collStiffness="1e6" collDamping="0.9" myy="1" shearImpulseLimit="30" particleType="ParticleSystem_Sand" voidVolumeCorrection="1.3" updateMassWithDensity="No" useAlphaMap="No" usePerturbTexture="No" texture0="" texture1="" texture2="" texture3="" texture4="" textureRepeat="8" normalStrength="1" useDustEffect="No" tex_dust_diff="" perturbationActive="No" fadeOutParticles="No" useGlobalFlow="No" nSubParticles="4" subParticleScale="1" subParticleSpread="0.01" drawGrid="No" tex_particle_diff="" tex_particle_spec="" tex_particle_normal="" heightFieldVertexShader="" heightFieldFragmentShader="" particleVertexShader="" particleFragmentShader="" globalFlowVertexShader="" globalFlowFragmentShader="" globalDustEffectVertexShader="" globalDustEffectFragmentShader="">
+          <hfColor0 r="1" g="1" b="1" />
+          <hfColor1 r="1" g="1" b="1" />
+          <smokeColor r="0.346" g="0.3047" b="0.2245" />
+          <perturbColor r="0.346" g="0.3047" b="0.2245" />
+          <subParticleColor r="0.346" g="0.3047" b="0.2245" />
+        </HF_Material_Sand>
+      </HeightFieldMaterials>
+      <Parameters name="GranularParameters" assembly="" maxGranularParticles="1000" globalHeightFieldMaterial="HF_Material_Sand" />
+    </Granular>
+  </Particles>
+  <WorldProperties name="WorldProperties" assembly="" vsync="Yes" computeNearFar="Yes" overrideOptions="No" controlSignalCameraNext="" controlSignalCameraPrev="" alpha_func_c="GREATER" alpha_ref="0.01" motionblur_persistence="0" defaultSceneShader="" TaskFile="" mergeTextures="No" useHeadTracking="No" headTrackingMode="Symmetric" displaySizeWidth="0.4" displaySizeHeight="0.3" displaySizeDistance="0.5" setClearColor="No" environmentReflectionCube="" programDefinitions="" textureDefinitions="" plantDefinitions="" plantPositions="">
+    <clearColor Red="0" Green="0" Blue="0" Alpha="1" />
+    <cameraLimits useCameraLimits="No">
+      <vmin x="-1000" y="0" z="-1000" />
+      <vmax x="1000" y="100" z="1000" />
+    </cameraLimits>
+  </WorldProperties>
+  <WorldShadows name="Shadows" assembly="" useShadows="No" shadowStyle="MinimalShadowMap" shadowTextureSize="1024" shadowMinLightMargin="10" shadowMaxFarPlane="50" shadowIntensity="0.5" defaultShadowShader="" useForestShadow="No" />
+  <WorldTouchscreen name="Touchscreen" assembly="" useTouchScreen="No" touchScreenPositionX="0" touchScreenPositionY="0" touchScreenSizeX="1024" touchScreenSizeY="768" touchScreenNames="" touchScreenFontName="" touchScreenFontSize="24" touchScreenMenuTextureBase="" touchScreenMenuTextureHover="">
+    <touchScreenBackgroundColor Red="0.2" Green="0.2" Blue="0.6" Alpha="1" />
+    <touchScreenFontColor Red="0" Green="0" Blue="0" Alpha="1" />
+  </WorldTouchscreen>
+  <SoundComponentProperties name="SoundComponentProperties" assembly="" body="" volume="0">
+    <direction x="0" y="0" z="0" />
+    <position x="0" y="0" z="0" />
+  </SoundComponentProperties>
+  <Cameras>
+    <Overview name="Overview" assembly="" RefBody="Ground" RefCS="Ground.CS_Overview_Ref" RefBodyLookAt="Ground" RefCSLookAt="Ground.CS_Overview_LookAt" ControlSignal="" ControlSignalFov="" ControlSignalAratio="" AcceptHeadTracking="No" AcceptViewAdjustments="Yes" fov="45">
+      <UpVector x="0" y="1" z="0" />
+    </Overview>
+    <Right name="Right" assembly="" RefBody="Ground" RefCS="Ground.CS_Right_Ref" RefBodyLookAt="Ground" RefCSLookAt="Ground.CS_Right_LookAt" ControlSignal="" ControlSignalFov="" ControlSignalAratio="" AcceptHeadTracking="No" AcceptViewAdjustments="Yes" fov="45">
+      <UpVector x="0" y="1" z="0" />
+    </Right>
+    <Left name="Left" assembly="" RefBody="Ground" RefCS="Ground.CS_Left_Ref" RefBodyLookAt="Ground" RefCSLookAt="Ground.CS_Left_LookAt" ControlSignal="" ControlSignalFov="" ControlSignalAratio="" AcceptHeadTracking="No" AcceptViewAdjustments="Yes" fov="45">
+      <UpVector x="0" y="1" z="0" />
+    </Left>
+  </Cameras>
+  <Scenes>
+    <Scene1 name="Scene1" assembly="" Camera="Right" DrawAxis="No" FoVy="45" ZFront="0.1" ZRear="5e5" AxisScale="0.5" useFrames="Yes" isActive="Yes" stayOnTop="No" overrideConfig="No" SizeX="200" SizeY="200" PositionX="200" PositionY="200" />
+  </Scenes>
+  <WeatherCollection>
+    <WeatherSettings name="WeatherSettings" assembly="" activeWeather="" automaticTransition="No" />
+    <Ocean>
+      <Ocean1 name="Ocean1" assembly="" IsActive="No" SurfaceHeight="-5" IsGodRays="No" IsEndless="Yes" IsSilt="Yes" IsDistortion="Yes" IsGlare="No" GlareAttenuation="0" UseShaders="No" IsReflections="Yes" IsRefractions="Yes" IsUnderWaterDOF="No" IsChoppy="Yes" ChoppyFactor="2.5" WindSpeed="12" WindX="1.1" WindY="1.1" ReflectionDamping="0.35" Depth="0" Scale="10.0e-9" CrestFoamHeight="2.2" FoamBottomHeight="2.2" FoamTopHeight="3" AboveWaterFog="0.0012" UnderwaterFog="0" fftGridSize="64" Resolution="256" NumTiles="17">
+        <LightColor r="104" g="137" b="173" />
+        <AboveWaterFogColor r="198" g="224" b="255" />
+        <UnderwaterFogColor r="0" g="0" b="0" />
+        <UnderwaterDiffuseColor r="0" g="0" b="0" />
+        <UnderwaterAttenuation r="0" g="0" b="0" />
+        <SunDirection x="-0.18221549689769744873" y="-0.67743921279907226562" z="-0.71265262365341186523" />
+        <ScreenDims x="0" y="0" />
+        <CylinderSize x="0" y="0" />
+      </Ocean1>
+    </Ocean>
+    <Sky>
+      <Daytime name="Daytime" assembly="" IsActive="Yes" Latitude="38.4765" Longitude="25.493" Radius="1000" MoonScale="0" SunScale="1" useSouthernHemisphere="Yes" mirrorSouthernHemisphere="Yes" moveWithEyePoint="Yes" drawGroundPlane="No" showStars="No" year="2011" month="5" day="14" hour="9" minute="30" second="1" dayCycleActive="Yes" dayCycleScale="1" showClouds="No" GroundHeight="0" GroundTextureName="" GroundTextureRepeat="1">
+        <Center x="0" y="0" z="0" />
+        <GroundColor r="0.1" g="1" b="0.1" a="1" />
+        <Shader shaderPath="" horizonTexture="" />
+      </Daytime>
+    </Sky>
+    <LensFlare>
+      <Flare1 name="Flare1" assembly="" IsActive="No" lensFlareGeometry="" lensFlareTexture="" Shader="" />
+    </LensFlare>
+    <Wind>
+      <Wind1 name="Wind1" assembly="" isActive="No" isGusty="Yes" windSpeed="5" windFrequency="0.2" windAmplitude="0.3" windDirection="90" angleVariance="15" />
+    </Wind>
+    <WeatherCollection>
+      <Preset1 name="Preset1" assembly="" oceanName="" skyName="Daytime" flareName="" windName="" precipitationName="" fogName="" autoTransitionTime="10" />
+    </WeatherCollection>
+  </WeatherCollection>
+  <Comments SimulationProperties_Simulation="Simulation time 18 for simple model\nSimulation time 31 for mechanism model\nSimulation time 31 for hydraulics model" CoordinateSystem_Ground.ExcavatorLocation="\n" CoordinateSystem_Ground.CS_Bucket="75*pi/180\n\nFor mechanism model\nx y z 8.5058 -0.0791 -0.2003\nrz 1.3089969389957472057\n\nFor hydraulics model\nx y z -3.204 4.493 5.55\nrx -3.142\nry -1.047\nrz -1.908" SocketSignal_SO_BucketForce_X="Note: Due to different CS orientation XYZ -&gt; YZX the forces are mapped on Mevea side\nDummy_Bucket CollFz" SocketSignal_SO_BucketForce_Y="Note: Due to different CS orientation XYZ -&gt; YZX the forces are mapped on Mevea side\nDummy_Bucket CollFx" SocketSignal_SO_BucketForce_Z="Note: Due to different CS orientation XYZ -&gt; YZX the forces are mapped on Meva side\nDummy_Bucket CollFy" SocketSignal_SO_BucketTorque_X="Note: Due to different CS orientation XYZ -&gt;; YZX the forces are mapped on Mevea side\nDummy_Bucket CollTz" SocketSignal_SO_BucketTorque_Y="Note: Due to different CS orientation XYZ -&gt; YZX the forces are mapped on Mevea side\nDummy_Bucket CollTx" SocketSignal_SO_BucketTorque_Z="Note: Due to different CS orientation XYZ -&gt; YZX the forces are mapped on Mevea side\nDummy_Bucket CollTy" SocketSignal_SO_UndercarriageForce_X="Note: Due to different CS orientation XYZ -&gt; YZX the forces are mapped on Mevea side\nDummy_Undercarriage Fz" SocketSignal_SO_UndercarriageForce_Y="Note: Due to different CS orientation XYZ -&gt; YZX the forces are mapped on Mevea side\nDummy_Undercarriage Fx" SocketSignal_SO_UndercarriageForce_Z="Note: Due to different CS orientation XYZ -&gt; YZX the forces are mapped on Mevea side\nDummy_Undercarriage Fy" SocketSignal_SO_UndercarriageTorque_X="Note: Due to different CS orientation XYZ -&gt; YZX the forces are mapped on Mevea side\nDummy_Undercarriage Tz" SocketSignal_SO_UndercarriageTorque_Y="Note: Due to different CS orientation XYZ -&gt; YZX the forces are mapped on Mevea side\nDummy_Undercarriage Tx" SocketSignal_SO_UndercarriageTorque_Z="Note: Due to different CS orientation XYZ -&gt; YZX the forces are mapped on Mevea side\nDummy_Undercarriage Ty" />
+</DMInputFile>

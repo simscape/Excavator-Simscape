@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Info File="Scripts_Data/shutdown_ssc_excavator.m" GroupUUID="default" Icon="" Name="shutdown_ssc_excavator" Type="Shutdown" Visible="0">
+    <Extension Name="ShutdownPrev" Value="HEAD"/>
+</Info>

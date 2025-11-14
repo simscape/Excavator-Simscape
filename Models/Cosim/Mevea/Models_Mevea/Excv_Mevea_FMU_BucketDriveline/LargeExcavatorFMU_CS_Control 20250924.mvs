@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MeVEASimulation>
+  <Environment simulationName="Excavator bucket with external control" particlesInThread="Yes" particleCellsInThread="Yes" nCollisionThreads="1" />
+  <Models ModelFile="LargeExcavatorFMU_CS_Control 20250924.xml" solverID="1" useArchive="No" MPKFile="" />
+  <ModelCreationInfo modelVersion="" softwareVersion="6.1.0" modellerVersion="2533" solverVersion="6.1.0.5669" />
+</MeVEASimulation>

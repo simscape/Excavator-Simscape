@@ -1,0 +1,1522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMInputFile>
+  <Frictions>
+    <Friction_DriveBrake name="Friction_DriveBrake" assembly="LargeCrawlerAssembly13Rollers" Fn="0" s0="1e5" s1="500" v0="0.001" c="0" myys="0.9" myyd="0.8" e="2" />
+    <Friction_RollingResistance name="Friction_RollingResistance" assembly="LargeCrawlerAssembly13Rollers" Fn="0" s0="1000" s1="5" v0="0.001" c="1" myys="0.9" myyd="0.8" e="2" />
+  </Frictions>
+  <Dummies>
+    <Dummy_Undercarriage name="Dummy_Undercarriage" assembly="LargeCrawlerAssembly13Rollers" DumType="Static" RelTo="Ground" RelToCS="Ground.ExcavatorLocation" CmCS="Dummy_Undercarriage.CS_CM" CmiCS="Dummy_Undercarriage.CS_CM" DumInd="N/A" VisualizationGraphics="Undercarriage_Graphics" CollisionGraphics="" bodyDefinitionFile="" scriptName="" ColLayer="" ColIgnores="" VisOptions="">
+      <Inertia mass="2.02e5">
+        <I Ixx="109382.9" Iyy="1026532.2" Izz="1.9228e6" Ixy="0" Izx="0" Iyz="0" />
+      </Inertia>
+      <CS>
+        <CS_Ground_Undercarriage name="CS_Ground_Undercarriage" Node="0" VisOptions="" orientTargetName="">
+          <Position x="0" y="0" z="0" />
+          <Orientation rx="-0" ry="0" rz="-0" />
+        </CS_Ground_Undercarriage>
+        <LOC name="LOC" Node="0" VisOptions="Draw coordinate system" orientTargetName="">
+          <Position x="0" y="0" z="0" />
+          <Orientation rx="0" ry="0" rz="0" />
+        </LOC>
+        <LOC_Offset name="LOC_Offset" Node="-1" VisOptions="" orientTargetName="">
+          <Position x="-1.4" y="-0.45" z="0" />
+          <Orientation rx="0" ry="0" rz="0" />
+          <CS>
+            <LeftCrawler name="LeftCrawler" Node="-1" VisOptions="" orientTargetName="">
+              <Position x="0" y="0" z="-1.9" />
+              <Orientation rx="0" ry="0" rz="0" />
+              <CS>
+                <Sprocket_Left_Rear name="Sprocket_Left_Rear" Node="-1" VisOptions="" orientTargetName="">
+                  <Position desvar="DV_RearSprocket" x="-2.75" y="-0.38" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </Sprocket_Left_Rear>
+                <Carrier1Left name="Carrier1Left" Node="-1" VisOptions="" orientTargetName="">
+                  <Position desvar="DV_CarrierRear" x="-1.6" y="0.06" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </Carrier1Left>
+                <Carrier2Left name="Carrier2Left" Node="-1" VisOptions="" orientTargetName="">
+                  <Position desvar="DV_CarrierMiddle" x="0" y="0.2" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </Carrier2Left>
+                <Carrier3Left name="Carrier3Left" Node="-1" VisOptions="" orientTargetName="">
+                  <Position desvar="DV_CarrierFront" x="1.6" y="0.06" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </Carrier3Left>
+                <Sprocket_Left_Front name="Sprocket_Left_Front" Node="-1" VisOptions="" orientTargetName="">
+                  <Position desvar="DV_FrontSprocket" x="2.75" y="-0.38" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </Sprocket_Left_Front>
+                <TrackRoller1Left name="TrackRoller1Left" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller1_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller1Left>
+                <TrackRoller2Left name="TrackRoller2Left" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller2_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller2Left>
+                <TrackRoller3Left name="TrackRoller3Left" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller3_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller3Left>
+                <TrackRoller4Left name="TrackRoller4Left" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller4_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller4Left>
+                <TrackRoller5Left name="TrackRoller5Left" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller5_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller5Left>
+                <TrackRoller6Left name="TrackRoller6Left" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller6_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller6Left>
+                <TrackRoller7Left name="TrackRoller7Left" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller7_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller7Left>
+                <TrackRoller8Left name="TrackRoller8Left" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller8_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller8Left>
+                <TrackRoller9Left name="TrackRoller9Left" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller9_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller9Left>
+                <TrackRoller10Left name="TrackRoller10Left" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller10_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller10Left>
+                <TrackRoller11Left name="TrackRoller11Left" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller11_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller11Left>
+                <TrackRoller12Left name="TrackRoller12Left" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller12_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller12Left>
+                <TrackRoller13Left name="TrackRoller13Left" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller13_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller13Left>
+              </CS>
+            </LeftCrawler>
+            <RightCrawler name="RightCrawler" Node="-1" VisOptions="" orientTargetName="">
+              <Position x="0" y="0" z="1.9" />
+              <Orientation rx="0" ry="0" rz="0" />
+              <CS>
+                <Sprocket_Right_Rear name="Sprocket_Right_Rear" Node="-1" VisOptions="" orientTargetName="">
+                  <Position desvar="DV_RearSprocket" x="-2.75" y="-0.38" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </Sprocket_Right_Rear>
+                <Carrier1Right name="Carrier1Right" Node="-1" VisOptions="" orientTargetName="">
+                  <Position desvar="DV_CarrierRear" x="-1.6" y="0.06" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </Carrier1Right>
+                <Carrier2Right name="Carrier2Right" Node="-1" VisOptions="" orientTargetName="">
+                  <Position desvar="DV_CarrierMiddle" x="0" y="0.2" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </Carrier2Right>
+                <Carrier3Right name="Carrier3Right" Node="-1" VisOptions="" orientTargetName="">
+                  <Position desvar="DV_CarrierFront" x="1.6" y="0.06" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </Carrier3Right>
+                <Sprocket_Right_Front name="Sprocket_Right_Front" Node="-1" VisOptions="" orientTargetName="">
+                  <Position desvar="DV_FrontSprocket" x="2.75" y="-0.38" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </Sprocket_Right_Front>
+                <TrackRoller1Right name="TrackRoller1Right" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller1_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller1Right>
+                <TrackRoller2Right name="TrackRoller2Right" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller2_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller2Right>
+                <TrackRoller3Right name="TrackRoller3Right" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller3_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller3Right>
+                <TrackRoller4Right name="TrackRoller4Right" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller4_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller4Right>
+                <TrackRoller5Right name="TrackRoller5Right" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller5_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller5Right>
+                <TrackRoller6Right name="TrackRoller6Right" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller6_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller6Right>
+                <TrackRoller7Right name="TrackRoller7Right" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller7_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller7Right>
+                <TrackRoller8Right name="TrackRoller8Right" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller8_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller8Right>
+                <TrackRoller9Right name="TrackRoller9Right" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller9_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller9Right>
+                <TrackRoller10Right name="TrackRoller10Right" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller10_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller10Right>
+                <TrackRoller11Right name="TrackRoller11Right" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller11_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller11Right>
+                <TrackRoller12Right name="TrackRoller12Right" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller12_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller12Right>
+                <TrackRoller13Right name="TrackRoller13Right" Node="-1" VisOptions="" orientTargetName="">
+                  <Position x="dv:DV_Roller13_Posx" y="dv:DV_RollerHeigth" z="0" />
+                  <Orientation rx="0" ry="0" rz="0" />
+                </TrackRoller13Right>
+              </CS>
+            </RightCrawler>
+          </CS>
+        </LOC_Offset>
+        <CS_CM name="CS_CM" Node="0" VisOptions="" orientTargetName="">
+          <Position x="-1.5" y="1" z="0" />
+          <Orientation rx="-0" ry="0" rz="-0" />
+        </CS_CM>
+        <CS_Camera1_Ref name="CS_Camera1_Ref" Node="0" VisOptions="" orientTargetName="">
+          <Position x="5" y="1" z="9" />
+          <Orientation rx="-0" ry="0" rz="-0" />
+        </CS_Camera1_Ref>
+        <CS_Camera1_LookAt name="CS_Camera1_LookAt" Node="0" VisOptions="" orientTargetName="">
+          <Position x="2" y="1.5" z="0" />
+          <Orientation rx="-0" ry="0" rz="-0" />
+        </CS_Camera1_LookAt>
+      </CS>
+    </Dummy_Undercarriage>
+  </Dummies>
+  <Forces>
+    <PowerTrain>
+      <Planets>
+        <PG_FrontLeft name="PG_FrontLeft" assembly="LargeCrawlerAssembly13Rollers" Input="BrakeLeft" i="12" />
+        <PG_FrontRight name="PG_FrontRight" assembly="LargeCrawlerAssembly13Rollers" Input="BrakeRight" i="12" />
+      </Planets>
+      <Brakes>
+        <BrakeLeft name="BrakeLeft" assembly="LargeCrawlerAssembly13Rollers" Input="TorqueSource_L" ControlSignal="AI_Brake" d="0.5" FricName="Friction_DriveBrake" />
+        <BrakeRight name="BrakeRight" assembly="LargeCrawlerAssembly13Rollers" Input="TorqueSource_R" ControlSignal="AI_Brake" d="0.5" FricName="Friction_DriveBrake" />
+        <BrakeLeftRollingResistance name="BrakeLeftRollingResistance" assembly="LargeCrawlerAssembly13Rollers" Input="" ControlSignal="AI_RollingResistance" d="0.2" FricName="Friction_RollingResistance" />
+        <BrakeRightRollingResistance name="BrakeRightRollingResistance" assembly="LargeCrawlerAssembly13Rollers" Input="" ControlSignal="AI_RollingResistance" d="0.2" FricName="Friction_RollingResistance" />
+      </Brakes>
+      <Sources>
+        <TorqueSource_L name="TorqueSource_L" assembly="LargeCrawlerAssembly13Rollers" ControlSignal="AI_LeftCrawlerTorque" T="0" />
+        <TorqueSource_R name="TorqueSource_R" assembly="LargeCrawlerAssembly13Rollers" ControlSignal="AI_RightCrawlerTorque" T="0" />
+      </Sources>
+    </PowerTrain>
+    <Hydraulics />
+  </Forces>
+  <Graphics>
+    <Undercarriage_Graphics name="Undercarriage_Graphics" assembly="LargeCrawlerAssembly13Rollers" FileName="fbx/ExcavatorBase_Primary.fbx" Scale="0.01" Transparency="0.75" CastShadows="Yes" ReceiveShadows="Yes" BothSides="No" TransparentBin="Yes" IsActive="Yes" MaterialColl="" modShading="GGX" useModShading="Yes" scriptName="" usePagedLoading="No" use_flexible_shader="No" showFlexCloud="No" use_normal_map="No" ocean_reflect="No" ocean_refract="No" ocean_discard="No" normalmap="" bumpMapScale="10" normal_map_index="1" ShaderName="" linkDefaultShaders="No" useColor="Yes" isTerrain="No" isPickable="No" disableCulling="No" flipNormals="No">
+      <Position x="-1.4" y="-0.45" z="0" />
+      <Orientation rx="0" ry="3.141592653589793116" rz="0" />
+      <Colour r="0.5" g="0.5" b="0.5" />
+      <Children>
+        <TrackElement name="TrackElement" assembly="" FileName="fbx/Excavator_TrackElement066.fbx" Scale="0.02" Transparency="1" CastShadows="Yes" ReceiveShadows="Yes" BothSides="No" TransparentBin="No" IsActive="Yes" MaterialColl="" modShading="GGX" useModShading="Yes" scriptName="" usePagedLoading="No" use_flexible_shader="No" showFlexCloud="No" use_normal_map="No" ocean_reflect="No" ocean_refract="No" ocean_discard="No" normalmap="" bumpMapScale="10" normal_map_index="1" ShaderName="" linkDefaultShaders="No" useColor="No" isTerrain="No" isPickable="No" disableCulling="No" flipNormals="No">
+          <Position x="0" y="0" z="0" />
+          <Orientation rx="0" ry="0" rz="0" />
+          <Colour r="0.5" g="0.5" b="0.5" />
+        </TrackElement>
+        <Excavator_Sprocket_Graphics name="Excavator_Sprocket_Graphics" assembly="" FileName="fbx/Excavator_FrontPulley.fbx" Scale="0.016" Transparency="1" CastShadows="Yes" ReceiveShadows="Yes" BothSides="No" TransparentBin="No" IsActive="Yes" MaterialColl="" modShading="GGX" useModShading="Yes" scriptName="" usePagedLoading="No" use_flexible_shader="No" showFlexCloud="No" use_normal_map="No" ocean_reflect="No" ocean_refract="No" ocean_discard="No" normalmap="" bumpMapScale="10" normal_map_index="1" ShaderName="" linkDefaultShaders="No" useColor="No" isTerrain="No" isPickable="No" disableCulling="No" flipNormals="No">
+          <Position x="0" y="0" z="0" />
+          <Orientation rx="0" ry="0" rz="0" />
+          <Colour r="0.5" g="0.5" b="0.5" />
+        </Excavator_Sprocket_Graphics>
+        <Excavator_Roller_Graphics name="Excavator_Roller_Graphics" assembly="" FileName="fbx/Excavator_TrackPulley.fbx" Scale="0.0136" Transparency="1" CastShadows="Yes" ReceiveShadows="Yes" BothSides="No" TransparentBin="No" IsActive="Yes" MaterialColl="" modShading="GGX" useModShading="Yes" scriptName="" usePagedLoading="No" use_flexible_shader="No" showFlexCloud="No" use_normal_map="No" ocean_reflect="No" ocean_refract="No" ocean_discard="No" normalmap="" bumpMapScale="10" normal_map_index="1" ShaderName="" linkDefaultShaders="No" useColor="No" isTerrain="No" isPickable="No" disableCulling="No" flipNormals="No">
+          <Position x="0" y="0" z="0" />
+          <Orientation rx="0" ry="0" rz="0" />
+          <Colour r="0.5" g="0.5" b="0.5" />
+        </Excavator_Roller_Graphics>
+      </Children>
+    </Undercarriage_Graphics>
+  </Graphics>
+  <DesignVariables>
+    <DV_TrackWidthPos name="DV_TrackWidthPos" assembly="LargeCrawlerAssembly13Rollers" type="vector3" value="0" function="" vector="0 0 0.4" string="" bool="No" />
+    <DV_TrackWidthNeg name="DV_TrackWidthNeg" assembly="LargeCrawlerAssembly13Rollers" type="vector3" value="0" function="" vector="0 0 -0.4" string="" bool="No" />
+    <DV_RearSprocket name="DV_RearSprocket" assembly="LargeCrawlerAssembly13Rollers" type="vector3" value="0" function="" vector="-2.75 -0.38 0" string="" bool="No" />
+    <DV_FrontSprocket name="DV_FrontSprocket" assembly="LargeCrawlerAssembly13Rollers" type="vector3" value="0" function="" vector="2.75 -0.38 0" string="" bool="No" />
+    <DV_CarrierRear name="DV_CarrierRear" assembly="LargeCrawlerAssembly13Rollers" type="vector3" value="0" function="" vector="-1.6 0.06 0" string="" bool="No" />
+    <DV_CarrierMiddle name="DV_CarrierMiddle" assembly="LargeCrawlerAssembly13Rollers" type="vector3" value="0" function="" vector="0 0.2 0" string="" bool="No" />
+    <DV_CarrierFront name="DV_CarrierFront" assembly="LargeCrawlerAssembly13Rollers" type="vector3" value="0" function="" vector="1.6 0.06 0" string="" bool="No" />
+    <DV_RollerHeigth name="DV_RollerHeigth" assembly="LargeCrawlerAssembly13Rollers" type="double" value="-0.73" function="" vector="" string="" bool="No" />
+    <DV_RollerDistance name="DV_RollerDistance" assembly="LargeCrawlerAssembly13Rollers" type="double" value="0.355" function="" vector="" string="" bool="No" />
+    <DV_Roller1_Posx name="DV_Roller1_Posx" assembly="LargeCrawlerAssembly13Rollers" type="double" value="2.13" function="DV_RollerDistance*6" vector="" string="" bool="No" />
+    <DV_Roller2_Posx name="DV_Roller2_Posx" assembly="LargeCrawlerAssembly13Rollers" type="double" value="1.775" function="DV_RollerDistance*5" vector="" string="" bool="No" />
+    <DV_Roller3_Posx name="DV_Roller3_Posx" assembly="LargeCrawlerAssembly13Rollers" type="double" value="1.42" function="DV_RollerDistance*4" vector="" string="" bool="No" />
+    <DV_Roller4_Posx name="DV_Roller4_Posx" assembly="LargeCrawlerAssembly13Rollers" type="double" value="1.065" function="DV_RollerDistance*3" vector="" string="" bool="No" />
+    <DV_Roller5_Posx name="DV_Roller5_Posx" assembly="LargeCrawlerAssembly13Rollers" type="double" value="0.71" function="DV_RollerDistance*2" vector="" string="" bool="No" />
+    <DV_Roller6_Posx name="DV_Roller6_Posx" assembly="LargeCrawlerAssembly13Rollers" type="double" value="0.355" function="DV_RollerDistance" vector="" string="" bool="No" />
+    <DV_Roller7_Posx name="DV_Roller7_Posx" assembly="LargeCrawlerAssembly13Rollers" type="double" value="0" function="DV_RollerDistance*0" vector="" string="" bool="No" />
+    <DV_Roller8_Posx name="DV_Roller8_Posx" assembly="LargeCrawlerAssembly13Rollers" type="double" value="-0.355" function="-DV_Roller6_Posx" vector="" string="" bool="No" />
+    <DV_Roller9_Posx name="DV_Roller9_Posx" assembly="LargeCrawlerAssembly13Rollers" type="double" value="-0.71" function="-DV_Roller5_Posx" vector="" string="" bool="No" />
+    <DV_Roller10_Posx name="DV_Roller10_Posx" assembly="LargeCrawlerAssembly13Rollers" type="double" value="-1.065" function="-DV_Roller4_Posx" vector="" string="" bool="No" />
+    <DV_Roller11_Posx name="DV_Roller11_Posx" assembly="LargeCrawlerAssembly13Rollers" type="double" value="-1.42" function="-DV_Roller3_Posx" vector="" string="" bool="No" />
+    <DV_Roller12_Posx name="DV_Roller12_Posx" assembly="LargeCrawlerAssembly13Rollers" type="double" value="-1.775" function="-DV_Roller2_Posx" vector="" string="" bool="No" />
+    <DV_Roller13_Posx name="DV_Roller13_Posx" assembly="LargeCrawlerAssembly13Rollers" type="double" value="-2.13" function="-DV_Roller1_Posx" vector="" string="" bool="No" />
+    <DV_SprocketRadius name="DV_SprocketRadius" assembly="LargeCrawlerAssembly13Rollers" type="double" value="0.496" function="" vector="" string="" bool="No" />
+    <DV_RollerRadius name="DV_RollerRadius" assembly="LargeCrawlerAssembly13Rollers" type="double" value="0.15" function="" vector="" string="" bool="No" />
+    <DV_RollerDamping name="DV_RollerDamping" assembly="LargeCrawlerAssembly13Rollers" type="double" value="1" function="" vector="" string="" bool="No" />
+    <DV_SprocketDamping name="DV_SprocketDamping" assembly="LargeCrawlerAssembly13Rollers" type="double" value="1" function="" vector="" string="" bool="No" />
+    <DV_SprocketInertia name="DV_SprocketInertia" assembly="LargeCrawlerAssembly13Rollers" type="inertiamatrix" value="0" function="" vector="39 0 0 39 0 75" string="" bool="No" />
+    <DV_RollerInertia name="DV_RollerInertia" assembly="LargeCrawlerAssembly13Rollers" type="inertiamatrix" value="0" function="" vector="1 0 0 1 0 2" string="" bool="No" />
+    <DV_SprocketMass name="DV_SprocketMass" assembly="LargeCrawlerAssembly13Rollers" type="double" value="615" function="" vector="" string="" bool="No" />
+  </DesignVariables>
+  <Inputs>
+    <AI_LeftCrawlerTorque name="AI_LeftCrawlerTorque" assembly="LargeCrawlerAssembly13Rollers" isActive="Yes" InType="Analog" JoyNro="6" JoyCh="0" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_RightCrawlerTorque name="AI_RightCrawlerTorque" assembly="LargeCrawlerAssembly13Rollers" isActive="Yes" InType="Analog" JoyNro="6" JoyCh="1" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_UndercarriageVelocity_X name="AI_UndercarriageVelocity_X" assembly="LargeCrawlerAssembly13Rollers" isActive="Yes" InType="Analog" JoyNro="6" JoyCh="2" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_UndercarriageVelocity_Y name="AI_UndercarriageVelocity_Y" assembly="LargeCrawlerAssembly13Rollers" isActive="Yes" InType="Analog" JoyNro="6" JoyCh="3" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_UndercarriageVelocity_Z name="AI_UndercarriageVelocity_Z" assembly="LargeCrawlerAssembly13Rollers" isActive="Yes" InType="Analog" JoyNro="6" JoyCh="4" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_UndercarriageOmega_X name="AI_UndercarriageOmega_X" assembly="LargeCrawlerAssembly13Rollers" isActive="Yes" InType="Analog" JoyNro="6" JoyCh="5" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_UndercarriageOmega_Y name="AI_UndercarriageOmega_Y" assembly="LargeCrawlerAssembly13Rollers" isActive="Yes" InType="Analog" JoyNro="6" JoyCh="6" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_UndercarriageOmega_Z name="AI_UndercarriageOmega_Z" assembly="LargeCrawlerAssembly13Rollers" isActive="Yes" InType="Analog" JoyNro="6" JoyCh="7" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_UndercarriagePosition_X name="AI_UndercarriagePosition_X" assembly="LargeCrawlerAssembly13Rollers" isActive="Yes" InType="Analog" JoyNro="6" JoyCh="8" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_UndercarriagePosition_Y name="AI_UndercarriagePosition_Y" assembly="LargeCrawlerAssembly13Rollers" isActive="Yes" InType="Analog" JoyNro="6" JoyCh="9" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_UndercarriagePosition_Z name="AI_UndercarriagePosition_Z" assembly="LargeCrawlerAssembly13Rollers" isActive="Yes" InType="Analog" JoyNro="6" JoyCh="10" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_UndercarriageQuat_w name="AI_UndercarriageQuat_w" assembly="LargeCrawlerAssembly13Rollers" isActive="Yes" InType="Analog" JoyNro="6" JoyCh="11" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_UndercarriageQuat_ux name="AI_UndercarriageQuat_ux" assembly="LargeCrawlerAssembly13Rollers" isActive="Yes" InType="Analog" JoyNro="6" JoyCh="12" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_UndercarriageQuat_uy name="AI_UndercarriageQuat_uy" assembly="LargeCrawlerAssembly13Rollers" isActive="Yes" InType="Analog" JoyNro="6" JoyCh="13" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_UndercarriageQuat_uz name="AI_UndercarriageQuat_uz" assembly="LargeCrawlerAssembly13Rollers" isActive="Yes" InType="Analog" JoyNro="6" JoyCh="14" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_Brake name="AI_Brake" assembly="LargeCrawlerAssembly13Rollers" isActive="Yes" InType="Analog" JoyNro="6" JoyCh="16" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_RollingResistance name="AI_RollingResistance" assembly="LargeCrawlerAssembly13Rollers" isActive="Yes" InType="Analog" JoyNro="6" JoyCh="15" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="0" B="300" DeadZone="0" />
+  </Inputs>
+  <DataCollections>
+    <DC_AngularVelocity name="DC_AngularVelocity" assembly="LargeCrawlerAssembly13Rollers" isActive="No" resultFolder="results" closeAfterInputs="No">
+      <DataSet>
+        <DS_AngularVelocity name="DS_AngularVelocity" isActive="Yes" resultFile="" prefixModelName="No" postfixTime="Yes" separator="Tab" updateFrequency="0" inputFile="" showPlot="Yes" plotLength="0" keepData="No" compareFile="" dataFile="" saveAnimation="No" animationFile="">
+          <PlotPos x="980" y="0" />
+          <PlotSize x="640" y="480" />
+          <DataItem>
+            <DI_wx name="DI_wx" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Undercarriage" parameterName="Dummy_Undercarriage wx" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_wx>
+            <DI_wy name="DI_wy" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Undercarriage" parameterName="Dummy_Undercarriage wx" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_wy>
+            <DI_wz name="DI_wz" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Undercarriage" parameterName="Dummy_Undercarriage wz" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_wz>
+            <DI_wx_in name="DI_wx_in" dataItemType="Component" dataSource="" componentType="Input" componentName="AI_UndercarriageOmega_X" parameterName="AI_UndercarriageOmega_X RealValue" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_wx_in>
+            <DI_wy_in name="DI_wy_in" dataItemType="Component" dataSource="" componentType="Input" componentName="AI_UndercarriageOmega_Y" parameterName="AI_UndercarriageOmega_Y RealValue" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_wy_in>
+            <DI_wz_in name="DI_wz_in" dataItemType="Component" dataSource="" componentType="Input" componentName="AI_UndercarriageOmega_Z" parameterName="AI_UndercarriageOmega_Z RealValue" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_wz_in>
+          </DataItem>
+        </DS_AngularVelocity>
+      </DataSet>
+    </DC_AngularVelocity>
+  </DataCollections>
+  <Particles>
+    <RopeSystems>
+      <Ropes>
+        <CrawlerL name="CrawlerL" assembly="LargeCrawlerAssembly13Rollers" DrawType="TrackElement" GraphVisName="TrackElement" TriangleContactMaterial="" nparticles="130" nLines="3" attachToline="" Density="3.7e4" RopeRadius="0.03" CollisionSphereRadius="0.06" k="3.5e6" c="20" k_coll="7e5" e_coll="0.3" scale_L="0.94" k_bend="0" c_bend="5" isLooped="Yes" ignoreAllContacts="No" useSegmentForceModel="Yes" lineSegmentForceScaling="3" scale_bending_constraint="1" c_global="0.5" k_bending_const="2e4" c_bending_const="0.2" myy="1" texture="">
+          <Color r="0" g="0" b="0" a="1" />
+          <RopeConstraints CrawlerL_Const0="Pulley_Left_Rear" CrawlerL_Const1="Carrier1Left" CrawlerL_Const2="Carrier2Left" CrawlerL_Const3="Carrier3Left" CrawlerL_Const4="Pulley_Left_Front" CrawlerL_Const5="TrackRoller1Left" CrawlerL_Const6="TrackRoller2Left" CrawlerL_Const7="TrackRoller3Left" CrawlerL_Const8="TrackRoller4Left" CrawlerL_Const9="TrackRoller5Left" CrawlerL_Const10="TrackRoller6Left" CrawlerL_Const11="TrackRoller7Left" CrawlerL_Const12="TrackRoller8Left" CrawlerL_Const13="TrackRoller9Left" CrawlerL_Const14="TrackRoller10Left" CrawlerL_Const15="TrackRoller11Left" CrawlerL_Const16="TrackRoller12Left" CrawlerL_Const17="TrackRoller13Left" />
+        </CrawlerL>
+        <CrawlerR name="CrawlerR" assembly="LargeCrawlerAssembly13Rollers" DrawType="TrackElement" GraphVisName="TrackElement" TriangleContactMaterial="" nparticles="130" nLines="3" attachToline="" Density="3.7e4" RopeRadius="0.03" CollisionSphereRadius="0.06" k="3.5e6" c="20" k_coll="7e5" e_coll="0.3" scale_L="0.94" k_bend="0" c_bend="5" isLooped="Yes" ignoreAllContacts="No" useSegmentForceModel="Yes" lineSegmentForceScaling="3" scale_bending_constraint="1" c_global="0.5" k_bending_const="2e4" c_bending_const="0.2" myy="1" texture="">
+          <Color r="0" g="0" b="0" a="1" />
+          <RopeConstraints CrawlerR_Const0="Pulley_Right_Rear" CrawlerR_Const1="Carrier1Right" CrawlerR_Const2="Carrier2Right" CrawlerR_Const3="Carrier3Right" CrawlerR_Const4="Pulley_Right_Front" CrawlerR_Const5="TrackRoller1Right" CrawlerR_Const6="TrackRoller2Right" CrawlerR_Const7="TrackRoller3Right" CrawlerR_Const8="TrackRoller4Right" CrawlerR_Const9="TrackRoller5Right" CrawlerR_Const10="TrackRoller6Right" CrawlerR_Const11="TrackRoller7Right" CrawlerR_Const12="TrackRoller8Right" CrawlerR_Const13="TrackRoller9Right" CrawlerR_Const14="TrackRoller10Right" CrawlerR_Const15="TrackRoller11Right" CrawlerR_Const16="TrackRoller12Right" CrawlerR_Const17="TrackRoller13Right" />
+        </CrawlerR>
+      </Ropes>
+      <RopeConstraints>
+        <Pulley_Left_Rear name="Pulley_Left_Rear" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.Sprocket_Left_Rear" InputPrimitiveType="Brake" InputPrimitiveName="BrakeLeftRollingResistance" InputPointSide="Left" GraphVisName="Excavator_Sprocket_Graphics" c="dv:DV_SprocketDamping" Radius="dv:DV_SprocketRadius" RopeLengthOnConstraint="1" MaxRopeLengthOnConstraint="1" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-1.91" y="-0.62" z="-1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="dv:DV_SprocketMass">
+            <I desvar="DV_SprocketInertia" Ixx="39" Iyy="39" Izz="75" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot1 name="Slot1" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot1>
+            <Slot2 name="Slot2" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot2>
+            <Slot3 name="Slot3" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot3>
+          </Slots>
+        </Pulley_Left_Rear>
+        <Carrier1Left name="Carrier1Left" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.Carrier1Left" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.1" MaxRopeLengthOnConstraint="0.1" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-0.93" y="-0.23" z="-1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot4 name="Slot4" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot4>
+            <Slot5 name="Slot5" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot5>
+            <Slot6 name="Slot6" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot6>
+          </Slots>
+        </Carrier1Left>
+        <Carrier2Left name="Carrier2Left" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.Carrier2Left" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.1" MaxRopeLengthOnConstraint="0.1" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-0.01" y="-0.23" z="-1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot7 name="Slot7" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot7>
+            <Slot8 name="Slot8" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot8>
+            <Slot9 name="Slot9" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot9>
+          </Slots>
+        </Carrier2Left>
+        <Carrier3Left name="Carrier3Left" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.Carrier3Left" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.1" MaxRopeLengthOnConstraint="0.1" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="0.9" y="-0.23" z="-1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot10 name="Slot10" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot10>
+            <Slot11 name="Slot11" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot11>
+            <Slot12 name="Slot12" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot12>
+          </Slots>
+        </Carrier3Left>
+        <Pulley_Left_Front name="Pulley_Left_Front" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.Sprocket_Left_Front" InputPrimitiveType="PlanetGear" InputPrimitiveName="PG_FrontLeft" InputPointSide="Left" GraphVisName="Excavator_Sprocket_Graphics" c="dv:DV_SprocketDamping" Radius="dv:DV_SprocketRadius" RopeLengthOnConstraint="1" MaxRopeLengthOnConstraint="1" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="1.9" y="-0.62" z="-1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="dv:DV_SprocketMass">
+            <I desvar="DV_SprocketInertia" Ixx="39" Iyy="39" Izz="75" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot13 name="Slot13" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot13>
+            <Slot14 name="Slot14" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot14>
+            <Slot15 name="Slot15" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot15>
+          </Slots>
+        </Pulley_Left_Front>
+        <TrackRoller1Left name="TrackRoller1Left" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller1Left" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="1.47" y="-0.8" z="-1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot16 name="Slot16" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot16>
+            <Slot17 name="Slot17" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot17>
+            <Slot18 name="Slot18" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot18>
+          </Slots>
+        </TrackRoller1Left>
+        <TrackRoller2Left name="TrackRoller2Left" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller2Left" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="1.05" y="-0.8" z="-1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot19 name="Slot19" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot19>
+            <Slot20 name="Slot20" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot20>
+            <Slot21 name="Slot21" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot21>
+          </Slots>
+        </TrackRoller2Left>
+        <TrackRoller3Left name="TrackRoller3Left" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller3Left" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="0.63" y="-0.8" z="-1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot22 name="Slot22" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot22>
+            <Slot23 name="Slot23" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot23>
+            <Slot24 name="Slot24" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot24>
+          </Slots>
+        </TrackRoller3Left>
+        <TrackRoller4Left name="TrackRoller4Left" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller4Left" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="0.2" y="-0.8" z="-1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot25 name="Slot25" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot25>
+            <Slot26 name="Slot26" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot26>
+            <Slot27 name="Slot27" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot27>
+          </Slots>
+        </TrackRoller4Left>
+        <TrackRoller5Left name="TrackRoller5Left" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller5Left" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-0.22" y="-0.8" z="-1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot28 name="Slot28" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot28>
+            <Slot29 name="Slot29" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot29>
+            <Slot30 name="Slot30" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot30>
+          </Slots>
+        </TrackRoller5Left>
+        <TrackRoller6Left name="TrackRoller6Left" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller6Left" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-0.64" y="-0.8" z="-1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot31 name="Slot31" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot31>
+            <Slot32 name="Slot32" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot32>
+            <Slot33 name="Slot33" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot33>
+          </Slots>
+        </TrackRoller6Left>
+        <TrackRoller7Left name="TrackRoller7Left" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller7Left" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-1.06" y="-0.8" z="-1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot34 name="Slot34" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot34>
+            <Slot35 name="Slot35" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot35>
+            <Slot36 name="Slot36" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot36>
+          </Slots>
+        </TrackRoller7Left>
+        <TrackRoller8Left name="TrackRoller8Left" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller8Left" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-1.06" y="-0.8" z="-1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot34_0 name="Slot34_0" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot34_0>
+            <Slot35_0 name="Slot35_0" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot35_0>
+            <Slot36_0 name="Slot36_0" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot36_0>
+          </Slots>
+        </TrackRoller8Left>
+        <TrackRoller9Left name="TrackRoller9Left" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller9Left" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-1.06" y="-0.8" z="-1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot34_0_0 name="Slot34_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot34_0_0>
+            <Slot35_0_0 name="Slot35_0_0" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot35_0_0>
+            <Slot36_0_0 name="Slot36_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot36_0_0>
+          </Slots>
+        </TrackRoller9Left>
+        <TrackRoller10Left name="TrackRoller10Left" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller10Left" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-1.06" y="-0.8" z="-1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot34_0_0_0 name="Slot34_0_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot34_0_0_0>
+            <Slot35_0_0_0 name="Slot35_0_0_0" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot35_0_0_0>
+            <Slot36_0_0_0 name="Slot36_0_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot36_0_0_0>
+          </Slots>
+        </TrackRoller10Left>
+        <TrackRoller11Left name="TrackRoller11Left" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller11Left" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-1.06" y="-0.8" z="-1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot34_0_0_0_0 name="Slot34_0_0_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot34_0_0_0_0>
+            <Slot35_0_0_0_0 name="Slot35_0_0_0_0" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot35_0_0_0_0>
+            <Slot36_0_0_0_0 name="Slot36_0_0_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot36_0_0_0_0>
+          </Slots>
+        </TrackRoller11Left>
+        <TrackRoller12Left name="TrackRoller12Left" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller12Left" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-1.06" y="-0.8" z="-1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot34_0_0_0_0_0 name="Slot34_0_0_0_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot34_0_0_0_0_0>
+            <Slot35_0_0_0_0_0 name="Slot35_0_0_0_0_0" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot35_0_0_0_0_0>
+            <Slot36_0_0_0_0_0 name="Slot36_0_0_0_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot36_0_0_0_0_0>
+          </Slots>
+        </TrackRoller12Left>
+        <TrackRoller13Left name="TrackRoller13Left" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller13Left" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-1.06" y="-0.8" z="-1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot34_0_0_0_0_0_0 name="Slot34_0_0_0_0_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot34_0_0_0_0_0_0>
+            <Slot35_0_0_0_0_0_0 name="Slot35_0_0_0_0_0_0" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot35_0_0_0_0_0_0>
+            <Slot36_0_0_0_0_0_0 name="Slot36_0_0_0_0_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot36_0_0_0_0_0_0>
+          </Slots>
+        </TrackRoller13Left>
+        <Pulley_Right_Rear name="Pulley_Right_Rear" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.Sprocket_Right_Rear" InputPrimitiveType="Brake" InputPrimitiveName="BrakeRightRollingResistance" InputPointSide="Left" GraphVisName="Excavator_Sprocket_Graphics" c="dv:DV_SprocketDamping" Radius="dv:DV_SprocketRadius" RopeLengthOnConstraint="1" MaxRopeLengthOnConstraint="1" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-1.91" y="-0.62" z="1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="dv:DV_SprocketMass">
+            <I desvar="DV_SprocketInertia" Ixx="39" Iyy="39" Izz="75" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot40 name="Slot40" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot40>
+            <Slot41 name="Slot41" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot41>
+            <Slot42 name="Slot42" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot42>
+          </Slots>
+        </Pulley_Right_Rear>
+        <Carrier1Right name="Carrier1Right" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.Carrier1Right" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.1" MaxRopeLengthOnConstraint="0.1" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-0.93" y="-0.23" z="1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot43 name="Slot43" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot43>
+            <Slot44 name="Slot44" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot44>
+            <Slot45 name="Slot45" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot45>
+          </Slots>
+        </Carrier1Right>
+        <Carrier2Right name="Carrier2Right" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.Carrier2Right" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.1" MaxRopeLengthOnConstraint="0.1" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-0.01" y="-0.23" z="1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot46 name="Slot46" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot46>
+            <Slot47 name="Slot47" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot47>
+            <Slot48 name="Slot48" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot48>
+          </Slots>
+        </Carrier2Right>
+        <Carrier3Right name="Carrier3Right" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.Carrier3Right" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.1" MaxRopeLengthOnConstraint="0.1" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="0.9" y="-0.23" z="1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot49 name="Slot49" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot49>
+            <Slot50 name="Slot50" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot50>
+            <Slot51 name="Slot51" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot51>
+          </Slots>
+        </Carrier3Right>
+        <Pulley_Right_Front name="Pulley_Right_Front" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.Sprocket_Right_Front" InputPrimitiveType="PlanetGear" InputPrimitiveName="PG_FrontRight" InputPointSide="Left" GraphVisName="Excavator_Sprocket_Graphics" c="dv:DV_SprocketDamping" Radius="dv:DV_SprocketRadius" RopeLengthOnConstraint="1" MaxRopeLengthOnConstraint="1" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="1.9" y="-0.62" z="1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="dv:DV_SprocketMass">
+            <I desvar="DV_SprocketInertia" Ixx="39" Iyy="39" Izz="75" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot52 name="Slot52" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot52>
+            <Slot53 name="Slot53" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot53>
+            <Slot54 name="Slot54" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot54>
+          </Slots>
+        </Pulley_Right_Front>
+        <TrackRoller1Right name="TrackRoller1Right" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller1Right" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="1.47" y="-0.8" z="1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot55 name="Slot55" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot55>
+            <Slot56 name="Slot56" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot56>
+            <Slot57 name="Slot57" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot57>
+          </Slots>
+        </TrackRoller1Right>
+        <TrackRoller2Right name="TrackRoller2Right" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller2Right" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="1.05" y="-0.8" z="1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot58 name="Slot58" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot58>
+            <Slot59 name="Slot59" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot59>
+            <Slot60 name="Slot60" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot60>
+          </Slots>
+        </TrackRoller2Right>
+        <TrackRoller3Right name="TrackRoller3Right" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller3Right" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="0.63" y="-0.8" z="1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot61 name="Slot61" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot61>
+            <Slot62 name="Slot62" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot62>
+            <Slot63 name="Slot63" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot63>
+          </Slots>
+        </TrackRoller3Right>
+        <TrackRoller4Right name="TrackRoller4Right" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller4Right" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="0.2" y="-0.8" z="1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot64 name="Slot64" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot64>
+            <Slot65 name="Slot65" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot65>
+            <Slot66 name="Slot66" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot66>
+          </Slots>
+        </TrackRoller4Right>
+        <TrackRoller5Right name="TrackRoller5Right" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller5Right" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-0.22" y="-0.8" z="1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot67 name="Slot67" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot67>
+            <Slot68 name="Slot68" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot68>
+            <Slot69 name="Slot69" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot69>
+          </Slots>
+        </TrackRoller5Right>
+        <TrackRoller6Right name="TrackRoller6Right" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller6Right" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-0.64" y="-0.8" z="1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot70 name="Slot70" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot70>
+            <Slot71 name="Slot71" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot71>
+            <Slot72 name="Slot72" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot72>
+          </Slots>
+        </TrackRoller6Right>
+        <TrackRoller7Right name="TrackRoller7Right" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller7Right" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-1.06" y="-0.8" z="1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot73 name="Slot73" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot73>
+            <Slot74 name="Slot74" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot74>
+            <Slot75 name="Slot75" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot75>
+          </Slots>
+        </TrackRoller7Right>
+        <TrackRoller8Right name="TrackRoller8Right" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller8Right" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-1.06" y="-0.8" z="1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot73_0 name="Slot73_0" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot73_0>
+            <Slot74_0 name="Slot74_0" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot74_0>
+            <Slot75_0 name="Slot75_0" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot75_0>
+          </Slots>
+        </TrackRoller8Right>
+        <TrackRoller9Right name="TrackRoller9Right" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller9Right" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-1.06" y="-0.8" z="1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot73_0_0 name="Slot73_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot73_0_0>
+            <Slot74_0_0 name="Slot74_0_0" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot74_0_0>
+            <Slot75_0_0 name="Slot75_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot75_0_0>
+          </Slots>
+        </TrackRoller9Right>
+        <TrackRoller10Right name="TrackRoller10Right" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller10Right" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-1.06" y="-0.8" z="1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot73_0_0_0 name="Slot73_0_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot73_0_0_0>
+            <Slot74_0_0_0 name="Slot74_0_0_0" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot74_0_0_0>
+            <Slot75_0_0_0 name="Slot75_0_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot75_0_0_0>
+          </Slots>
+        </TrackRoller10Right>
+        <TrackRoller11Right name="TrackRoller11Right" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller11Right" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-1.06" y="-0.8" z="1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot73_0_0_0_0 name="Slot73_0_0_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot73_0_0_0_0>
+            <Slot74_0_0_0_0 name="Slot74_0_0_0_0" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot74_0_0_0_0>
+            <Slot75_0_0_0_0 name="Slot75_0_0_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot75_0_0_0_0>
+          </Slots>
+        </TrackRoller11Right>
+        <TrackRoller12Right name="TrackRoller12Right" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller12Right" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-1.06" y="-0.8" z="1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot73_0_0_0_0_0 name="Slot73_0_0_0_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot73_0_0_0_0_0>
+            <Slot74_0_0_0_0_0 name="Slot74_0_0_0_0_0" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot74_0_0_0_0_0>
+            <Slot75_0_0_0_0_0 name="Slot75_0_0_0_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot75_0_0_0_0_0>
+          </Slots>
+        </TrackRoller12Right>
+        <TrackRoller13Right name="TrackRoller13Right" assembly="LargeCrawlerAssembly13Rollers" Type="Pulley" AttachmentBodyType="Body" AttachmentBody="Dummy_Undercarriage" AttachmentBodyCS="Dummy_Undercarriage.TrackRoller13Right" InputPrimitiveType="None" InputPrimitiveName="" InputPointSide="Left" GraphVisName="Excavator_Roller_Graphics" c="dv:DV_RollerDamping" Radius="dv:DV_RollerRadius" RopeLengthOnConstraint="0.07" MaxRopeLengthOnConstraint="0.07" InputUpdateWeight="0" OutputUpdateWeight="0" UseReelWidth="No" ReelWidth="0" ReelThickness="0" ReelStartingEdge="Left">
+          <PositionInBodyCS x="-1.06" y="-0.8" z="1.1" />
+          <OrientationInBodyCS x="0" y="0" z="0" />
+          <Inertia mass="10">
+            <I desvar="DV_RollerInertia" Ixx="1" Iyy="1" Izz="2" Ixy="0" Izx="0" Iyz="0" />
+          </Inertia>
+          <Slots>
+            <Slot73_0_0_0_0_0_0 name="Slot73_0_0_0_0_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthNeg" x="0" y="0" z="-0.4" />
+            </Slot73_0_0_0_0_0_0>
+            <Slot74_0_0_0_0_0_0 name="Slot74_0_0_0_0_0_0" assembly="">
+              <PosL x="0" y="0" z="0" />
+            </Slot74_0_0_0_0_0_0>
+            <Slot75_0_0_0_0_0_0 name="Slot75_0_0_0_0_0_0" assembly="">
+              <PosL desvar="DV_TrackWidthPos" x="0" y="0" z="0.4" />
+            </Slot75_0_0_0_0_0_0>
+          </Slots>
+        </TrackRoller13Right>
+      </RopeConstraints>
+    </RopeSystems>
+  </Particles>
+  <Comments Graphics_TrackElement="Scaling 0.02" Graphics_Excavator_Roller_Graphics="0.016 with radius 0.176\n0.0136 with radius 0.15\n" DesignVariable_DV_RollerRadius="0.176 with 71 track elelemnts" DesignVariable_DV_RollerDamping="Roller viscous damping [Nm]/[rad/s]" DesignVariable_DV_SprocketDamping="Roller viscous damping [Nm]/[rad/s]" />
+  <DesignVariableConns>
+    <Dummy_Undercarriage.Sprocket_Left_Rear>
+      <DV Key="Position" Value="DV_RearSprocket" />
+    </Dummy_Undercarriage.Sprocket_Left_Rear>
+    <Dummy_Undercarriage.Carrier1Left>
+      <DV Key="Position" Value="DV_CarrierRear" />
+    </Dummy_Undercarriage.Carrier1Left>
+    <Dummy_Undercarriage.Carrier2Left>
+      <DV Key="Position" Value="DV_CarrierMiddle" />
+    </Dummy_Undercarriage.Carrier2Left>
+    <Dummy_Undercarriage.Carrier3Left>
+      <DV Key="Position" Value="DV_CarrierFront" />
+    </Dummy_Undercarriage.Carrier3Left>
+    <Dummy_Undercarriage.Sprocket_Left_Front>
+      <DV Key="Position" Value="DV_FrontSprocket" />
+    </Dummy_Undercarriage.Sprocket_Left_Front>
+    <Dummy_Undercarriage.TrackRoller1Left>
+      <DV Key="Position{0}" Value="DV_Roller1_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller1Left>
+    <Dummy_Undercarriage.TrackRoller2Left>
+      <DV Key="Position{0}" Value="DV_Roller2_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller2Left>
+    <Dummy_Undercarriage.TrackRoller3Left>
+      <DV Key="Position{0}" Value="DV_Roller3_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller3Left>
+    <Dummy_Undercarriage.TrackRoller4Left>
+      <DV Key="Position{0}" Value="DV_Roller4_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller4Left>
+    <Dummy_Undercarriage.TrackRoller5Left>
+      <DV Key="Position{0}" Value="DV_Roller5_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller5Left>
+    <Dummy_Undercarriage.TrackRoller6Left>
+      <DV Key="Position{0}" Value="DV_Roller6_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller6Left>
+    <Dummy_Undercarriage.TrackRoller7Left>
+      <DV Key="Position{0}" Value="DV_Roller7_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller7Left>
+    <Dummy_Undercarriage.TrackRoller8Left>
+      <DV Key="Position{0}" Value="DV_Roller8_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller8Left>
+    <Dummy_Undercarriage.TrackRoller9Left>
+      <DV Key="Position{0}" Value="DV_Roller9_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller9Left>
+    <Dummy_Undercarriage.TrackRoller10Left>
+      <DV Key="Position{0}" Value="DV_Roller10_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller10Left>
+    <Dummy_Undercarriage.TrackRoller11Left>
+      <DV Key="Position{0}" Value="DV_Roller11_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller11Left>
+    <Dummy_Undercarriage.TrackRoller12Left>
+      <DV Key="Position{0}" Value="DV_Roller12_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller12Left>
+    <Dummy_Undercarriage.TrackRoller13Left>
+      <DV Key="Position{0}" Value="DV_Roller13_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller13Left>
+    <Dummy_Undercarriage.Sprocket_Right_Rear>
+      <DV Key="Position" Value="DV_RearSprocket" />
+    </Dummy_Undercarriage.Sprocket_Right_Rear>
+    <Dummy_Undercarriage.Carrier1Right>
+      <DV Key="Position" Value="DV_CarrierRear" />
+    </Dummy_Undercarriage.Carrier1Right>
+    <Dummy_Undercarriage.Carrier2Right>
+      <DV Key="Position" Value="DV_CarrierMiddle" />
+    </Dummy_Undercarriage.Carrier2Right>
+    <Dummy_Undercarriage.Carrier3Right>
+      <DV Key="Position" Value="DV_CarrierFront" />
+    </Dummy_Undercarriage.Carrier3Right>
+    <Dummy_Undercarriage.Sprocket_Right_Front>
+      <DV Key="Position" Value="DV_FrontSprocket" />
+    </Dummy_Undercarriage.Sprocket_Right_Front>
+    <Dummy_Undercarriage.TrackRoller1Right>
+      <DV Key="Position{0}" Value="DV_Roller1_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller1Right>
+    <Dummy_Undercarriage.TrackRoller2Right>
+      <DV Key="Position{0}" Value="DV_Roller2_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller2Right>
+    <Dummy_Undercarriage.TrackRoller3Right>
+      <DV Key="Position{0}" Value="DV_Roller3_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller3Right>
+    <Dummy_Undercarriage.TrackRoller4Right>
+      <DV Key="Position{0}" Value="DV_Roller4_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller4Right>
+    <Dummy_Undercarriage.TrackRoller5Right>
+      <DV Key="Position{0}" Value="DV_Roller5_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller5Right>
+    <Dummy_Undercarriage.TrackRoller6Right>
+      <DV Key="Position{0}" Value="DV_Roller6_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller6Right>
+    <Dummy_Undercarriage.TrackRoller7Right>
+      <DV Key="Position{0}" Value="DV_Roller7_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller7Right>
+    <Dummy_Undercarriage.TrackRoller8Right>
+      <DV Key="Position{0}" Value="DV_Roller8_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller8Right>
+    <Dummy_Undercarriage.TrackRoller9Right>
+      <DV Key="Position{0}" Value="DV_Roller9_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller9Right>
+    <Dummy_Undercarriage.TrackRoller10Right>
+      <DV Key="Position{0}" Value="DV_Roller10_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller10Right>
+    <Dummy_Undercarriage.TrackRoller11Right>
+      <DV Key="Position{0}" Value="DV_Roller11_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller11Right>
+    <Dummy_Undercarriage.TrackRoller12Right>
+      <DV Key="Position{0}" Value="DV_Roller12_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller12Right>
+    <Dummy_Undercarriage.TrackRoller13Right>
+      <DV Key="Position{0}" Value="DV_Roller13_Posx" />
+      <DV Key="Position{1}" Value="DV_RollerHeigth" />
+    </Dummy_Undercarriage.TrackRoller13Right>
+    <Pulley_Left_Rear>
+      <DV Key="c" Value="DV_SprocketDamping" />
+      <DV Key="Radius" Value="DV_SprocketRadius" />
+      <DV Key="mass" Value="DV_SprocketMass" />
+      <DV Key="I" Value="DV_SprocketInertia" />
+    </Pulley_Left_Rear>
+    <Slot1>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot1>
+    <Slot3>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot3>
+    <Carrier1Left>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </Carrier1Left>
+    <Slot4>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot4>
+    <Slot6>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot6>
+    <Carrier2Left>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </Carrier2Left>
+    <Slot7>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot7>
+    <Slot9>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot9>
+    <Carrier3Left>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </Carrier3Left>
+    <Slot10>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot10>
+    <Slot12>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot12>
+    <Pulley_Left_Front>
+      <DV Key="c" Value="DV_SprocketDamping" />
+      <DV Key="Radius" Value="DV_SprocketRadius" />
+      <DV Key="mass" Value="DV_SprocketMass" />
+      <DV Key="I" Value="DV_SprocketInertia" />
+    </Pulley_Left_Front>
+    <Slot13>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot13>
+    <Slot15>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot15>
+    <TrackRoller1Left>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller1Left>
+    <Slot16>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot16>
+    <Slot18>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot18>
+    <TrackRoller2Left>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller2Left>
+    <Slot19>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot19>
+    <Slot21>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot21>
+    <TrackRoller3Left>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller3Left>
+    <Slot22>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot22>
+    <Slot24>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot24>
+    <TrackRoller4Left>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller4Left>
+    <Slot25>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot25>
+    <Slot27>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot27>
+    <TrackRoller5Left>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller5Left>
+    <Slot28>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot28>
+    <Slot30>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot30>
+    <TrackRoller6Left>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller6Left>
+    <Slot31>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot31>
+    <Slot33>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot33>
+    <TrackRoller7Left>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller7Left>
+    <Slot34>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot34>
+    <Slot36>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot36>
+    <TrackRoller8Left>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller8Left>
+    <Slot34_0>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot34_0>
+    <Slot36_0>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot36_0>
+    <TrackRoller9Left>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller9Left>
+    <Slot34_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot34_0_0>
+    <Slot36_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot36_0_0>
+    <TrackRoller10Left>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller10Left>
+    <Slot34_0_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot34_0_0_0>
+    <Slot36_0_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot36_0_0_0>
+    <TrackRoller11Left>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller11Left>
+    <Slot34_0_0_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot34_0_0_0_0>
+    <Slot36_0_0_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot36_0_0_0_0>
+    <TrackRoller12Left>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller12Left>
+    <Slot34_0_0_0_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot34_0_0_0_0_0>
+    <Slot36_0_0_0_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot36_0_0_0_0_0>
+    <TrackRoller13Left>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller13Left>
+    <Slot34_0_0_0_0_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot34_0_0_0_0_0_0>
+    <Slot36_0_0_0_0_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot36_0_0_0_0_0_0>
+    <Pulley_Right_Rear>
+      <DV Key="c" Value="DV_SprocketDamping" />
+      <DV Key="Radius" Value="DV_SprocketRadius" />
+      <DV Key="mass" Value="DV_SprocketMass" />
+      <DV Key="I" Value="DV_SprocketInertia" />
+    </Pulley_Right_Rear>
+    <Slot40>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot40>
+    <Slot42>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot42>
+    <Carrier1Right>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </Carrier1Right>
+    <Slot43>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot43>
+    <Slot45>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot45>
+    <Carrier2Right>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </Carrier2Right>
+    <Slot46>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot46>
+    <Slot48>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot48>
+    <Carrier3Right>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </Carrier3Right>
+    <Slot49>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot49>
+    <Slot51>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot51>
+    <Pulley_Right_Front>
+      <DV Key="c" Value="DV_SprocketDamping" />
+      <DV Key="Radius" Value="DV_SprocketRadius" />
+      <DV Key="mass" Value="DV_SprocketMass" />
+      <DV Key="I" Value="DV_SprocketInertia" />
+    </Pulley_Right_Front>
+    <Slot52>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot52>
+    <Slot54>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot54>
+    <TrackRoller1Right>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller1Right>
+    <Slot55>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot55>
+    <Slot57>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot57>
+    <TrackRoller2Right>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller2Right>
+    <Slot58>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot58>
+    <Slot60>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot60>
+    <TrackRoller3Right>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller3Right>
+    <Slot61>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot61>
+    <Slot63>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot63>
+    <TrackRoller4Right>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller4Right>
+    <Slot64>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot64>
+    <Slot66>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot66>
+    <TrackRoller5Right>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller5Right>
+    <Slot67>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot67>
+    <Slot69>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot69>
+    <TrackRoller6Right>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller6Right>
+    <Slot70>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot70>
+    <Slot72>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot72>
+    <TrackRoller7Right>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller7Right>
+    <Slot73>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot73>
+    <Slot75>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot75>
+    <TrackRoller8Right>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller8Right>
+    <Slot73_0>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot73_0>
+    <Slot75_0>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot75_0>
+    <TrackRoller9Right>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller9Right>
+    <Slot73_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot73_0_0>
+    <Slot75_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot75_0_0>
+    <TrackRoller10Right>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller10Right>
+    <Slot73_0_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot73_0_0_0>
+    <Slot75_0_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot75_0_0_0>
+    <TrackRoller11Right>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller11Right>
+    <Slot73_0_0_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot73_0_0_0_0>
+    <Slot75_0_0_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot75_0_0_0_0>
+    <TrackRoller12Right>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller12Right>
+    <Slot73_0_0_0_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot73_0_0_0_0_0>
+    <Slot75_0_0_0_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot75_0_0_0_0_0>
+    <TrackRoller13Right>
+      <DV Key="c" Value="DV_RollerDamping" />
+      <DV Key="Radius" Value="DV_RollerRadius" />
+      <DV Key="I" Value="DV_RollerInertia" />
+    </TrackRoller13Right>
+    <Slot73_0_0_0_0_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthNeg" />
+    </Slot73_0_0_0_0_0_0>
+    <Slot75_0_0_0_0_0_0>
+      <DV Key="PosL" Value="DV_TrackWidthPos" />
+    </Slot75_0_0_0_0_0_0>
+  </DesignVariableConns>
+</DMInputFile>

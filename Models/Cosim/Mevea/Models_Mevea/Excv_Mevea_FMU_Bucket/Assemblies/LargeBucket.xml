@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMInputFile>
+  <Dummies>
+    <Dummy_Bucket name="Dummy_Bucket" assembly="LargeBucketAssembly" DumType="Static" RelTo="Ground" RelToCS="Ground.CS_Bucket" CmCS="Dummy_Bucket.CM" CmiCS="Dummy_Bucket.CM" DumInd="N/A" VisualizationGraphics="Graphics_Bucket" CollisionGraphics="" bodyDefinitionFile="" scriptName="" ColLayer="" ColIgnores="" VisOptions="">
+      <Inertia mass="5120">
+        <I Ixx="120.06725993324100443" Iyy="71.015170983925997916" Izz="439.57168706724598906" Ixy="22.819685769336000902" Izx="101.6211052155679937" Iyz="96.776382233264001798" />
+      </Inertia>
+      <CS>
+        <PRT_DEF_SYS name="PRT_DEF_SYS" Node="0" VisOptions="" orientTargetName="">
+          <Position x="0" y="0" z="0" />
+          <Orientation rx="-0" ry="0" rz="-0" />
+        </PRT_DEF_SYS>
+        <DipperarmJoint name="DipperarmJoint" Node="0" VisOptions="Draw coordinate system" orientTargetName="">
+          <Position x="0" y="0" z="0" />
+          <Orientation rx="0" ry="-1.570796326794896558" rz="0" />
+        </DipperarmJoint>
+        <Link2Joint name="Link2Joint" Node="0" VisOptions="" orientTargetName="">
+          <Position x="0.7" y="0" z="0" />
+          <Orientation rx="0" ry="-1.570796326794896558" rz="0" />
+        </Link2Joint>
+        <CM name="CM" Node="-1" VisOptions="" orientTargetName="">
+          <Position x="0.4" y="-1" z="0" />
+          <Orientation rx="0" ry="0" rz="0" />
+        </CM>
+      </CS>
+    </Dummy_Bucket>
+  </Dummies>
+  <Graphics>
+    <Graphics_Bucket name="Graphics_Bucket" assembly="LargeBucketAssembly" FileName="fbx/LargeBucket.fbx" Scale="0.01" Transparency="1" CastShadows="Yes" ReceiveShadows="No" BothSides="No" TransparentBin="No" IsActive="Yes" MaterialColl="" modShading="GGX" useModShading="Yes" scriptName="" usePagedLoading="No" use_flexible_shader="No" showFlexCloud="No" use_normal_map="No" ocean_reflect="No" ocean_refract="No" ocean_discard="No" normalmap="" bumpMapScale="10" normal_map_index="1" ShaderName="" linkDefaultShaders="No" useColor="No" isTerrain="No" isPickable="No" disableCulling="No" flipNormals="No">
+      <Position x="0" y="0" z="0" />
+      <Orientation desvar="DV_BucketInitialAngle" rx="0" ry="0" rz="0.6" />
+      <Colour r="0" g="0" b="0" />
+      <Children>
+        <COLLISION_Bucket name="COLLISION_Bucket" assembly="" FileName="OSG/LargeBucket/COLL_LargeBucket.3ds" Scale="1" Transparency="1" CastShadows="No" ReceiveShadows="No" BothSides="No" TransparentBin="No" IsActive="Yes" MaterialColl="" modShading="Collision" useModShading="Yes" scriptName="" usePagedLoading="No" use_flexible_shader="No" showFlexCloud="No" use_normal_map="No" ocean_reflect="No" ocean_refract="No" ocean_discard="No" normalmap="" bumpMapScale="10" normal_map_index="1" ShaderName="" linkDefaultShaders="No" useColor="No" isTerrain="No" isPickable="No" disableCulling="No" flipNormals="No">
+          <Position x="0" y="0" z="0" />
+          <Orientation desvar="DV_BucketInitialAngle" rx="0" ry="0" rz="0.6" />
+          <Colour r="0.5" g="0.5" b="0.5" />
+        </COLLISION_Bucket>
+        <COLLISION_Bucket_Teeths name="COLLISION_Bucket_Teeths" assembly="" FileName="OSG/LargeBucket/COLL_LargeBucket_Teeths_HF.3ds" Scale="1" Transparency="1" CastShadows="No" ReceiveShadows="No" BothSides="No" TransparentBin="No" IsActive="Yes" MaterialColl="" modShading="Collision" useModShading="Yes" scriptName="" usePagedLoading="No" use_flexible_shader="No" showFlexCloud="No" use_normal_map="No" ocean_reflect="No" ocean_refract="No" ocean_discard="No" normalmap="" bumpMapScale="10" normal_map_index="1" ShaderName="" linkDefaultShaders="No" useColor="No" isTerrain="No" isPickable="No" disableCulling="No" flipNormals="No">
+          <Position x="0" y="0" z="0" />
+          <Orientation desvar="DV_BucketInitialAngle" rx="0" ry="0" rz="0.6" />
+          <Colour r="0.5" g="0.5" b="0.5" />
+        </COLLISION_Bucket_Teeths>
+        <COLLISION_Bucket_HF name="COLLISION_Bucket_HF" assembly="" FileName="OSG/LargeBucket/COLL_LargeBucket_HF_Only.3ds" Scale="1" Transparency="1" CastShadows="No" ReceiveShadows="No" BothSides="No" TransparentBin="No" IsActive="No" MaterialColl="" modShading="Collision" useModShading="Yes" scriptName="" usePagedLoading="No" use_flexible_shader="No" showFlexCloud="No" use_normal_map="No" ocean_reflect="No" ocean_refract="No" ocean_discard="No" normalmap="" bumpMapScale="10" normal_map_index="1" ShaderName="" linkDefaultShaders="No" useColor="No" isTerrain="No" isPickable="No" disableCulling="No" flipNormals="No">
+          <Position x="0" y="0" z="0" />
+          <Orientation desvar="DV_BucketInitialAngle" rx="0" ry="0" rz="0.6" />
+          <Colour r="0.5" g="0.5" b="0.5" />
+        </COLLISION_Bucket_HF>
+      </Children>
+    </Graphics_Bucket>
+  </Graphics>
+  <DesignVariables>
+    <DV_BucketInitialAngle name="DV_BucketInitialAngle" assembly="LargeBucketAssembly" type="vector3" value="60" function="" vector="0 0 0.6" string="" bool="No" />
+  </DesignVariables>
+  <Inputs>
+    <AI_BucketVelocity_X name="AI_BucketVelocity_X" assembly="LargeBucketAssembly" isActive="Yes" InType="Analog" JoyNro="5" JoyCh="0" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_BucketVelocity_Y name="AI_BucketVelocity_Y" assembly="LargeBucketAssembly" isActive="Yes" InType="Analog" JoyNro="5" JoyCh="1" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_BucketVelocity_Z name="AI_BucketVelocity_Z" assembly="LargeBucketAssembly" isActive="Yes" InType="Analog" JoyNro="5" JoyCh="2" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_BucketOmega_X name="AI_BucketOmega_X" assembly="LargeBucketAssembly" isActive="Yes" InType="Analog" JoyNro="5" JoyCh="3" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_BucketOmega_Y name="AI_BucketOmega_Y" assembly="LargeBucketAssembly" isActive="Yes" InType="Analog" JoyNro="5" JoyCh="4" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_BucketOmega_Z name="AI_BucketOmega_Z" assembly="LargeBucketAssembly" isActive="Yes" InType="Analog" JoyNro="5" JoyCh="5" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_BucketPosition_X name="AI_BucketPosition_X" assembly="LargeBucketAssembly" isActive="Yes" InType="Analog" JoyNro="5" JoyCh="6" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_BucketPosition_Y name="AI_BucketPosition_Y" assembly="LargeBucketAssembly" isActive="Yes" InType="Analog" JoyNro="5" JoyCh="7" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_BucketPosition_Z name="AI_BucketPosition_Z" assembly="LargeBucketAssembly" isActive="Yes" InType="Analog" JoyNro="5" JoyCh="8" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_BucketQuat_w name="AI_BucketQuat_w" assembly="LargeBucketAssembly" isActive="Yes" InType="Analog" JoyNro="5" JoyCh="9" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_BucketQuat_ux name="AI_BucketQuat_ux" assembly="LargeBucketAssembly" isActive="Yes" InType="Analog" JoyNro="5" JoyCh="10" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_BucketQuat_uy name="AI_BucketQuat_uy" assembly="LargeBucketAssembly" isActive="Yes" InType="Analog" JoyNro="5" JoyCh="11" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+    <AI_BucketQuat_uz name="AI_BucketQuat_uz" assembly="LargeBucketAssembly" isActive="Yes" InType="Analog" JoyNro="5" JoyCh="12" InputSource="" scriptName="" positiveOnly="No" noPlayback="No" Scale="1" B="0" DeadZone="0" />
+  </Inputs>
+  <DataCollections>
+    <DC_BucketForces name="DC_BucketForces" assembly="LargeBucketAssembly" isActive="No" resultFolder="results" closeAfterInputs="No">
+      <DataSet>
+        <DS_Translational name="DS_Translational" isActive="Yes" resultFile="" prefixModelName="No" postfixTime="Yes" separator="Tab" updateFrequency="0" inputFile="" showPlot="Yes" plotLength="0" keepData="No" compareFile="" dataFile="" saveAnimation="No" animationFile="">
+          <PlotPos x="1000" y="0" />
+          <PlotSize x="640" y="480" />
+          <DataItem>
+            <DI_Fx name="DI_Fx" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Bucket" parameterName="Dummy_Bucket CollFx" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_Fx>
+            <DI_Fy name="DI_Fy" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Bucket" parameterName="Dummy_Bucket CollFy" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_Fy>
+            <DI_Fz name="DI_Fz" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Bucket" parameterName="Dummy_Bucket CollFz" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_Fz>
+          </DataItem>
+        </DS_Translational>
+        <DS_Rotational name="DS_Rotational" isActive="Yes" resultFile="" prefixModelName="No" postfixTime="Yes" separator="Tab" updateFrequency="0" inputFile="" showPlot="Yes" plotLength="0" keepData="No" compareFile="" dataFile="" saveAnimation="No" animationFile="">
+          <PlotPos x="1000" y="520" />
+          <PlotSize x="640" y="480" />
+          <DataItem>
+            <DI_Tx name="DI_Tx" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Bucket" parameterName="Dummy_Bucket CollTx" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_Tx>
+            <DI_Ty name="DI_Ty" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Bucket" parameterName="Dummy_Bucket CollTy" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_Ty>
+            <DI_Tz name="DI_Tz" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Bucket" parameterName="Dummy_Bucket CollTz" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_Tz>
+          </DataItem>
+        </DS_Rotational>
+      </DataSet>
+    </DC_BucketForces>
+    <DC_BucketKinematics name="DC_BucketKinematics" assembly="LargeBucketAssembly" isActive="No" resultFolder="results" closeAfterInputs="No">
+      <DataSet>
+        <DS_BucketPosition name="DS_BucketPosition" isActive="Yes" resultFile="" prefixModelName="No" postfixTime="No" separator="Tab" updateFrequency="0" inputFile="" showPlot="Yes" plotLength="0" keepData="No" compareFile="" dataFile="" saveAnimation="No" animationFile="">
+          <PlotPos x="1000" y="0" />
+          <PlotSize x="640" y="480" />
+          <DataItem>
+            <DI_Bucket_x name="DI_Bucket_x" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Bucket" parameterName="Dummy_Bucket x" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_Bucket_x>
+            <DI_Bucket_y name="DI_Bucket_y" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Bucket" parameterName="Dummy_Bucket y" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_Bucket_y>
+            <DI_Bucket_xd name="DI_Bucket_xd" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Bucket" parameterName="Dummy_Bucket xd" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_Bucket_xd>
+            <DI_Bucket_yd name="DI_Bucket_yd" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Bucket" parameterName="Dummy_Bucket yd" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_Bucket_yd>
+          </DataItem>
+        </DS_BucketPosition>
+        <DS_BucketOrientation name="DS_BucketOrientation" isActive="Yes" resultFile="" prefixModelName="No" postfixTime="No" separator="Tab" updateFrequency="0" inputFile="" showPlot="Yes" plotLength="0" keepData="No" compareFile="" dataFile="" saveAnimation="No" animationFile="">
+          <PlotPos x="1000" y="500" />
+          <PlotSize x="640" y="480" />
+          <DataItem>
+            <DI_Bucket_rz name="DI_Bucket_rz" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Bucket" parameterName="Dummy_Bucket rz" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_Bucket_rz>
+            <DI_Bucket_wz name="DI_Bucket_wz" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Bucket" parameterName="Dummy_Bucket wz" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_Bucket_wz>
+          </DataItem>
+        </DS_BucketOrientation>
+        <DS_BucketEP name="DS_BucketEP" isActive="Yes" resultFile="" prefixModelName="No" postfixTime="Yes" separator="Tab" updateFrequency="0" inputFile="" showPlot="Yes" plotLength="0" keepData="No" compareFile="" dataFile="" saveAnimation="No" animationFile="">
+          <PlotPos x="1640" y="0" />
+          <PlotSize x="640" y="480" />
+          <DataItem>
+            <DI_e0 name="DI_e0" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Bucket" parameterName="Dummy_Bucket ep0" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_e0>
+            <DI_e1 name="DI_e1" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Bucket" parameterName="Dummy_Bucket ep1" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_e1>
+            <DI_e2 name="DI_e2" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Bucket" parameterName="Dummy_Bucket ep2" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_e2>
+            <DI_e3 name="DI_e3" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Bucket" parameterName="Dummy_Bucket ep3" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_e3>
+          </DataItem>
+        </DS_BucketEP>
+      </DataSet>
+    </DC_BucketKinematics>
+    <DC_Difference name="DC_Difference" assembly="LargeBucketAssembly" isActive="No" resultFolder="results" closeAfterInputs="No">
+      <DataSet>
+        <DS_PosDiff name="DS_PosDiff" isActive="Yes" resultFile="" prefixModelName="No" postfixTime="Yes" separator="Tab" updateFrequency="0" inputFile="" showPlot="Yes" plotLength="0" keepData="No" compareFile="" dataFile="" saveAnimation="No" animationFile="">
+          <PlotPos x="900" y="0" />
+          <PlotSize x="640" y="480" />
+          <DataItem>
+            <DI_diff_x name="DI_diff_x" dataItemType="DataSource" dataSource="DS_diff_x" componentType="" componentName="" parameterName="" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_diff_x>
+            <DI_diff_y name="DI_diff_y" dataItemType="DataSource" dataSource="DS_diff_y" componentType="" componentName="" parameterName="" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_diff_y>
+            <DI_diff_z name="DI_diff_z" dataItemType="DataSource" dataSource="DS_diff_z" componentType="" componentName="" parameterName="" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_diff_z>
+          </DataItem>
+        </DS_PosDiff>
+        <DS_Comparison name="DS_Comparison" isActive="Yes" resultFile="" prefixModelName="No" postfixTime="Yes" separator="Tab" updateFrequency="0" inputFile="" showPlot="Yes" plotLength="0" keepData="No" compareFile="" dataFile="" saveAnimation="No" animationFile="">
+          <PlotPos x="900" y="500" />
+          <PlotSize x="640" y="480" />
+          <DataItem>
+            <DI_pos_x name="DI_pos_x" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Bucket" parameterName="Dummy_Bucket x" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_pos_x>
+            <DI_pos_y name="DI_pos_y" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Bucket" parameterName="Dummy_Bucket y" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_pos_y>
+            <DI_pos_z name="DI_pos_z" dataItemType="Component" dataSource="" componentType="Dummy" componentName="Dummy_Bucket" parameterName="Dummy_Bucket z" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_pos_z>
+            <DI_in_x name="DI_in_x" dataItemType="Component" dataSource="" componentType="Input" componentName="AI_BucketPosition_X" parameterName="AI_BucketPosition_X RealValue" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_in_x>
+            <DI_in_y name="DI_in_y" dataItemType="Component" dataSource="" componentType="Input" componentName="AI_BucketPosition_Y" parameterName="AI_BucketPosition_Y RealValue" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_in_y>
+            <DI_in_z name="DI_in_z" dataItemType="Component" dataSource="" componentType="Input" componentName="AI_BucketPosition_Z" parameterName="AI_BucketPosition_Z RealValue" useItemName="No" scale="1" offset="0" vBody="" vCS="" vEffect="" setLineStyle="No" lineStyle="Solid">
+              <lineColor r="0" g="0" b="0" />
+            </DI_in_z>
+          </DataItem>
+        </DS_Comparison>
+      </DataSet>
+    </DC_Difference>
+  </DataCollections>
+  <Particles>
+    <Pile>
+      <MBSContactGraph>
+        <Contact_Bucket_Particles name="Contact_Bucket_Particles" assembly="LargeBucketAssembly" BodyName="Dummy_Bucket" GraphName="COLLISION_Bucket" UseCIM="Yes" UseTriangleMesh="No" TriangleContactMaterial="" IsStatic="No" GType="3DS" usage="OnlyParticleCollisions" k_coll="6e6" e_coll="0.05" myy="0.1" cylRadius="1" cylHeight="1" rollingResistance="0.1" thicknessValue="0" soilShearing="0" isDestructive="No" useTwistlocks="No" TwistlockDefinition="" />
+        <Contact_BucketTeeths_HF name="Contact_BucketTeeths_HF" assembly="LargeBucketAssembly" BodyName="Dummy_Bucket" GraphName="COLLISION_Bucket_Teeths" UseCIM="Yes" UseTriangleMesh="No" TriangleContactMaterial="" IsStatic="No" GType="3DS" usage="OnlyHeightfieldCollisions" k_coll="5e5" e_coll="0.05" myy="0.5" cylRadius="1" cylHeight="1" rollingResistance="0" thicknessValue="0" soilShearing="0.3" isDestructive="No" useTwistlocks="No" TwistlockDefinition="" />
+        <Contact_Bucket_Outside_HF name="Contact_Bucket_Outside_HF" assembly="LargeBucketAssembly" BodyName="Dummy_Bucket" GraphName="COLLISION_Bucket_HF" UseCIM="Yes" UseTriangleMesh="No" TriangleContactMaterial="" IsStatic="No" GType="3DS" usage="OnlyHeightfieldCollisions" k_coll="3e5" e_coll="0.05" myy="0.8" cylRadius="1" cylHeight="1" rollingResistance="0" thicknessValue="0" soilShearing="0" isDestructive="No" useTwistlocks="No" TwistlockDefinition="" />
+      </MBSContactGraph>
+      <PsysActivation>
+        <ParticleActivator_Bucket name="ParticleActivator_Bucket" assembly="LargeBucketAssembly" MBSContactGraph="Contact_Bucket_Particles" radius="2.4" BodyName="" CSName="" controlContacts="No" controlConstraint="No" modeContacts="Activate contacts" modeConstraint="Deactivate constraints" attachToBody="Ground" useConstraintDefinition="No" constraintDefinition="" activationDataSource="" priority="0" />
+      </PsysActivation>
+    </Pile>
+  </Particles>
+  <VirtualSensors>
+    <PsysMassSensors>
+      <MassSensor_Bucket name="MassSensor_Bucket" assembly="LargeBucketAssembly" BodyType="CGraph" BodyName="Contact_Bucket_Particles" CSName="" Radius="1" UpdateEveryNRounds="3" isLeaky="No" dataSourceName="">
+        <Position x="0" y="0" z="0" />
+      </MassSensor_Bucket>
+    </PsysMassSensors>
+  </VirtualSensors>
+  <Comments DesignVariable_DV_BucketInitialAngle="Graphics tilt 34.4 degrees around z-axis" />
+  <DesignVariableConns>
+    <Graphics_Bucket>
+      <DV Key="Orientation" Value="DV_BucketInitialAngle" />
+    </Graphics_Bucket>
+    <COLLISION_Bucket>
+      <DV Key="Orientation" Value="DV_BucketInitialAngle" />
+    </COLLISION_Bucket>
+    <COLLISION_Bucket_Teeths>
+      <DV Key="Orientation" Value="DV_BucketInitialAngle" />
+    </COLLISION_Bucket_Teeths>
+    <COLLISION_Bucket_HF>
+      <DV Key="Orientation" Value="DV_BucketInitialAngle" />
+    </COLLISION_Bucket_HF>
+  </DesignVariableConns>
+</DMInputFile>
