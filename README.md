@@ -14,6 +14,7 @@ according to international standards.
 * **Hydraulic regeneration valves** are modeled to evaluate efficiency.
 * **Dig cycle time and efficiency** are determined in dynamic simulation.
 * **Realistic soil loads** are applied to the bucket using Discrete Element Modeling (DEM) software.
+* **Realistic soil loads** are applied to the bucket and tracks using Mevea software.
 
 Open the project file Excavator_Simscape.prj to get started.
 
