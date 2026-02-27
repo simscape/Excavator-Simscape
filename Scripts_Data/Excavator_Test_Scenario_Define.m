@@ -6,7 +6,7 @@ function Scenario = Excavator_Test_Scenario_Define
 
 %% Defaults
 % -- Test Definitions
-load('TestCommands.mat','TestCmds','EmptyBucketDigCycle','LoadedBucketDigCycle');
+load('TestCommands.mat','TestCmds','EmptyBucketDigCycle','LoadedBucketDigCycle','LoadedBucketDigCycleOrig');
 activeTestCmds = TestCmds;
 
 % -- Bucket Loads
@@ -330,6 +330,12 @@ Scenario.loadedBucketDigCycle.activeTestCmds = LoadedBucketDigCycle;
 % Set the model conditions
 Scenario.loadedBucketDigCycle.stopTime = 31; % [s]
 Scenario.loadedBucketDigCycle.bucketLoadsActive = true;
+
+% Make copy for original test sequence
+% Used in model demonstrating tuning for fixed-cost simulation
+Scenario.loadedBucketDigCycleOrig = Scenario.loadedBucketDigCycle;
+Scenario.loadedBucketDigCycleOrig.activeTestCmds = LoadedBucketDigCycleOrig;
+
 
 fldnames = fieldnames(Scenario);
 

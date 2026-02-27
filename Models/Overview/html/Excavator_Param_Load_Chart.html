@@ -9,7 +9,7 @@ To make changes, update the MATLAB code and republish this document.
 <title>Excavator Design with Simscape&trade;: Load Chart Calculation</title>
 <meta name="generator" content="MATLAB 25.2">
 <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
-<meta name="DC.date" content="2025-11-14">
+<meta name="DC.date" content="2026-02-18">
 <meta name="DC.source" content="Excavator_Param_Load_Chart.m">
 <style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
@@ -189,136 +189,139 @@ qBucketSet = linspace(90,60,3);   <span class="comment">% deg</span>
 Excavator_LoadChart_Create(qBoomSet,qStickSet,qBucketSet,<span class="keyword">...</span>
     mdl_LoadChart_setup,mdl_LoadChart_calc,true);
 </pre>
-<pre class="codeoutput">[14-Nov-2025 09:36:29] Running simulations...
-[14-Nov-2025 09:36:33] Completed 1 of 16 simulation runs
-[14-Nov-2025 09:36:33] Completed 2 of 16 simulation runs
-[14-Nov-2025 09:36:34] Completed 3 of 16 simulation runs
-[14-Nov-2025 09:36:34] Completed 4 of 16 simulation runs
-[14-Nov-2025 09:36:35] Completed 5 of 16 simulation runs
-[14-Nov-2025 09:36:35] Completed 6 of 16 simulation runs
-[14-Nov-2025 09:36:35] Completed 7 of 16 simulation runs
-[14-Nov-2025 09:36:36] Completed 8 of 16 simulation runs
-[14-Nov-2025 09:36:36] Completed 9 of 16 simulation runs
-[14-Nov-2025 09:36:36] Completed 10 of 16 simulation runs
-[14-Nov-2025 09:36:36] Completed 11 of 16 simulation runs
-[14-Nov-2025 09:36:37] Completed 12 of 16 simulation runs
-[14-Nov-2025 09:36:37] Completed 13 of 16 simulation runs
-[14-Nov-2025 09:36:37] Completed 14 of 16 simulation runs
-[14-Nov-2025 09:36:38] Completed 15 of 16 simulation runs
-[14-Nov-2025 09:36:38] Completed 16 of 16 simulation runs
-[14-Nov-2025 09:36:40] Running simulations...
-[14-Nov-2025 09:36:44] Completed 1 of 16 simulation runs
-[14-Nov-2025 09:36:44] Completed 2 of 16 simulation runs
-[14-Nov-2025 09:36:45] Completed 3 of 16 simulation runs
-[14-Nov-2025 09:36:45] Completed 4 of 16 simulation runs
-[14-Nov-2025 09:36:45] Completed 5 of 16 simulation runs
-[14-Nov-2025 09:36:45] Completed 6 of 16 simulation runs
-[14-Nov-2025 09:36:46] Completed 7 of 16 simulation runs
-[14-Nov-2025 09:36:46] Completed 8 of 16 simulation runs
-[14-Nov-2025 09:36:46] Completed 9 of 16 simulation runs
-[14-Nov-2025 09:36:47] Completed 10 of 16 simulation runs
-[14-Nov-2025 09:36:47] Completed 11 of 16 simulation runs
-[14-Nov-2025 09:36:47] Completed 12 of 16 simulation runs
-[14-Nov-2025 09:36:47] Completed 13 of 16 simulation runs
-[14-Nov-2025 09:36:48] Completed 14 of 16 simulation runs
-[14-Nov-2025 09:36:48] Completed 15 of 16 simulation runs
-[14-Nov-2025 09:36:48] Completed 16 of 16 simulation runs
+<pre class="codeoutput">[18-Feb-2026 00:11:15] Running simulations...
+[18-Feb-2026 00:11:18] Completed 1 of 16 simulation runs
+[18-Feb-2026 00:11:20] Completed 2 of 16 simulation runs
+[18-Feb-2026 00:11:22] Completed 3 of 16 simulation runs
+[18-Feb-2026 00:11:24] Completed 4 of 16 simulation runs
+[18-Feb-2026 00:11:26] Completed 5 of 16 simulation runs
+[18-Feb-2026 00:11:28] Completed 6 of 16 simulation runs
+[18-Feb-2026 00:11:30] Completed 7 of 16 simulation runs
+[18-Feb-2026 00:11:32] Completed 8 of 16 simulation runs
+[18-Feb-2026 00:11:34] Completed 9 of 16 simulation runs
+[18-Feb-2026 00:11:36] Completed 10 of 16 simulation runs
+[18-Feb-2026 00:11:38] Completed 11 of 16 simulation runs
+[18-Feb-2026 00:11:40] Completed 12 of 16 simulation runs
+[18-Feb-2026 00:11:42] Completed 13 of 16 simulation runs
+[18-Feb-2026 00:11:45] Completed 14 of 16 simulation runs
+[18-Feb-2026 00:11:47] Completed 15 of 16 simulation runs
+[18-Feb-2026 00:11:49] Completed 16 of 16 simulation runs
+[18-Feb-2026 00:11:50] Running simulations...
+[18-Feb-2026 00:11:54] Completed 1 of 16 simulation runs
+[18-Feb-2026 00:11:56] Completed 2 of 16 simulation runs
+[18-Feb-2026 00:11:58] Completed 3 of 16 simulation runs
+[18-Feb-2026 00:12:00] Completed 4 of 16 simulation runs
+[18-Feb-2026 00:12:02] Completed 5 of 16 simulation runs
+[18-Feb-2026 00:12:04] Completed 6 of 16 simulation runs
+[18-Feb-2026 00:12:06] Completed 7 of 16 simulation runs
+[18-Feb-2026 00:12:08] Completed 8 of 16 simulation runs
+[18-Feb-2026 00:12:11] Completed 9 of 16 simulation runs
+[18-Feb-2026 00:12:13] Completed 10 of 16 simulation runs
+[18-Feb-2026 00:12:15] Completed 11 of 16 simulation runs
+[18-Feb-2026 00:12:17] Completed 12 of 16 simulation runs
+[18-Feb-2026 00:12:19] Completed 13 of 16 simulation runs
+[18-Feb-2026 00:12:21] Completed 14 of 16 simulation runs
+[18-Feb-2026 00:12:23] Completed 15 of 16 simulation runs
+[18-Feb-2026 00:12:25] Completed 16 of 16 simulation runs
 </pre>
-<img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_01.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_02.png" alt=""> <h2 id="4">Load Capacity Test, Design A, Pin Loads</h2>
+<img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_01.png" alt=""> <h2 id="4">Load Capacity Test, Design A, Pin Loads</h2>
 <p>In this test we calculate and plot the pin loads and cylinder pressures for one of the positions of the load capacity test.</p>
-<pre class="codeinput">Excavator_Test_Scenario_Select(<span class="string">'Lift'</span>,mdl_LoadChart_setup,mdl_LoadChart_calc);
+<pre class="codeinput">close(h1_Excavator_LoadChart_Plot)
+Excavator_Test_Scenario_Select(<span class="string">'Lift'</span>,mdl_LoadChart_setup,mdl_LoadChart_calc);
 simOut = sim(mdl_LoadChart_calc);
 [fLoad,test_type,pBoom,pStick,pBucket,pinForces]= Excavator_simlogToBOFTOF(simOut.logsout);
 Excavator_BOFTOFLoad_plot(ExcvGlobal,fLoad,test_type,pBoom,pStick,pBucket,pinForces);
 </pre>
-<img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_03.png" alt=""> <h2 id="5">Load Chart Test, Design B</h2>
+<img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_02.png" alt=""> <h2 id="5">Load Chart Test, Design B</h2>
 <p>In this test we generate the load chart using Design B</p>
-<pre class="codeinput">MPdata = readtable(<span class="string">'Excavator_Pin_Locations_global.xlsx'</span>,<span class="string">'Sheet'</span>,<span class="string">'Design B'</span>,<span class="string">'Range'</span>,<span class="string">'B2:F15'</span>,<span class="string">'VariableNamingRule'</span>,<span class="string">'preserve'</span>);
+<pre class="codeinput">close(h1_Excavator_BOFTOFLoad_plot)
+MPdata = readtable(<span class="string">'Excavator_Pin_Locations_global.xlsx'</span>,<span class="string">'Sheet'</span>,<span class="string">'Design B'</span>,<span class="string">'Range'</span>,<span class="string">'B2:F15'</span>,<span class="string">'VariableNamingRule'</span>,<span class="string">'preserve'</span>);
 ExcvGlobal = Excavator_Pin_Locations_table2struct(MPdata);
 ExcvLocal  = Excavator_Pin_Locations_global2local(ExcvGlobal);
 
 Excavator_LoadChart_Create(qBoomSet,qStickSet,qBucketSet,<span class="keyword">...</span>
     mdl_LoadChart_setup,mdl_LoadChart_calc,true);
 </pre>
-<pre class="codeoutput">[14-Nov-2025 09:37:05] Running simulations...
-[14-Nov-2025 09:37:08] Completed 1 of 16 simulation runs
-[14-Nov-2025 09:37:08] Completed 2 of 16 simulation runs
-[14-Nov-2025 09:37:09] Completed 3 of 16 simulation runs
-[14-Nov-2025 09:37:09] Completed 4 of 16 simulation runs
-[14-Nov-2025 09:37:09] Completed 5 of 16 simulation runs
-[14-Nov-2025 09:37:10] Completed 6 of 16 simulation runs
-[14-Nov-2025 09:37:10] Completed 7 of 16 simulation runs
-[14-Nov-2025 09:37:10] Completed 8 of 16 simulation runs
-[14-Nov-2025 09:37:11] Completed 9 of 16 simulation runs
-[14-Nov-2025 09:37:11] Completed 10 of 16 simulation runs
-[14-Nov-2025 09:37:11] Completed 11 of 16 simulation runs
-[14-Nov-2025 09:37:12] Completed 12 of 16 simulation runs
-[14-Nov-2025 09:37:12] Completed 13 of 16 simulation runs
-[14-Nov-2025 09:37:12] Completed 14 of 16 simulation runs
-[14-Nov-2025 09:37:13] Completed 15 of 16 simulation runs
-[14-Nov-2025 09:37:13] Completed 16 of 16 simulation runs
-[14-Nov-2025 09:37:15] Running simulations...
-[14-Nov-2025 09:37:18] Completed 1 of 16 simulation runs
-[14-Nov-2025 09:37:18] Completed 2 of 16 simulation runs
-[14-Nov-2025 09:37:19] Completed 3 of 16 simulation runs
-[14-Nov-2025 09:37:19] Completed 4 of 16 simulation runs
-[14-Nov-2025 09:37:19] Completed 5 of 16 simulation runs
-[14-Nov-2025 09:37:19] Completed 6 of 16 simulation runs
-[14-Nov-2025 09:37:20] Completed 7 of 16 simulation runs
-[14-Nov-2025 09:37:20] Completed 8 of 16 simulation runs
-[14-Nov-2025 09:37:20] Completed 9 of 16 simulation runs
-[14-Nov-2025 09:37:21] Completed 10 of 16 simulation runs
-[14-Nov-2025 09:37:21] Completed 11 of 16 simulation runs
-[14-Nov-2025 09:37:21] Completed 12 of 16 simulation runs
-[14-Nov-2025 09:37:22] Completed 13 of 16 simulation runs
-[14-Nov-2025 09:37:22] Completed 14 of 16 simulation runs
-[14-Nov-2025 09:37:22] Completed 15 of 16 simulation runs
-[14-Nov-2025 09:37:23] Completed 16 of 16 simulation runs
+<pre class="codeoutput">[18-Feb-2026 00:12:39] Running simulations...
+[18-Feb-2026 00:12:42] Completed 1 of 16 simulation runs
+[18-Feb-2026 00:12:44] Completed 2 of 16 simulation runs
+[18-Feb-2026 00:12:46] Completed 3 of 16 simulation runs
+[18-Feb-2026 00:12:48] Completed 4 of 16 simulation runs
+[18-Feb-2026 00:12:50] Completed 5 of 16 simulation runs
+[18-Feb-2026 00:12:53] Completed 6 of 16 simulation runs
+[18-Feb-2026 00:12:55] Completed 7 of 16 simulation runs
+[18-Feb-2026 00:12:57] Completed 8 of 16 simulation runs
+[18-Feb-2026 00:12:59] Completed 9 of 16 simulation runs
+[18-Feb-2026 00:13:01] Completed 10 of 16 simulation runs
+[18-Feb-2026 00:13:03] Completed 11 of 16 simulation runs
+[18-Feb-2026 00:13:05] Completed 12 of 16 simulation runs
+[18-Feb-2026 00:13:07] Completed 13 of 16 simulation runs
+[18-Feb-2026 00:13:09] Completed 14 of 16 simulation runs
+[18-Feb-2026 00:13:11] Completed 15 of 16 simulation runs
+[18-Feb-2026 00:13:13] Completed 16 of 16 simulation runs
+[18-Feb-2026 00:13:15] Running simulations...
+[18-Feb-2026 00:13:18] Completed 1 of 16 simulation runs
+[18-Feb-2026 00:13:20] Completed 2 of 16 simulation runs
+[18-Feb-2026 00:13:22] Completed 3 of 16 simulation runs
+[18-Feb-2026 00:13:24] Completed 4 of 16 simulation runs
+[18-Feb-2026 00:13:26] Completed 5 of 16 simulation runs
+[18-Feb-2026 00:13:28] Completed 6 of 16 simulation runs
+[18-Feb-2026 00:13:30] Completed 7 of 16 simulation runs
+[18-Feb-2026 00:13:32] Completed 8 of 16 simulation runs
+[18-Feb-2026 00:13:34] Completed 9 of 16 simulation runs
+[18-Feb-2026 00:13:36] Completed 10 of 16 simulation runs
+[18-Feb-2026 00:13:38] Completed 11 of 16 simulation runs
+[18-Feb-2026 00:13:40] Completed 12 of 16 simulation runs
+[18-Feb-2026 00:13:42] Completed 13 of 16 simulation runs
+[18-Feb-2026 00:13:44] Completed 14 of 16 simulation runs
+[18-Feb-2026 00:13:46] Completed 15 of 16 simulation runs
+[18-Feb-2026 00:13:48] Completed 16 of 16 simulation runs
 </pre>
-<img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_04.png" alt=""> <img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_05.png" alt=""> <h2 id="6">Load Chart Test, Design B, Higher Pressure Settings</h2>
+<img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_03.png" alt=""> <h2 id="6">Load Chart Test, Design B, Higher Pressure Settings</h2>
 <p>In this test we increase the pressure settings to see the effect on the load chart.</p>
 <pre class="codeinput">forceTestMaxActiveCylPr   = 400; <span class="comment">% bar, Max pressure boom cylinder</span>
 forceTestMaxReactiveCylPr = 450; <span class="comment">% bar, Max pressure stick and bucket cylinders</span>
 
+close(h1_Excavator_LoadChart_Plot)
 Excavator_LoadChart_Create(qBoomSet,qStickSet,qBucketSet,<span class="keyword">...</span>
     mdl_LoadChart_setup,mdl_LoadChart_calc,true);
 </pre>
-<pre class="codeoutput">[14-Nov-2025 09:37:30] Running simulations...
-[14-Nov-2025 09:37:33] Completed 1 of 16 simulation runs
-[14-Nov-2025 09:37:34] Completed 2 of 16 simulation runs
-[14-Nov-2025 09:37:34] Completed 3 of 16 simulation runs
-[14-Nov-2025 09:37:35] Completed 4 of 16 simulation runs
-[14-Nov-2025 09:37:35] Completed 5 of 16 simulation runs
-[14-Nov-2025 09:37:36] Completed 6 of 16 simulation runs
-[14-Nov-2025 09:37:36] Completed 7 of 16 simulation runs
-[14-Nov-2025 09:37:36] Completed 8 of 16 simulation runs
-[14-Nov-2025 09:37:37] Completed 9 of 16 simulation runs
-[14-Nov-2025 09:37:37] Completed 10 of 16 simulation runs
-[14-Nov-2025 09:37:38] Completed 11 of 16 simulation runs
-[14-Nov-2025 09:37:39] Completed 12 of 16 simulation runs
-[14-Nov-2025 09:37:39] Completed 13 of 16 simulation runs
-[14-Nov-2025 09:37:39] Completed 14 of 16 simulation runs
-[14-Nov-2025 09:37:40] Completed 15 of 16 simulation runs
-[14-Nov-2025 09:37:40] Completed 16 of 16 simulation runs
-[14-Nov-2025 09:37:43] Running simulations...
-[14-Nov-2025 09:37:47] Completed 1 of 16 simulation runs
-[14-Nov-2025 09:37:48] Completed 2 of 16 simulation runs
-[14-Nov-2025 09:37:48] Completed 3 of 16 simulation runs
-[14-Nov-2025 09:37:49] Completed 4 of 16 simulation runs
-[14-Nov-2025 09:37:49] Completed 5 of 16 simulation runs
-[14-Nov-2025 09:37:49] Completed 6 of 16 simulation runs
-[14-Nov-2025 09:37:50] Completed 7 of 16 simulation runs
-[14-Nov-2025 09:37:50] Completed 8 of 16 simulation runs
-[14-Nov-2025 09:37:51] Completed 9 of 16 simulation runs
-[14-Nov-2025 09:37:51] Completed 10 of 16 simulation runs
-[14-Nov-2025 09:37:52] Completed 11 of 16 simulation runs
-[14-Nov-2025 09:37:52] Completed 12 of 16 simulation runs
-[14-Nov-2025 09:37:53] Completed 13 of 16 simulation runs
-[14-Nov-2025 09:37:53] Completed 14 of 16 simulation runs
-[14-Nov-2025 09:37:54] Completed 15 of 16 simulation runs
-[14-Nov-2025 09:37:54] Completed 16 of 16 simulation runs
+<pre class="codeoutput">[18-Feb-2026 00:13:55] Running simulations...
+[18-Feb-2026 00:13:58] Completed 1 of 16 simulation runs
+[18-Feb-2026 00:14:00] Completed 2 of 16 simulation runs
+[18-Feb-2026 00:14:02] Completed 3 of 16 simulation runs
+[18-Feb-2026 00:14:04] Completed 4 of 16 simulation runs
+[18-Feb-2026 00:14:06] Completed 5 of 16 simulation runs
+[18-Feb-2026 00:14:08] Completed 6 of 16 simulation runs
+[18-Feb-2026 00:14:10] Completed 7 of 16 simulation runs
+[18-Feb-2026 00:14:12] Completed 8 of 16 simulation runs
+[18-Feb-2026 00:14:14] Completed 9 of 16 simulation runs
+[18-Feb-2026 00:14:16] Completed 10 of 16 simulation runs
+[18-Feb-2026 00:14:18] Completed 11 of 16 simulation runs
+[18-Feb-2026 00:14:20] Completed 12 of 16 simulation runs
+[18-Feb-2026 00:14:22] Completed 13 of 16 simulation runs
+[18-Feb-2026 00:14:24] Completed 14 of 16 simulation runs
+[18-Feb-2026 00:14:26] Completed 15 of 16 simulation runs
+[18-Feb-2026 00:14:28] Completed 16 of 16 simulation runs
+[18-Feb-2026 00:14:31] Running simulations...
+[18-Feb-2026 00:14:34] Completed 1 of 16 simulation runs
+[18-Feb-2026 00:14:36] Completed 2 of 16 simulation runs
+[18-Feb-2026 00:14:38] Completed 3 of 16 simulation runs
+[18-Feb-2026 00:14:40] Completed 4 of 16 simulation runs
+[18-Feb-2026 00:14:42] Completed 5 of 16 simulation runs
+[18-Feb-2026 00:14:44] Completed 6 of 16 simulation runs
+[18-Feb-2026 00:14:46] Completed 7 of 16 simulation runs
+[18-Feb-2026 00:14:48] Completed 8 of 16 simulation runs
+[18-Feb-2026 00:14:50] Completed 9 of 16 simulation runs
+[18-Feb-2026 00:14:53] Completed 10 of 16 simulation runs
+[18-Feb-2026 00:14:55] Completed 11 of 16 simulation runs
+[18-Feb-2026 00:14:57] Completed 12 of 16 simulation runs
+[18-Feb-2026 00:14:59] Completed 13 of 16 simulation runs
+[18-Feb-2026 00:15:01] Completed 14 of 16 simulation runs
+[18-Feb-2026 00:15:03] Completed 15 of 16 simulation runs
+[18-Feb-2026 00:15:05] Completed 16 of 16 simulation runs
 </pre>
-<img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_06.png" alt=""> <p class="footer">Copyright 2022-2025 The MathWorks, Inc.<br>
+<img vspace="5" hspace="5" src="Excavator_Param_Load_Chart_04.png" alt=""> <p class="footer">Copyright 2022-2025 The MathWorks, Inc.<br>
 <a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2025b</a>
 <br>
 </p>
@@ -434,6 +437,7 @@ Excavator_LoadChart_Create(qBoomSet,qStickSet,qBucketSet,...
 % In this test we calculate and plot the pin loads and cylinder pressures
 % for one of the positions of the load capacity test.
 
+close(h1_Excavator_LoadChart_Plot)
 Excavator_Test_Scenario_Select('Lift',mdl_LoadChart_setup,mdl_LoadChart_calc);
 simOut = sim(mdl_LoadChart_calc);
 [fLoad,test_type,pBoom,pStick,pBucket,pinForces]= Excavator_simlogToBOFTOF(simOut.logsout);
@@ -443,6 +447,7 @@ Excavator_BOFTOFLoad_plot(ExcvGlobal,fLoad,test_type,pBoom,pStick,pBucket,pinFor
 %
 % In this test we generate the load chart using Design B
 
+close(h1_Excavator_BOFTOFLoad_plot)
 MPdata = readtable('Excavator_Pin_Locations_global.xlsx','Sheet','Design B','Range','B2:F15','VariableNamingRule','preserve');
 ExcvGlobal = Excavator_Pin_Locations_table2struct(MPdata);
 ExcvLocal  = Excavator_Pin_Locations_global2local(ExcvGlobal);
@@ -458,6 +463,7 @@ Excavator_LoadChart_Create(qBoomSet,qStickSet,qBucketSet,...
 forceTestMaxActiveCylPr   = 400; % bar, Max pressure boom cylinder
 forceTestMaxReactiveCylPr = 450; % bar, Max pressure stick and bucket cylinders
 
+close(h1_Excavator_LoadChart_Plot)
 Excavator_LoadChart_Create(qBoomSet,qStickSet,qBucketSet,...
     mdl_LoadChart_setup,mdl_LoadChart_calc,true);
 

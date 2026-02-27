@@ -82,7 +82,7 @@ open_system('Excavator_Mevea_Bucket/Controller/Function Commander','force')
 % positions, cylinder pressures, and the load on the bucket due to the
 % soil.
 
-mdl = 'Excavator_Mevea_BucketDriveline';
+mdl = 'Excavator_Mevea_Bucket';
 
 simOut = sim(mdl);
 

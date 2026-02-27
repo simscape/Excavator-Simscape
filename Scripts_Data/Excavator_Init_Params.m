@@ -3,12 +3,10 @@
 
 
 %% Setup
-%close all;clearvars;clc;
 
 % Sample time
-%Ts = 0.005;
 Ts = 0.1;
-p0 = 5.66532;
+p0 = 1.01325; % 56.6532; % [bar]  
 
 %% Test Definition
 
@@ -22,14 +20,6 @@ p0 = 5.66532;
 % Combined Tests
 % emptyBucketDigCycle | loadedBucketDigCycle
 
-
-%% Initial Conditions
-initBoomHEPr = 10; % [bar]
-initBoomREPr = 10; % [bar]
-initStickHEPr = 10; % [bar]
-initStickREPr = 10; % [bar]
-initBucketHEPr = 10; % [bar]
-initBucketREPr = 10; % [bar]
 
 % Gravity
 gravity = -9.81; % [m/s^2]
@@ -70,8 +60,8 @@ boomValve.AtoTOrificeAreaVector = [1e-3; 2.2.^spoolPos(2:end)]; % [mm^2]
 boomValve.AtoBRegOrificeAreaVector = [1e-3; 2.2.^spoolPos(2:end)]; % [mm^2]
 boomValve.BtoTOrificeAreaVector = [1e-3; 2.6.^spoolPos(2:end)]; % [mm^2]
 boomValve.PtoBOrificeAreaVector = [1e-3; 2.6.^spoolPos(2:end)]; % [mm^2]
-boomValve.checkValveCrackingPrDiff = 0.001; % [bar]
-boomValve.checkValveMaxOpeningPrDiff = 0.01; % [bar]
+boomValve.checkValveCrackingPrDiff    = 0.001*10; % [bar] % REAL-TIME ADJ
+boomValve.checkValveMaxOpeningPrDiff  = 0.01*100; % [bar] % REAL-TIME ADJ
 boomValve.checkValveMaxOpeningArea = 1100; % [mm^2]
 boomValve.checkValveLeakageArea = 0.001; % [mm^2]
 boomCylFriction.brkawyToCoulRatio = 1.2;
@@ -93,8 +83,8 @@ stickValve.AtoTOrificeAreaVector = [1e-3; 3.0.^spoolPos(1:end-1)]; % [mm^2]
 stickValve.BtoARegOrificeAreaVector = [1e-3; 2.2.^spoolPos(2:end)]; % [mm^2] 
 stickValve.BtoTOrificeAreaVector = [1e-3; 2.6.^spoolPos(2:end)]; % [mm^2]
 stickValve.PtoBOrificeAreaVector = [1e-3; 3.6.^spoolPos(2:end)]; % [mm^2]
-stickValve.checkValveCrackingPrDiff = 0.001; % [bar]
-stickValve.checkValveMaxOpeningPrDiff = 0.01; % [bar]
+stickValve.checkValveCrackingPrDiff   = 0.001*10; % [bar]  % REAL-TIME ADJ
+stickValve.checkValveMaxOpeningPrDiff = 0.01*100; % [bar]  % REAL-TIME ADJ
 stickValve.checkValveMaxOpeningArea = 1100; % [mm^2]
 stickValve.checkValveLeakageArea = 0.01; % [mm^2]
 stickCylFriction.brkawyToCoulRatio = 1.2;
@@ -134,14 +124,14 @@ swingValve.PtoAOrificeAreaVector = swingASideArea; % [mm^2]
 swingValve.AtoTOrificeAreaVector = swingASideArea; % [mm^2]
 swingValve.BtoTOrificeAreaVector = swingBSideArea; % [mm^2]
 swingValve.PtoBOrificeAreaVector = swingBSideArea; % [mm^2]
-swingPRV.reliefPr = 260; % [bar]
+swingPRV.reliefPr = 260; % [bar] 
 swingPRV.regRange = 5; % [bar]
 swingPRV.maxOpeningArea = 100; % [mm^2]
 swingPRV.leakageArea = 0.01; % [mm^2]
 
 %% Check Valves
-checkValves.crackingPrDiff = 0.001; % [bar]
-checkValves.maxOpeningPrDiff = 0.01; % [bar]
+checkValves.crackingPrDiff = 0.001*10;   % [bar]  % REAL-TIME ADJ
+checkValves.maxOpeningPrDiff = 0.01*100; % [bar] % REAL-TIME ADJ
 checkValves.maxOpeningArea = 1200; % [mm^2]
 checkValves.leakageArea = 0.01; % [mm^2]
 
@@ -169,3 +159,25 @@ pipeCrossSectArea = pi * (pipeHydraulicDiam/2)^2; % [mm^2]
 
 %% Engine
 nominalEngineSpeed = 2000; % [rpm]
+
+
+%% Initial Conditions
+Tb = 0.001; % model base sample rate [s]
+cFilt = tf([1],[0.01 1]); % REAL-TIME ADJ
+dFilt = c2d(cFilt,Tb,'tustin'); % REAL-TIME ADJ
+
+%%
+initBoomHEPr   = p0*50; % [bar]  % REAL-TIME ADJ
+initBoomREPr   = initBoomHEPr*boomHEArea/boomREArea; % [bar]  % REAL-TIME ADJ
+initStickHEPr  = p0*50; % [bar]  % REAL-TIME ADJ
+initStickREPr  = initStickHEPr*stickHEArea/stickREArea; % [bar]  % REAL-TIME ADJ
+initBucketHEPr = p0*50; % [bar]  % REAL-TIME ADJ
+initBucketREPr = initBucketHEPr*bucketHEArea/bucketREArea; % [bar]  % REAL-TIME ADJ
+initSwingAPr   = p0*10; % [bar]  % REAL-TIME ADJ
+initSwingBPr   = p0*10; % [bar]  % REAL-TIME ADJ
+
+% Extra
+pistonCylClearance = 0.15; %0.125; % [mm] % REAL-TIME ADJ
+pistonHeadLen = 50; %25; % [mm] % REAL-TIME ADJ
+vcVol = 2e-3;
+
