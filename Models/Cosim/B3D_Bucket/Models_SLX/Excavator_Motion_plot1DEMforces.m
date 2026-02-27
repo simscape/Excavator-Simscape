@@ -13,9 +13,15 @@
 
 
 % Get simulation results
-simlog_DEMLoads_f = simOut.logsout_Excavator_Motion_B3D.get('DEMLoads_f');
-simlog_DEMLoads_m = simOut.logsout_Excavator_Motion_B3D.get('DEMLoads_m');
-
+try
+    % Motion model
+    simlog_DEMLoads_f = simOut.logsout_Excavator_Motion_B3D.get('DEMLoads_f');
+    simlog_DEMLoads_m = simOut.logsout_Excavator_Motion_B3D.get('DEMLoads_m');
+catch
+    % Hydraulics model
+    simlog_DEMLoads_f = simOut.logsout_Excavator_Complete.get('DEMLoads_f');
+    simlog_DEMLoads_m = simOut.logsout_Excavator_Complete.get('DEMLoads_m');
+end
 % Reuse figure if it exists, else create new figure
 if ~exist('h1_Excavator_B3D_DEM', 'var') || ...
         ~isgraphics(h1_Excavator_B3D_DEM, 'figure')

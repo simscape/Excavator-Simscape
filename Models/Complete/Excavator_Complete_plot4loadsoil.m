@@ -15,8 +15,8 @@
 %    % Model StopFcn callback adds a timestamp to the Simscape simulation data log
 %end
 
-simlog_bucketCGpos      = simOut.logsout_Excavator_Complete.get('Bucket_CG');
-simlog_bucketSoilLoad   = simOut.logsout_Excavator_Complete.get('BucketSoilLoad');
+simlog_bucketCGpos      = squeeze(simOut.logsout_Excavator_Complete.get('Bucket_CG'));
+simlog_bucketSoilLoad   = squeeze(simOut.logsout_Excavator_Complete.get('BucketSoilLoad'));
 
 BktCGpLon  = simlog_bucketCGpos.Values.xLong.Data(:);
 BktCGpVer  = simlog_bucketCGpos.Values.xVert.Data(:);

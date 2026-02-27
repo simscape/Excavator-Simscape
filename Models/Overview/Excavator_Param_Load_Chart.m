@@ -107,6 +107,7 @@ Excavator_LoadChart_Create(qBoomSet,qStickSet,qBucketSet,...
 % In this test we calculate and plot the pin loads and cylinder pressures
 % for one of the positions of the load capacity test.
 
+close(h1_Excavator_LoadChart_Plot)
 Excavator_Test_Scenario_Select('Lift',mdl_LoadChart_setup,mdl_LoadChart_calc);
 simOut = sim(mdl_LoadChart_calc);
 [fLoad,test_type,pBoom,pStick,pBucket,pinForces]= Excavator_simlogToBOFTOF(simOut.logsout);
@@ -116,6 +117,7 @@ Excavator_BOFTOFLoad_plot(ExcvGlobal,fLoad,test_type,pBoom,pStick,pBucket,pinFor
 %
 % In this test we generate the load chart using Design B
 
+close(h1_Excavator_BOFTOFLoad_plot)
 MPdata = readtable('Excavator_Pin_Locations_global.xlsx','Sheet','Design B','Range','B2:F15','VariableNamingRule','preserve');
 ExcvGlobal = Excavator_Pin_Locations_table2struct(MPdata);
 ExcvLocal  = Excavator_Pin_Locations_global2local(ExcvGlobal);
@@ -131,6 +133,7 @@ Excavator_LoadChart_Create(qBoomSet,qStickSet,qBucketSet,...
 forceTestMaxActiveCylPr   = 400; % bar, Max pressure boom cylinder
 forceTestMaxReactiveCylPr = 450; % bar, Max pressure stick and bucket cylinders
 
+close(h1_Excavator_LoadChart_Plot)
 Excavator_LoadChart_Create(qBoomSet,qStickSet,qBucketSet,...
     mdl_LoadChart_setup,mdl_LoadChart_calc,true);
 
