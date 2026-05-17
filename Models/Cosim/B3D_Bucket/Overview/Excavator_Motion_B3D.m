@@ -12,20 +12,13 @@
 %
 % Follow the steps below to set up cosimulation on your machine.  All of
 % the files you need to set up the cosimulation are provided here.  You
-% will also need ThreeParticle software. Note that the compiled files
-% provided will only work with MATLAB R2025a on a Windows 64 bit operating
-% system. To set up this example for other versions or operating systems,
-% please contact the authors of this submission on the MATLAB Central File
-% Exchange.
+% will also need ThreeParticle software. 
 %
 % <matlab:open_system('Excavator_Motion_B3D') Open Excavator with ThreeParticle DEM Soil Loads Model>
 %
-% Copyright 2022-2025 The MathWorks, Inc.
+% Copyright 2022-2026 The MathWorks, Inc.
 
 %% Cosimulation Setup
-%
-% (Note: the compiled files will only work with MATLAB R2025a on a Windows
-% 64 bit operating system.)
 %
 % *1. Copy |\Models\Cosim\util_zmq\zmqdll\libzmq-v143-mt-4_3_6.dll| to the
 % "Bin" subfolder within your ThreeParticle installation directory.*

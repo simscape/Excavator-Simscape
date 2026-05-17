@@ -7,7 +7,7 @@
 % reported in the cab swing motor reference frame (swing motor angle is
 % ignored).
 
-% Copyright 2022-2025 The MathWorks, Inc.
+% Copyright 2022-2026 The MathWorks, Inc.
 
 simlog_bucketCGpos      = simOut.logsout_Excavator_Complete.get('Bucket_CG');
 simlog_bucketForces     = simOut.logsout_Excavator_Complete.get('Bucket_Forces');
